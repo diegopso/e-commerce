@@ -1,0 +1,6 @@
+	/**
+     * :auto_increment
+     * @Column(Type=":column_type",Key="Primary")
+     */
+    public $:column_name;
+

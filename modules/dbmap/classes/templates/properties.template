@@ -1,0 +1,3 @@
+	/** @Column(Type=":column_type") */
+	public $:column_name;
+

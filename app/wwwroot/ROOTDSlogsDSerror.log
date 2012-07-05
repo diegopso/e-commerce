@@ -1,0 +1,249 @@
+[05-Jul-2012 16:11:32] PHP Notice:  Undefined index: AuthController in C:\xampp\htdocs\testeTrilado\core\libs\Annotation.php on line 47
+[05-Jul-2012 16:11:32] PHP Stack trace:
+[05-Jul-2012 16:11:32] PHP   1. {main}() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:0
+[05-Jul-2012 16:11:32] PHP   2. App->__construct() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:39
+[05-Jul-2012 16:11:32] PHP   3. App->auth() C:\xampp\htdocs\testeTrilado\core\libs\App.php:65
+[05-Jul-2012 16:11:32] PHP   4. Annotation::get() C:\xampp\htdocs\testeTrilado\core\libs\App.php:195
+[05-Jul-2012 16:11:32] PHP Notice:  Undefined property: stdClass::$Auth in C:\xampp\htdocs\testeTrilado\core\libs\App.php on line 202
+[05-Jul-2012 16:11:32] PHP Stack trace:
+[05-Jul-2012 16:11:32] PHP   1. {main}() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:0
+[05-Jul-2012 16:11:32] PHP   2. App->__construct() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:39
+[05-Jul-2012 16:11:32] PHP   3. App->auth() C:\xampp\htdocs\testeTrilado\core\libs\App.php:65
+[05-Jul-2012 16:11:32] PHP Notice:  Undefined variable: roles in C:\xampp\htdocs\testeTrilado\core\libs\App.php on line 204
+[05-Jul-2012 16:11:32] PHP Stack trace:
+[05-Jul-2012 16:11:32] PHP   1. {main}() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:0
+[05-Jul-2012 16:11:32] PHP   2. App->__construct() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:39
+[05-Jul-2012 16:11:32] PHP   3. App->auth() C:\xampp\htdocs\testeTrilado\core\libs\App.php:65
+[05-Jul-2012 16:11:32] PHP Notice:  Undefined variable: roles in C:\xampp\htdocs\testeTrilado\core\libs\App.php on line 207
+[05-Jul-2012 16:11:32] PHP Stack trace:
+[05-Jul-2012 16:11:32] PHP   1. {main}() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:0
+[05-Jul-2012 16:11:32] PHP   2. App->__construct() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:39
+[05-Jul-2012 16:11:32] PHP   3. App->auth() C:\xampp\htdocs\testeTrilado\core\libs\App.php:65
+[05-Jul-2012 16:11:32] PHP Notice:  Undefined property: stdClass::$Master in C:\xampp\htdocs\testeTrilado\core\libs\Template.php on line 94
+[05-Jul-2012 16:11:32] PHP Stack trace:
+[05-Jul-2012 16:11:32] PHP   1. {main}() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:0
+[05-Jul-2012 16:11:32] PHP   2. App->__construct() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:39
+[05-Jul-2012 16:11:32] PHP   3. Template->render() C:\xampp\htdocs\testeTrilado\core\libs\App.php:67
+[05-Jul-2012 16:11:32] PHP   4. Template->master() C:\xampp\htdocs\testeTrilado\core\libs\Template.php:30
+[05-Jul-2012 16:11:32] PHP Notice:  Undefined variable: tpl in C:\xampp\htdocs\testeTrilado\core\libs\Template.php on line 99
+[05-Jul-2012 16:11:32] PHP Stack trace:
+[05-Jul-2012 16:11:32] PHP   1. {main}() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:0
+[05-Jul-2012 16:11:32] PHP   2. App->__construct() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:39
+[05-Jul-2012 16:11:32] PHP   3. Template->render() C:\xampp\htdocs\testeTrilado\core\libs\App.php:67
+[05-Jul-2012 16:11:32] PHP   4. Template->master() C:\xampp\htdocs\testeTrilado\core\libs\Template.php:30
+[05-Jul-2012 16:11:32] PHP Notice:  Undefined index: dot in C:\xampp\htdocs\testeTrilado\core\libs\Template.php on line 51
+[05-Jul-2012 16:11:32] PHP Stack trace:
+[05-Jul-2012 16:11:32] PHP   1. {main}() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:0
+[05-Jul-2012 16:11:32] PHP   2. App->__construct() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:39
+[05-Jul-2012 16:11:32] PHP   3. Template->render() C:\xampp\htdocs\testeTrilado\core\libs\App.php:67
+[05-Jul-2012 16:23:52] PHP Notice:  Undefined index: PostController in C:\xampp\htdocs\testeTrilado\core\libs\Annotation.php on line 47
+[05-Jul-2012 16:23:53] PHP Stack trace:
+[05-Jul-2012 16:23:53] PHP   1. {main}() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:0
+[05-Jul-2012 16:23:53] PHP   2. App->__construct() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:39
+[05-Jul-2012 16:23:53] PHP   3. App->auth() C:\xampp\htdocs\testeTrilado\core\libs\App.php:65
+[05-Jul-2012 16:23:53] PHP   4. Annotation::get() C:\xampp\htdocs\testeTrilado\core\libs\App.php:195
+[05-Jul-2012 16:23:53] PHP Notice:  Undefined property: stdClass::$Auth in C:\xampp\htdocs\testeTrilado\core\libs\App.php on line 202
+[05-Jul-2012 16:23:53] PHP Stack trace:
+[05-Jul-2012 16:23:53] PHP   1. {main}() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:0
+[05-Jul-2012 16:23:53] PHP   2. App->__construct() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:39
+[05-Jul-2012 16:23:53] PHP   3. App->auth() C:\xampp\htdocs\testeTrilado\core\libs\App.php:65
+[05-Jul-2012 16:23:53] PHP Notice:  Undefined variable: roles in C:\xampp\htdocs\testeTrilado\core\libs\App.php on line 204
+[05-Jul-2012 16:23:53] PHP Stack trace:
+[05-Jul-2012 16:23:53] PHP   1. {main}() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:0
+[05-Jul-2012 16:23:53] PHP   2. App->__construct() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:39
+[05-Jul-2012 16:23:53] PHP   3. App->auth() C:\xampp\htdocs\testeTrilado\core\libs\App.php:65
+[05-Jul-2012 16:23:53] PHP Notice:  Undefined variable: roles in C:\xampp\htdocs\testeTrilado\core\libs\App.php on line 207
+[05-Jul-2012 16:23:53] PHP Stack trace:
+[05-Jul-2012 16:23:53] PHP   1. {main}() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:0
+[05-Jul-2012 16:23:53] PHP   2. App->__construct() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:39
+[05-Jul-2012 16:23:53] PHP   3. App->auth() C:\xampp\htdocs\testeTrilado\core\libs\App.php:65
+[05-Jul-2012 16:23:53] PHP Notice:  Undefined property: stdClass::$Master in C:\xampp\htdocs\testeTrilado\core\libs\Template.php on line 94
+[05-Jul-2012 16:23:53] PHP Stack trace:
+[05-Jul-2012 16:23:53] PHP   1. {main}() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:0
+[05-Jul-2012 16:23:53] PHP   2. App->__construct() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:39
+[05-Jul-2012 16:23:53] PHP   3. Template->render() C:\xampp\htdocs\testeTrilado\core\libs\App.php:67
+[05-Jul-2012 16:23:53] PHP   4. Template->master() C:\xampp\htdocs\testeTrilado\core\libs\Template.php:30
+[05-Jul-2012 16:23:53] PHP Notice:  Undefined variable: tpl in C:\xampp\htdocs\testeTrilado\core\libs\Template.php on line 99
+[05-Jul-2012 16:23:53] PHP Stack trace:
+[05-Jul-2012 16:23:53] PHP   1. {main}() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:0
+[05-Jul-2012 16:23:53] PHP   2. App->__construct() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:39
+[05-Jul-2012 16:23:53] PHP   3. Template->render() C:\xampp\htdocs\testeTrilado\core\libs\App.php:67
+[05-Jul-2012 16:23:53] PHP   4. Template->master() C:\xampp\htdocs\testeTrilado\core\libs\Template.php:30
+[05-Jul-2012 16:23:53] PHP Notice:  Undefined index: Post in C:\xampp\htdocs\testeTrilado\core\libs\Database.php on line 61
+[05-Jul-2012 16:23:53] PHP Stack trace:
+[05-Jul-2012 16:23:53] PHP   1. {main}() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:0
+[05-Jul-2012 16:23:53] PHP   2. App->__construct() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:39
+[05-Jul-2012 16:23:53] PHP   3. Template->render() C:\xampp\htdocs\testeTrilado\core\libs\App.php:67
+[05-Jul-2012 16:23:53] PHP   4. call_user_func_array() C:\xampp\htdocs\testeTrilado\core\libs\Template.php:36
+[05-Jul-2012 16:23:53] PHP   5. PostController->index() C:\xampp\htdocs\testeTrilado\core\libs\Template.php:36
+[05-Jul-2012 16:23:53] PHP   6. Model::all() C:\xampp\htdocs\testeTrilado\modules\post\controllers\PostController.php:7
+[05-Jul-2012 16:23:53] PHP   7. Database->__get() C:\xampp\htdocs\testeTrilado\modules\post\controllers\PostController.php:101
+[05-Jul-2012 16:23:53] PHP Notice:  Undefined index: Post in C:\xampp\htdocs\testeTrilado\core\libs\Annotation.php on line 47
+[05-Jul-2012 16:23:53] PHP Stack trace:
+[05-Jul-2012 16:23:53] PHP   1. {main}() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:0
+[05-Jul-2012 16:23:53] PHP   2. App->__construct() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:39
+[05-Jul-2012 16:23:53] PHP   3. Template->render() C:\xampp\htdocs\testeTrilado\core\libs\App.php:67
+[05-Jul-2012 16:23:53] PHP   4. call_user_func_array() C:\xampp\htdocs\testeTrilado\core\libs\Template.php:36
+[05-Jul-2012 16:23:53] PHP   5. PostController->index() C:\xampp\htdocs\testeTrilado\core\libs\Template.php:36
+[05-Jul-2012 16:23:53] PHP   6. Model::all() C:\xampp\htdocs\testeTrilado\modules\post\controllers\PostController.php:7
+[05-Jul-2012 16:23:53] PHP   7. Database->__get() C:\xampp\htdocs\testeTrilado\modules\post\controllers\PostController.php:101
+[05-Jul-2012 16:23:53] PHP   8. DatabaseQuery->__construct() C:\xampp\htdocs\testeTrilado\core\libs\Database.php:63
+[05-Jul-2012 16:23:53] PHP   9. Annotation::get() C:\xampp\htdocs\testeTrilado\core\libs\DatabaseQuery.php:110
+[05-Jul-2012 16:23:53] PHP Notice:  Undefined offset: 0 in C:\xampp\htdocs\testeTrilado\core\libs\Debug.php on line 51
+[05-Jul-2012 16:23:53] PHP Stack trace:
+[05-Jul-2012 16:23:53] PHP   1. {main}() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:0
+[05-Jul-2012 16:23:53] PHP   2. App->__construct() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:39
+[05-Jul-2012 16:23:53] PHP   3. Template->render() C:\xampp\htdocs\testeTrilado\core\libs\App.php:67
+[05-Jul-2012 16:23:53] PHP   4. call_user_func_array() C:\xampp\htdocs\testeTrilado\core\libs\Template.php:36
+[05-Jul-2012 16:23:53] PHP   5. PostController->index() C:\xampp\htdocs\testeTrilado\core\libs\Template.php:36
+[05-Jul-2012 16:23:53] PHP   6. Model::all() C:\xampp\htdocs\testeTrilado\modules\post\controllers\PostController.php:7
+[05-Jul-2012 16:23:53] PHP   7. DatabaseQuery->paginate() C:\xampp\htdocs\testeTrilado\core\libs\Model.php:101
+[05-Jul-2012 16:23:53] PHP   8. DatabaseQuery->all() C:\xampp\htdocs\testeTrilado\core\libs\DatabaseQuery.php:369
+[05-Jul-2012 16:23:53] PHP   9. Debug::addSql() C:\xampp\htdocs\testeTrilado\core\libs\DatabaseQuery.php:300
+[05-Jul-2012 16:23:53] PHP  10. Debug::bindValues() C:\xampp\htdocs\testeTrilado\core\libs\Debug.php:38
+[05-Jul-2012 16:23:53] PHP Notice:  Undefined offset: 0 in C:\xampp\htdocs\testeTrilado\core\libs\Debug.php on line 51
+[05-Jul-2012 16:23:53] PHP Stack trace:
+[05-Jul-2012 16:23:53] PHP   1. {main}() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:0
+[05-Jul-2012 16:23:53] PHP   2. App->__construct() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:39
+[05-Jul-2012 16:23:53] PHP   3. Template->render() C:\xampp\htdocs\testeTrilado\core\libs\App.php:67
+[05-Jul-2012 16:23:53] PHP   4. call_user_func_array() C:\xampp\htdocs\testeTrilado\core\libs\Template.php:36
+[05-Jul-2012 16:23:53] PHP   5. PostController->index() C:\xampp\htdocs\testeTrilado\core\libs\Template.php:36
+[05-Jul-2012 16:23:53] PHP   6. Model::all() C:\xampp\htdocs\testeTrilado\modules\post\controllers\PostController.php:7
+[05-Jul-2012 16:23:53] PHP   7. DatabaseQuery->paginate() C:\xampp\htdocs\testeTrilado\core\libs\Model.php:101
+[05-Jul-2012 16:23:53] PHP   8. DatabaseQuery->count() C:\xampp\htdocs\testeTrilado\core\libs\DatabaseQuery.php:372
+[05-Jul-2012 16:23:53] PHP   9. DatabaseQuery->calc() C:\xampp\htdocs\testeTrilado\core\libs\DatabaseQuery.php:395
+[05-Jul-2012 16:23:53] PHP  10. DatabaseQuery->all() C:\xampp\htdocs\testeTrilado\core\libs\DatabaseQuery.php:386
+[05-Jul-2012 16:23:53] PHP  11. Debug::addSql() C:\xampp\htdocs\testeTrilado\core\libs\DatabaseQuery.php:300
+[05-Jul-2012 16:23:53] PHP  12. Debug::bindValues() C:\xampp\htdocs\testeTrilado\core\libs\Debug.php:38
+[05-Jul-2012 16:23:53] PHP Notice:  Undefined index: dot in C:\xampp\htdocs\testeTrilado\core\libs\Template.php on line 51
+[05-Jul-2012 16:23:53] PHP Stack trace:
+[05-Jul-2012 16:23:53] PHP   1. {main}() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:0
+[05-Jul-2012 16:23:53] PHP   2. App->__construct() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:39
+[05-Jul-2012 16:23:53] PHP   3. Template->render() C:\xampp\htdocs\testeTrilado\core\libs\App.php:67
+[06-Jul-2012 00:02:50] PHP Notice:  Undefined index: AuthController in C:\xampp\htdocs\testeTrilado\core\libs\Annotation.php on line 47
+[06-Jul-2012 00:02:50] PHP Stack trace:
+[06-Jul-2012 00:02:50] PHP   1. {main}() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:0
+[06-Jul-2012 00:02:50] PHP   2. App->__construct() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:39
+[06-Jul-2012 00:02:50] PHP   3. App->auth() C:\xampp\htdocs\testeTrilado\core\libs\App.php:65
+[06-Jul-2012 00:02:50] PHP   4. Annotation::get() C:\xampp\htdocs\testeTrilado\core\libs\App.php:195
+[06-Jul-2012 00:02:50] PHP Notice:  Undefined property: stdClass::$Auth in C:\xampp\htdocs\testeTrilado\core\libs\App.php on line 202
+[06-Jul-2012 00:02:50] PHP Stack trace:
+[06-Jul-2012 00:02:50] PHP   1. {main}() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:0
+[06-Jul-2012 00:02:50] PHP   2. App->__construct() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:39
+[06-Jul-2012 00:02:50] PHP   3. App->auth() C:\xampp\htdocs\testeTrilado\core\libs\App.php:65
+[06-Jul-2012 00:02:50] PHP Notice:  Undefined variable: roles in C:\xampp\htdocs\testeTrilado\core\libs\App.php on line 204
+[06-Jul-2012 00:02:50] PHP Stack trace:
+[06-Jul-2012 00:02:50] PHP   1. {main}() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:0
+[06-Jul-2012 00:02:50] PHP   2. App->__construct() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:39
+[06-Jul-2012 00:02:50] PHP   3. App->auth() C:\xampp\htdocs\testeTrilado\core\libs\App.php:65
+[06-Jul-2012 00:02:50] PHP Notice:  Undefined variable: roles in C:\xampp\htdocs\testeTrilado\core\libs\App.php on line 207
+[06-Jul-2012 00:02:50] PHP Stack trace:
+[06-Jul-2012 00:02:50] PHP   1. {main}() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:0
+[06-Jul-2012 00:02:50] PHP   2. App->__construct() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:39
+[06-Jul-2012 00:02:50] PHP   3. App->auth() C:\xampp\htdocs\testeTrilado\core\libs\App.php:65
+[06-Jul-2012 00:02:50] PHP Notice:  Undefined property: stdClass::$Master in C:\xampp\htdocs\testeTrilado\core\libs\Template.php on line 94
+[06-Jul-2012 00:02:50] PHP Stack trace:
+[06-Jul-2012 00:02:50] PHP   1. {main}() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:0
+[06-Jul-2012 00:02:50] PHP   2. App->__construct() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:39
+[06-Jul-2012 00:02:50] PHP   3. Template->render() C:\xampp\htdocs\testeTrilado\core\libs\App.php:67
+[06-Jul-2012 00:02:50] PHP   4. Template->master() C:\xampp\htdocs\testeTrilado\core\libs\Template.php:30
+[06-Jul-2012 00:02:50] PHP Notice:  Undefined variable: tpl in C:\xampp\htdocs\testeTrilado\core\libs\Template.php on line 99
+[06-Jul-2012 00:02:50] PHP Stack trace:
+[06-Jul-2012 00:02:50] PHP   1. {main}() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:0
+[06-Jul-2012 00:02:50] PHP   2. App->__construct() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:39
+[06-Jul-2012 00:02:50] PHP   3. Template->render() C:\xampp\htdocs\testeTrilado\core\libs\App.php:67
+[06-Jul-2012 00:02:50] PHP   4. Template->master() C:\xampp\htdocs\testeTrilado\core\libs\Template.php:30
+[06-Jul-2012 00:02:50] PHP Notice:  Undefined index: dot in C:\xampp\htdocs\testeTrilado\core\libs\Template.php on line 51
+[06-Jul-2012 00:02:50] PHP Stack trace:
+[06-Jul-2012 00:02:50] PHP   1. {main}() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:0
+[06-Jul-2012 00:02:50] PHP   2. App->__construct() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:39
+[06-Jul-2012 00:02:50] PHP   3. Template->render() C:\xampp\htdocs\testeTrilado\core\libs\App.php:67
+[06-Jul-2012 00:06:31] PHP Notice:  Undefined index: POSTController in C:\xampp\htdocs\testeTrilado\core\libs\Annotation.php on line 47
+[06-Jul-2012 00:06:31] PHP Stack trace:
+[06-Jul-2012 00:06:31] PHP   1. {main}() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:0
+[06-Jul-2012 00:06:31] PHP   2. App->__construct() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:39
+[06-Jul-2012 00:06:31] PHP   3. App->auth() C:\xampp\htdocs\testeTrilado\core\libs\App.php:65
+[06-Jul-2012 00:06:31] PHP   4. Annotation::get() C:\xampp\htdocs\testeTrilado\core\libs\App.php:195
+[06-Jul-2012 00:06:31] PHP Notice:  Undefined property: stdClass::$Auth in C:\xampp\htdocs\testeTrilado\core\libs\App.php on line 202
+[06-Jul-2012 00:06:31] PHP Stack trace:
+[06-Jul-2012 00:06:31] PHP   1. {main}() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:0
+[06-Jul-2012 00:06:31] PHP   2. App->__construct() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:39
+[06-Jul-2012 00:06:31] PHP   3. App->auth() C:\xampp\htdocs\testeTrilado\core\libs\App.php:65
+[06-Jul-2012 00:06:31] PHP Notice:  Undefined variable: roles in C:\xampp\htdocs\testeTrilado\core\libs\App.php on line 204
+[06-Jul-2012 00:06:31] PHP Stack trace:
+[06-Jul-2012 00:06:31] PHP   1. {main}() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:0
+[06-Jul-2012 00:06:31] PHP   2. App->__construct() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:39
+[06-Jul-2012 00:06:31] PHP   3. App->auth() C:\xampp\htdocs\testeTrilado\core\libs\App.php:65
+[06-Jul-2012 00:06:31] PHP Notice:  Undefined variable: roles in C:\xampp\htdocs\testeTrilado\core\libs\App.php on line 207
+[06-Jul-2012 00:06:31] PHP Stack trace:
+[06-Jul-2012 00:06:31] PHP   1. {main}() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:0
+[06-Jul-2012 00:06:31] PHP   2. App->__construct() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:39
+[06-Jul-2012 00:06:31] PHP   3. App->auth() C:\xampp\htdocs\testeTrilado\core\libs\App.php:65
+[06-Jul-2012 00:06:31] PHP Notice:  Undefined property: stdClass::$Master in C:\xampp\htdocs\testeTrilado\core\libs\Template.php on line 94
+[06-Jul-2012 00:06:31] PHP Stack trace:
+[06-Jul-2012 00:06:31] PHP   1. {main}() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:0
+[06-Jul-2012 00:06:31] PHP   2. App->__construct() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:39
+[06-Jul-2012 00:06:31] PHP   3. Template->render() C:\xampp\htdocs\testeTrilado\core\libs\App.php:67
+[06-Jul-2012 00:06:31] PHP   4. Template->master() C:\xampp\htdocs\testeTrilado\core\libs\Template.php:30
+[06-Jul-2012 00:06:31] PHP Notice:  Undefined variable: tpl in C:\xampp\htdocs\testeTrilado\core\libs\Template.php on line 99
+[06-Jul-2012 00:06:31] PHP Stack trace:
+[06-Jul-2012 00:06:31] PHP   1. {main}() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:0
+[06-Jul-2012 00:06:31] PHP   2. App->__construct() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:39
+[06-Jul-2012 00:06:31] PHP   3. Template->render() C:\xampp\htdocs\testeTrilado\core\libs\App.php:67
+[06-Jul-2012 00:06:31] PHP   4. Template->master() C:\xampp\htdocs\testeTrilado\core\libs\Template.php:30
+[06-Jul-2012 00:06:31] PHP Notice:  Undefined index: Post in C:\xampp\htdocs\testeTrilado\core\libs\Database.php on line 61
+[06-Jul-2012 00:06:31] PHP Stack trace:
+[06-Jul-2012 00:06:31] PHP   1. {main}() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:0
+[06-Jul-2012 00:06:31] PHP   2. App->__construct() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:39
+[06-Jul-2012 00:06:31] PHP   3. Template->render() C:\xampp\htdocs\testeTrilado\core\libs\App.php:67
+[06-Jul-2012 00:06:31] PHP   4. call_user_func_array() C:\xampp\htdocs\testeTrilado\core\libs\Template.php:36
+[06-Jul-2012 00:06:31] PHP   5. PostController->index() C:\xampp\htdocs\testeTrilado\core\libs\Template.php:36
+[06-Jul-2012 00:06:31] PHP   6. Model::all() C:\xampp\htdocs\testeTrilado\modules\post\controllers\PostController.php:7
+[06-Jul-2012 00:06:31] PHP   7. Database->__get() C:\xampp\htdocs\testeTrilado\modules\post\controllers\PostController.php:101
+[06-Jul-2012 00:06:31] PHP Notice:  Undefined index: Post in C:\xampp\htdocs\testeTrilado\core\libs\Annotation.php on line 47
+[06-Jul-2012 00:06:31] PHP Stack trace:
+[06-Jul-2012 00:06:31] PHP   1. {main}() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:0
+[06-Jul-2012 00:06:31] PHP   2. App->__construct() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:39
+[06-Jul-2012 00:06:31] PHP   3. Template->render() C:\xampp\htdocs\testeTrilado\core\libs\App.php:67
+[06-Jul-2012 00:06:31] PHP   4. call_user_func_array() C:\xampp\htdocs\testeTrilado\core\libs\Template.php:36
+[06-Jul-2012 00:06:31] PHP   5. PostController->index() C:\xampp\htdocs\testeTrilado\core\libs\Template.php:36
+[06-Jul-2012 00:06:31] PHP   6. Model::all() C:\xampp\htdocs\testeTrilado\modules\post\controllers\PostController.php:7
+[06-Jul-2012 00:06:31] PHP   7. Database->__get() C:\xampp\htdocs\testeTrilado\modules\post\controllers\PostController.php:101
+[06-Jul-2012 00:06:31] PHP   8. DatabaseQuery->__construct() C:\xampp\htdocs\testeTrilado\core\libs\Database.php:63
+[06-Jul-2012 00:06:31] PHP   9. Annotation::get() C:\xampp\htdocs\testeTrilado\core\libs\DatabaseQuery.php:110
+[06-Jul-2012 00:06:31] PHP Notice:  Undefined offset: 0 in C:\xampp\htdocs\testeTrilado\core\libs\Debug.php on line 51
+[06-Jul-2012 00:06:31] PHP Stack trace:
+[06-Jul-2012 00:06:31] PHP   1. {main}() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:0
+[06-Jul-2012 00:06:31] PHP   2. App->__construct() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:39
+[06-Jul-2012 00:06:31] PHP   3. Template->render() C:\xampp\htdocs\testeTrilado\core\libs\App.php:67
+[06-Jul-2012 00:06:31] PHP   4. call_user_func_array() C:\xampp\htdocs\testeTrilado\core\libs\Template.php:36
+[06-Jul-2012 00:06:31] PHP   5. PostController->index() C:\xampp\htdocs\testeTrilado\core\libs\Template.php:36
+[06-Jul-2012 00:06:31] PHP   6. Model::all() C:\xampp\htdocs\testeTrilado\modules\post\controllers\PostController.php:7
+[06-Jul-2012 00:06:31] PHP   7. DatabaseQuery->paginate() C:\xampp\htdocs\testeTrilado\core\libs\Model.php:101
+[06-Jul-2012 00:06:31] PHP   8. DatabaseQuery->all() C:\xampp\htdocs\testeTrilado\core\libs\DatabaseQuery.php:369
+[06-Jul-2012 00:06:31] PHP   9. Debug::addSql() C:\xampp\htdocs\testeTrilado\core\libs\DatabaseQuery.php:300
+[06-Jul-2012 00:06:31] PHP  10. Debug::bindValues() C:\xampp\htdocs\testeTrilado\core\libs\Debug.php:38
+[06-Jul-2012 00:06:31] PHP Notice:  Undefined offset: 0 in C:\xampp\htdocs\testeTrilado\core\libs\Debug.php on line 51
+[06-Jul-2012 00:06:31] PHP Stack trace:
+[06-Jul-2012 00:06:31] PHP   1. {main}() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:0
+[06-Jul-2012 00:06:31] PHP   2. App->__construct() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:39
+[06-Jul-2012 00:06:31] PHP   3. Template->render() C:\xampp\htdocs\testeTrilado\core\libs\App.php:67
+[06-Jul-2012 00:06:31] PHP   4. call_user_func_array() C:\xampp\htdocs\testeTrilado\core\libs\Template.php:36
+[06-Jul-2012 00:06:31] PHP   5. PostController->index() C:\xampp\htdocs\testeTrilado\core\libs\Template.php:36
+[06-Jul-2012 00:06:31] PHP   6. Model::all() C:\xampp\htdocs\testeTrilado\modules\post\controllers\PostController.php:7
+[06-Jul-2012 00:06:31] PHP   7. DatabaseQuery->paginate() C:\xampp\htdocs\testeTrilado\core\libs\Model.php:101
+[06-Jul-2012 00:06:31] PHP   8. DatabaseQuery->count() C:\xampp\htdocs\testeTrilado\core\libs\DatabaseQuery.php:372
+[06-Jul-2012 00:06:31] PHP   9. DatabaseQuery->calc() C:\xampp\htdocs\testeTrilado\core\libs\DatabaseQuery.php:395
+[06-Jul-2012 00:06:31] PHP  10. DatabaseQuery->all() C:\xampp\htdocs\testeTrilado\core\libs\DatabaseQuery.php:386
+[06-Jul-2012 00:06:31] PHP  11. Debug::addSql() C:\xampp\htdocs\testeTrilado\core\libs\DatabaseQuery.php:300
+[06-Jul-2012 00:06:31] PHP  12. Debug::bindValues() C:\xampp\htdocs\testeTrilado\core\libs\Debug.php:38
+[06-Jul-2012 00:06:31] PHP Notice:  Undefined index: dot in C:\xampp\htdocs\testeTrilado\core\libs\Template.php on line 51
+[06-Jul-2012 00:06:31] PHP Stack trace:
+[06-Jul-2012 00:06:31] PHP   1. {main}() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:0
+[06-Jul-2012 00:06:31] PHP   2. App->__construct() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:39
+[06-Jul-2012 00:06:31] PHP   3. Template->render() C:\xampp\htdocs\testeTrilado\core\libs\App.php:67
+[06-Jul-2012 00:06:31] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\testeTrilado\core\libs\Import.php:159) in C:\xampp\htdocs\testeTrilado\core\libs\App.php on line 76
+[06-Jul-2012 00:06:31] PHP Stack trace:
+[06-Jul-2012 00:06:31] PHP   1. {main}() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:0
+[06-Jul-2012 00:06:31] PHP   2. App->__construct() C:\xampp\htdocs\testeTrilado\app\wwwroot\index.php:39
+[06-Jul-2012 00:06:31] PHP   3. header() C:\xampp\htdocs\testeTrilado\core\libs\App.php:76

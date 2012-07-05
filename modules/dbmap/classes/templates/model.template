@@ -1,0 +1,6 @@
+<?php
+/** @Entity(":table_name") */
+class :class_name extends Model
+{
+:properties
+}
