@@ -9,7 +9,7 @@
 */
 //Modules::add('dbmap', modpath . 'dbmap/');
 Modules::add('auth', modpath . 'auth/');
-Modules::add('produto', modpath . 'produto/');
+Modules::add('produtos', modpath . 'produtos/');
 
 
 /**
