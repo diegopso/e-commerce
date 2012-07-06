@@ -8,7 +8,7 @@
 * Definição dos modulos utilizados
 */
 //Modules::add('dbmap', modpath . 'dbmap/');
-Modules::add('auth', modpath . 'auth/');
+//Modules::add('auth', modpath . 'auth/');
 Modules::add('produtos', modpath . 'produtos/');
 
 
@@ -19,3 +19,4 @@ Modules::add('produtos', modpath . 'produtos/');
  * Também é possível criar prefixos. Veja um exemplo:
  * Route::prefix('admin');
  */
+Route::add('^produtos/cadastrar/([\d]+)$','produtos/cadastrar/$1');

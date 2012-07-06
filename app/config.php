@@ -96,4 +96,5 @@ define('dbmap_force', false);
 
 define('auto_ajax', false);
 define('auto_dotxml', false);
+
 define('auto_dotjson', false);
