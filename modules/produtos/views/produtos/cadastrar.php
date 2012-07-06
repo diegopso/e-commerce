@@ -6,8 +6,9 @@
     <br />
     <label>
         Quantidade<br />
-        <input type="text" name="quantidade" value="<?= $model->quantidaade ?>"
+        <input type="text" name="quantidade" value="<?= $model->quantidade ?>" />
     </label>
     <br />
     <input type="submit" value="Salvar" />
+    <input type="hidden" name="id" value="<?= $model->id ?>" />
 </form>

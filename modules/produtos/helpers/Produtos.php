@@ -21,22 +21,29 @@ class Helper_Produtos{
         return $db->all();
     }
     
-    public static function cadastrar($properties){
-        $produto = Produto::get(isset($properties['id']) ? $properties['id'] : null);
+    public static function cadastrar($propriedades){
+        $produto = Produto::get($propriedades['id'] ? $propriedades['id'] : null);
         
-        foreach (self::$validation as $key => $value) {
-            if(isset($properties[$key])){
-                if(preg_match($value['regExp'], $properties[$key]) == 0){
+        foreach (self::$validation as $k => $v) {
+            if(isset($propriedades[$k])){
+                if(preg_match($v['regExp'], $propriedades[$k]) == 0){
                     throw new ValidationException();
-                }else{
-                    $produto->{$key} = $properties[$key];
                 }
             }elseif($value['obrigatorio']){
-                throw new ValidationException();
+                throw new ValidationException("Formato de $k invalido.");
             }
+        }
+        
+        foreach ($propriedades as $k => $p) {
+            $produto->{$k} = $p;
         }
         
         $produto->save();
         return $produto;
+    }
+    
+    public static function excluir($id) {
+        $produto = Produto::get($id);
+        $produto->delete();
     }
 }

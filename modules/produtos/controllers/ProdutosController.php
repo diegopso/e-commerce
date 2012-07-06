@@ -17,7 +17,7 @@ class ProdutosController extends Controller{
         return $this->_view($model);
     }
     
-    public function cadastrar() {
+    public function cadastrar($id = null) {
         if(is_post){
             $properties = $this->post();
             
@@ -27,11 +27,28 @@ class ProdutosController extends Controller{
                 $this->_redirect('~/produtos');
                 return;
             } catch (Exception $exc) {
-                $this->_flash('ERROR', 'Ocorreu um erro ao cadastrar o produto. <br/>' . var_dump($exc->getMessage()));
+                $this->_flash('ERROR', 'Ocorreu um erro ao cadastrar o produto.');
                 return $this->_view($produto);
             }
         }
         
-        return $this->_view(new Model_Produto());
+        return $this->_view(Produto::get($id));
+    }
+    
+    public function excluir($id) {
+        try {
+            Helper_Produtos::excluir($id);
+            $this->_flash('SUCCESS', 'O produto foi excluído.');
+            return $this->_json(array(
+                'status' => 'SUCCESS',
+                'message' => 'O produto foi excluído.'
+            ));
+        } catch (Exception $exc) {
+            $this->_flash('ERROR', 'Ocorreu um erro ao excluir o produto.');
+            return $this->_json(array(
+                'status' => 'ERROR',
+                'message' => 'Ocorreu um erro ao excluir o produto.'
+            ));
+        }
     }
 }

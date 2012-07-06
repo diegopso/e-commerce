@@ -19,4 +19,3 @@ Modules::add('produtos', modpath . 'produtos/');
  * Também é possível criar prefixos. Veja um exemplo:
  * Route::prefix('admin');
  */
-Route::add('^produtos/cadastrar/([\d]+)$','produtos/cadastrar/$1');
