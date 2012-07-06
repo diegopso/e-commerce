@@ -1,0 +1,23 @@
+/*
+ ==================== content
+*/
+.content
+{
+    margin-top: 50px;
+}
+
+
+/*
+ ==================== footer
+*/
+
+.footer
+{
+    background-color: whitesmoke;
+}
+h3
+{
+    display: block;
+    border-bottom: 1px solid #090909;
+    margin-bottom: 10px;
+}
