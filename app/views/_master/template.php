@@ -4,13 +4,14 @@
         <title>Lobo</title>
 
         <link rel="stylesheet" type="text/css" href="~/app/wwwroot/media/css/bootstrap.css"></link>
-        <link rel="stylesheet" type="text/css" href="~/app/wwwroot/media/css/responsive.css"></link>
+
         <link rel="stylesheet" type="text/css" href="~/app/wwwroot/media/css/app.css"></link>
 
     </head>
     <body>
         <div class="container">
 
+            <!-- Menu -->
             <div class="navbar navbar-fixed-top">
                 <div class="navbar-inner">
                     <div class="container">
@@ -114,56 +115,60 @@
                     </div>
                 </div><!-- /navbar-inner -->
             </div>
-            <div class="content">
-                Teste
-                <?= flash ?>
-                <?= content ?>
+        </div>
+
+        <div class="content container">
+            <?= flash ?>
+            <?= content ?>
+        </div>
+        
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="span5">
+                        <img src="http://lorempixel.com/g/400/200/animals/9/" />
+                    </div>
+                    <div class="span2 offset1">
+                        <h3>Span 2</h3>
+                        <p>
+                            <a href="#">Link</a>
+                        </p>
+                        <p>
+                            <a href="#">Link</a>
+                        </p>
+                        <p>
+                            <a href="#">Link</a>
+                        </p>
+                    </div>
+                    <div class="span2">
+                        <h3>Span 2</h3>
+                        <p>
+                            <a href="#">Link</a>
+                        </p>
+                        <p>
+                            <a href="#">Link</a>
+                        </p>
+                        <p>
+                            <a href="#">Link</a>
+                        </p>
+                    </div>
+                    <div class="span2">
+                        <h3>Span 2</h3>
+                        <p>
+                            <a href="#">Link</a>
+                        </p>
+                        <p>
+                            <a href="#">Link</a>
+                        </p>
+                        <p>
+                            <a href="#">Link</a>
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="row">
-                <div class="span5">
-                    <img src="http://lorempixel.com/g/400/200/animals/9/" />
-                </div>
-                <div class="span2 offset1">
-                    <h3>Span 2</h3>
-                    <p>
-                        <a href="#">Link</a>
-                    </p>
-                    <p>
-                        <a href="#">Link</a>
-                    </p>
-                    <p>
-                        <a href="#">Link</a>
-                    </p>
-                </div>
-                <div class="span2">
-                    <h3>Span 2</h3>
-                    <p>
-                        <a href="#">Link</a>
-                    </p>
-                    <p>
-                        <a href="#">Link</a>
-                    </p>
-                    <p>
-                        <a href="#">Link</a>
-                    </p>
-                </div>
-                <div class="span2">
-                    <h3>Span 2</h3>
-                    <p>
-                        <a href="#">Link</a>
-                    </p>
-                    <p>
-                        <a href="#">Link</a>
-                    </p>
-                    <p>
-                        <a href="#">Link</a>
-                    </p>
-                </div>
-            </div>
-
-            <script type="text/javascript" src="~/app/wwwroot/media/js/jquery-1.7.2.min.js"></script>
-            <script type="text/javascript" src="~/app/wwwroot/media/js/bootstrap.min.js"></script>
-
-
+        </div>
+        <script type="text/javascript" src="~/app/wwwroot/media/js/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="~/app/wwwroot/media/js/bootstrap.min.js"></script>
+        
     </body>
 </html>
