@@ -389,3 +389,124 @@
 [06-Jul-2012 01:03:53] PHP   1. {main}() C:\xampp\htdocs\e-commerce\app\wwwroot\index.php:0
 [06-Jul-2012 01:03:53] PHP   2. App->__construct() C:\xampp\htdocs\e-commerce\app\wwwroot\index.php:39
 [06-Jul-2012 01:03:53] PHP   3. Template->render() C:\xampp\htdocs\e-commerce\core\libs\App.php:67
+[06-Jul-2012 02:19:30] PHP Notice:  Undefined index: HomeController in C:\xampp\htdocs\e-commerce\core\libs\Annotation.php on line 47
+[06-Jul-2012 02:19:30] PHP Stack trace:
+[06-Jul-2012 02:19:30] PHP   1. {main}() C:\xampp\htdocs\e-commerce\app\wwwroot\index.php:0
+[06-Jul-2012 02:19:30] PHP   2. App->__construct() C:\xampp\htdocs\e-commerce\app\wwwroot\index.php:39
+[06-Jul-2012 02:19:30] PHP   3. App->auth() C:\xampp\htdocs\e-commerce\core\libs\App.php:65
+[06-Jul-2012 02:19:30] PHP   4. Annotation::get() C:\xampp\htdocs\e-commerce\core\libs\App.php:195
+[06-Jul-2012 02:19:30] PHP Notice:  Undefined property: stdClass::$Auth in C:\xampp\htdocs\e-commerce\core\libs\App.php on line 202
+[06-Jul-2012 02:19:30] PHP Stack trace:
+[06-Jul-2012 02:19:30] PHP   1. {main}() C:\xampp\htdocs\e-commerce\app\wwwroot\index.php:0
+[06-Jul-2012 02:19:30] PHP   2. App->__construct() C:\xampp\htdocs\e-commerce\app\wwwroot\index.php:39
+[06-Jul-2012 02:19:30] PHP   3. App->auth() C:\xampp\htdocs\e-commerce\core\libs\App.php:65
+[06-Jul-2012 02:19:30] PHP Notice:  Undefined variable: roles in C:\xampp\htdocs\e-commerce\core\libs\App.php on line 204
+[06-Jul-2012 02:19:30] PHP Stack trace:
+[06-Jul-2012 02:19:30] PHP   1. {main}() C:\xampp\htdocs\e-commerce\app\wwwroot\index.php:0
+[06-Jul-2012 02:19:30] PHP   2. App->__construct() C:\xampp\htdocs\e-commerce\app\wwwroot\index.php:39
+[06-Jul-2012 02:19:30] PHP   3. App->auth() C:\xampp\htdocs\e-commerce\core\libs\App.php:65
+[06-Jul-2012 02:19:30] PHP Notice:  Undefined variable: roles in C:\xampp\htdocs\e-commerce\core\libs\App.php on line 207
+[06-Jul-2012 02:19:30] PHP Stack trace:
+[06-Jul-2012 02:19:30] PHP   1. {main}() C:\xampp\htdocs\e-commerce\app\wwwroot\index.php:0
+[06-Jul-2012 02:19:30] PHP   2. App->__construct() C:\xampp\htdocs\e-commerce\app\wwwroot\index.php:39
+[06-Jul-2012 02:19:30] PHP   3. App->auth() C:\xampp\htdocs\e-commerce\core\libs\App.php:65
+[06-Jul-2012 02:19:30] PHP Notice:  Undefined property: stdClass::$Master in C:\xampp\htdocs\e-commerce\core\libs\Template.php on line 94
+[06-Jul-2012 02:19:30] PHP Stack trace:
+[06-Jul-2012 02:19:30] PHP   1. {main}() C:\xampp\htdocs\e-commerce\app\wwwroot\index.php:0
+[06-Jul-2012 02:19:30] PHP   2. App->__construct() C:\xampp\htdocs\e-commerce\app\wwwroot\index.php:39
+[06-Jul-2012 02:19:30] PHP   3. Template->render() C:\xampp\htdocs\e-commerce\core\libs\App.php:67
+[06-Jul-2012 02:19:30] PHP   4. Template->master() C:\xampp\htdocs\e-commerce\core\libs\Template.php:30
+[06-Jul-2012 02:19:30] PHP Notice:  Undefined variable: tpl in C:\xampp\htdocs\e-commerce\core\libs\Template.php on line 99
+[06-Jul-2012 02:19:30] PHP Stack trace:
+[06-Jul-2012 02:19:30] PHP   1. {main}() C:\xampp\htdocs\e-commerce\app\wwwroot\index.php:0
+[06-Jul-2012 02:19:30] PHP   2. App->__construct() C:\xampp\htdocs\e-commerce\app\wwwroot\index.php:39
+[06-Jul-2012 02:19:30] PHP   3. Template->render() C:\xampp\htdocs\e-commerce\core\libs\App.php:67
+[06-Jul-2012 02:19:30] PHP   4. Template->master() C:\xampp\htdocs\e-commerce\core\libs\Template.php:30
+[06-Jul-2012 02:34:34] PHP Notice:  Undefined index: ProdutosController in C:\xampp\htdocs\e-commerce\core\libs\Annotation.php on line 47
+[06-Jul-2012 02:34:34] PHP Stack trace:
+[06-Jul-2012 02:34:34] PHP   1. {main}() C:\xampp\htdocs\e-commerce\app\wwwroot\index.php:0
+[06-Jul-2012 02:34:34] PHP   2. App->__construct() C:\xampp\htdocs\e-commerce\app\wwwroot\index.php:39
+[06-Jul-2012 02:34:34] PHP   3. App->auth() C:\xampp\htdocs\e-commerce\core\libs\App.php:65
+[06-Jul-2012 02:34:34] PHP   4. Annotation::get() C:\xampp\htdocs\e-commerce\core\libs\App.php:195
+[06-Jul-2012 02:34:34] PHP Notice:  Undefined property: stdClass::$Auth in C:\xampp\htdocs\e-commerce\core\libs\App.php on line 202
+[06-Jul-2012 02:34:34] PHP Stack trace:
+[06-Jul-2012 02:34:34] PHP   1. {main}() C:\xampp\htdocs\e-commerce\app\wwwroot\index.php:0
+[06-Jul-2012 02:34:34] PHP   2. App->__construct() C:\xampp\htdocs\e-commerce\app\wwwroot\index.php:39
+[06-Jul-2012 02:34:34] PHP   3. App->auth() C:\xampp\htdocs\e-commerce\core\libs\App.php:65
+[06-Jul-2012 02:34:34] PHP Notice:  Undefined variable: roles in C:\xampp\htdocs\e-commerce\core\libs\App.php on line 204
+[06-Jul-2012 02:34:34] PHP Stack trace:
+[06-Jul-2012 02:34:34] PHP   1. {main}() C:\xampp\htdocs\e-commerce\app\wwwroot\index.php:0
+[06-Jul-2012 02:34:34] PHP   2. App->__construct() C:\xampp\htdocs\e-commerce\app\wwwroot\index.php:39
+[06-Jul-2012 02:34:34] PHP   3. App->auth() C:\xampp\htdocs\e-commerce\core\libs\App.php:65
+[06-Jul-2012 02:34:34] PHP Notice:  Undefined variable: roles in C:\xampp\htdocs\e-commerce\core\libs\App.php on line 207
+[06-Jul-2012 02:34:34] PHP Stack trace:
+[06-Jul-2012 02:34:34] PHP   1. {main}() C:\xampp\htdocs\e-commerce\app\wwwroot\index.php:0
+[06-Jul-2012 02:34:34] PHP   2. App->__construct() C:\xampp\htdocs\e-commerce\app\wwwroot\index.php:39
+[06-Jul-2012 02:34:34] PHP   3. App->auth() C:\xampp\htdocs\e-commerce\core\libs\App.php:65
+[06-Jul-2012 02:34:34] PHP Notice:  Undefined property: stdClass::$Master in C:\xampp\htdocs\e-commerce\core\libs\Template.php on line 94
+[06-Jul-2012 02:34:34] PHP Stack trace:
+[06-Jul-2012 02:34:34] PHP   1. {main}() C:\xampp\htdocs\e-commerce\app\wwwroot\index.php:0
+[06-Jul-2012 02:34:34] PHP   2. App->__construct() C:\xampp\htdocs\e-commerce\app\wwwroot\index.php:39
+[06-Jul-2012 02:34:34] PHP   3. Template->render() C:\xampp\htdocs\e-commerce\core\libs\App.php:67
+[06-Jul-2012 02:34:34] PHP   4. Template->master() C:\xampp\htdocs\e-commerce\core\libs\Template.php:30
+[06-Jul-2012 02:34:34] PHP Notice:  Undefined variable: tpl in C:\xampp\htdocs\e-commerce\core\libs\Template.php on line 99
+[06-Jul-2012 02:34:34] PHP Stack trace:
+[06-Jul-2012 02:34:34] PHP   1. {main}() C:\xampp\htdocs\e-commerce\app\wwwroot\index.php:0
+[06-Jul-2012 02:34:34] PHP   2. App->__construct() C:\xampp\htdocs\e-commerce\app\wwwroot\index.php:39
+[06-Jul-2012 02:34:34] PHP   3. Template->render() C:\xampp\htdocs\e-commerce\core\libs\App.php:67
+[06-Jul-2012 02:34:34] PHP   4. Template->master() C:\xampp\htdocs\e-commerce\core\libs\Template.php:30
+[06-Jul-2012 02:34:34] PHP Notice:  Undefined index: Produto in C:\xampp\htdocs\e-commerce\core\libs\Annotation.php on line 47
+[06-Jul-2012 02:34:34] PHP Stack trace:
+[06-Jul-2012 02:34:34] PHP   1. {main}() C:\xampp\htdocs\e-commerce\app\wwwroot\index.php:0
+[06-Jul-2012 02:34:34] PHP   2. App->__construct() C:\xampp\htdocs\e-commerce\app\wwwroot\index.php:39
+[06-Jul-2012 02:34:34] PHP   3. Template->render() C:\xampp\htdocs\e-commerce\core\libs\App.php:67
+[06-Jul-2012 02:34:34] PHP   4. call_user_func_array() C:\xampp\htdocs\e-commerce\core\libs\Template.php:36
+[06-Jul-2012 02:34:34] PHP   5. ProdutosController->index() C:\xampp\htdocs\e-commerce\core\libs\Template.php:36
+[06-Jul-2012 02:34:34] PHP   6. Helper_Produtos::get_produtos() C:\xampp\htdocs\e-commerce\modules\produtos\controllers\ProdutosController.php:11
+[06-Jul-2012 02:34:34] PHP   7. DatabaseQuery->__construct() C:\xampp\htdocs\e-commerce\modules\produtos\helpers\Produtos.php:5
+[06-Jul-2012 02:34:34] PHP   8. Annotation::get() C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php:110
+[06-Jul-2012 02:34:34] PHP Notice:  Undefined offset: 0 in C:\xampp\htdocs\e-commerce\core\libs\Debug.php on line 51
+[06-Jul-2012 02:34:34] PHP Stack trace:
+[06-Jul-2012 02:34:34] PHP   1. {main}() C:\xampp\htdocs\e-commerce\app\wwwroot\index.php:0
+[06-Jul-2012 02:34:34] PHP   2. App->__construct() C:\xampp\htdocs\e-commerce\app\wwwroot\index.php:39
+[06-Jul-2012 02:34:34] PHP   3. Template->render() C:\xampp\htdocs\e-commerce\core\libs\App.php:67
+[06-Jul-2012 02:34:34] PHP   4. call_user_func_array() C:\xampp\htdocs\e-commerce\core\libs\Template.php:36
+[06-Jul-2012 02:34:34] PHP   5. ProdutosController->index() C:\xampp\htdocs\e-commerce\core\libs\Template.php:36
+[06-Jul-2012 02:34:34] PHP   6. Helper_Produtos::get_produtos() C:\xampp\htdocs\e-commerce\modules\produtos\controllers\ProdutosController.php:11
+[06-Jul-2012 02:34:34] PHP   7. DatabaseQuery->count() C:\xampp\htdocs\e-commerce\modules\produtos\helpers\Produtos.php:10
+[06-Jul-2012 02:34:34] PHP   8. DatabaseQuery->calc() C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php:395
+[06-Jul-2012 02:34:34] PHP   9. DatabaseQuery->all() C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php:386
+[06-Jul-2012 02:34:34] PHP  10. Debug::addSql() C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php:300
+[06-Jul-2012 02:34:34] PHP  11. Debug::bindValues() C:\xampp\htdocs\e-commerce\core\libs\Debug.php:38
+[06-Jul-2012 02:34:34] PHP Notice:  Undefined offset: 0 in C:\xampp\htdocs\e-commerce\core\libs\Debug.php on line 51
+[06-Jul-2012 02:34:34] PHP Stack trace:
+[06-Jul-2012 02:34:34] PHP   1. {main}() C:\xampp\htdocs\e-commerce\app\wwwroot\index.php:0
+[06-Jul-2012 02:34:34] PHP   2. App->__construct() C:\xampp\htdocs\e-commerce\app\wwwroot\index.php:39
+[06-Jul-2012 02:34:34] PHP   3. Template->render() C:\xampp\htdocs\e-commerce\core\libs\App.php:67
+[06-Jul-2012 02:34:34] PHP   4. call_user_func_array() C:\xampp\htdocs\e-commerce\core\libs\Template.php:36
+[06-Jul-2012 02:34:34] PHP   5. ProdutosController->index() C:\xampp\htdocs\e-commerce\core\libs\Template.php:36
+[06-Jul-2012 02:34:34] PHP   6. Helper_Produtos::get_produtos() C:\xampp\htdocs\e-commerce\modules\produtos\controllers\ProdutosController.php:11
+[06-Jul-2012 02:34:34] PHP   7. DatabaseQuery->all() C:\xampp\htdocs\e-commerce\modules\produtos\helpers\Produtos.php:13
+[06-Jul-2012 02:34:34] PHP   8. Debug::addSql() C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php:300
+[06-Jul-2012 02:34:34] PHP   9. Debug::bindValues() C:\xampp\htdocs\e-commerce\core\libs\Debug.php:38
+[06-Jul-2012 02:34:34] PHP Notice:  Undefined index: dot in C:\xampp\htdocs\e-commerce\core\libs\Template.php on line 51
+[06-Jul-2012 02:34:34] PHP Stack trace:
+[06-Jul-2012 02:34:34] PHP   1. {main}() C:\xampp\htdocs\e-commerce\app\wwwroot\index.php:0
+[06-Jul-2012 02:34:34] PHP   2. App->__construct() C:\xampp\htdocs\e-commerce\app\wwwroot\index.php:39
+[06-Jul-2012 02:34:34] PHP   3. Template->render() C:\xampp\htdocs\e-commerce\core\libs\App.php:67
+[06-Jul-2012 02:34:34] PHP Notice:  Undefined variable: model in C:\xampp\htdocs\e-commerce\modules\produtos\views\produtos\index.php on line 1
+[06-Jul-2012 02:34:34] PHP Stack trace:
+[06-Jul-2012 02:34:34] PHP   1. {main}() C:\xampp\htdocs\e-commerce\app\wwwroot\index.php:0
+[06-Jul-2012 02:34:34] PHP   2. App->__construct() C:\xampp\htdocs\e-commerce\app\wwwroot\index.php:39
+[06-Jul-2012 02:34:34] PHP   3. Template->render() C:\xampp\htdocs\e-commerce\core\libs\App.php:67
+[06-Jul-2012 02:34:34] PHP   4. Template->renderView() C:\xampp\htdocs\e-commerce\core\libs\Template.php:59
+[06-Jul-2012 02:34:34] PHP   5. Import::view() C:\xampp\htdocs\e-commerce\core\libs\Template.php:129
+[06-Jul-2012 02:34:34] PHP   6. require_once() C:\xampp\htdocs\e-commerce\core\libs\Import.php:156
+[06-Jul-2012 02:34:34] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\e-commerce\modules\produtos\views\produtos\index.php on line 1
+[06-Jul-2012 02:34:34] PHP Stack trace:
+[06-Jul-2012 02:34:34] PHP   1. {main}() C:\xampp\htdocs\e-commerce\app\wwwroot\index.php:0
+[06-Jul-2012 02:34:34] PHP   2. App->__construct() C:\xampp\htdocs\e-commerce\app\wwwroot\index.php:39
+[06-Jul-2012 02:34:34] PHP   3. Template->render() C:\xampp\htdocs\e-commerce\core\libs\App.php:67
+[06-Jul-2012 02:34:34] PHP   4. Template->renderView() C:\xampp\htdocs\e-commerce\core\libs\Template.php:59
+[06-Jul-2012 02:34:34] PHP   5. Import::view() C:\xampp\htdocs\e-commerce\core\libs\Template.php:129
+[06-Jul-2012 02:34:34] PHP   6. require_once() C:\xampp\htdocs\e-commerce\core\libs\Import.php:156

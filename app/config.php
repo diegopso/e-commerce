@@ -14,7 +14,7 @@
  * Define o tipo do debug, pode assumir os seguintes valores: off, local, network e all
  * @var	string
  */
-define('debug', 'off');
+define('debug', 'local');
 
 /**
  * Tipo do drive do banco de dados, pode assumir os seguintes valores: mysql
@@ -32,7 +32,7 @@ define('db_host', 'localhost');
  * Nome do banco de dados
  * @var	string
  */
-define('db_name', 'trilado2');
+define('db_name', 'store');
 
 /**
  * Usuário do banco de dados

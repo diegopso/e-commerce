@@ -79,9 +79,13 @@ class Model {
      * @param	int	$id		valor da chave primária
      * @return	object		retorna uma intância de Model
      */
-    public static function get($id) {
+    public static function get($id = null) {
         $class = preg_replace('@^Model_@', '', get_called_class());
         $instance = new $class();
+        
+        if(!$id)
+            return $instance;
+        
         $db = Database::getInstance();
         return $db->{$class}->single($instance->_getKey() . ' = ?', $id);
     }
