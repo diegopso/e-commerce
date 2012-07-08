@@ -9,7 +9,7 @@ class Helper_Produtos{
     );
     
     public static function get_produtos($q, $pg, $qt_pg, &$count) {
-        $db = new DatabaseQuery('Produto');
+        $db = new DatabaseQuery('Model_Produto');
         $db->whereSQL("nome LIKE '%$q%'");
         
         $db2 = clone $db;
@@ -22,7 +22,12 @@ class Helper_Produtos{
     }
     
     public static function cadastrar($propriedades){
-        $produto = Produto::get($propriedades['id'] ? $propriedades['id'] : null);
+        //be safe
+        if(is_object($propriedades))
+            $propriedades = (array) $propriedades;
+        
+        $id = $propriedades['id'] ? $propriedades['id'] : null;
+        $produto = Model_Produto::get($id);
         
         foreach (self::$validation as $k => $v) {
             if(isset($propriedades[$k])){
@@ -43,7 +48,11 @@ class Helper_Produtos{
     }
     
     public static function excluir($id) {
-        $produto = Produto::get($id);
+        $produto = Model_Produto::get($id);
+        
+        if($id != $produto->id)
+            throw new Exception_ProdutoNaoEncontrado();
+        
         $produto->delete();
     }
 }

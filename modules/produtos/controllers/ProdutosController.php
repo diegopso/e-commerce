@@ -2,7 +2,7 @@
 
 
 class ProdutosController extends Controller{
-    public function index() {
+    public function index($q = '', $pg = 0, $qt_pg = 20) {
         $pg = $this->params('pg', 0);
         $qt_pg = $this->params('s', 20);
         $q = $this->params('q');
@@ -32,7 +32,12 @@ class ProdutosController extends Controller{
             }
         }
         
-        return $this->_view(Produto::get($id));
+        $produto = Model_Produto::get($id);
+        
+        if($id != $produto->id)
+            throw new Exception_ProdutoNaoEncontrado();
+        
+        return $this->_view($produto);
     }
     
     public function excluir($id) {
