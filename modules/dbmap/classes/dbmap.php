@@ -31,10 +31,18 @@ class DBmap {
 
         $file_name = $table_name;
         $file_name[0] = strtolower($file_name[0]);
-
+        
         if (is_file(root . "app/models/$file_name.php") && !dbmap_force) {
             return;
         }
+        
+        $modules = Modules::instance();
+        foreach ($modules as $path) {
+            if (is_file($path . "models/$file_name.php") && !dbmap_force) {
+                return;
+            }
+        }
+        
 
         $class_name = $table_name;
         $class_name[0] = strtoupper($class_name[0]);
