@@ -16,4 +16,33 @@ class Model_Produto extends Model
 
     /** @Column(Type="float") */
     public $preco;
+
+    /** @Column(Type="varchar(256)") */
+    public $tags;
+
+    /** @Column(Type="varchar(256)") */
+    public $modelo;
+
+    /** @Column(Type="float") */
+    public $altura;
+
+    /** @Column(Type="float") */
+    public $largura;
+
+    /** @Column(Type="float") */
+    public $comprimento;
+
+    /** @Column(Type="float") */
+    public $peso;
+
+    /** @Column(Type="int(11)") */
+    public $id_imagem;
+
+    /** @Column(Type="int(11)") */
+    public $id_pagina;
+
+    /** @Column(Type="int(11)") */
+    public $id_loja;
+
+
 }

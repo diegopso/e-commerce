@@ -136,5 +136,17 @@ class Model {
         $db->{$class}->delete($this);
         $db->save();
     }
+    
+    public static function get_properties_name(){
+        $properties = get_class_vars(get_called_class());
+        $names = array();
+        
+        foreach ($properties as $k => $v){
+            if($k[0] != '_')
+                $names[] = $k;
+        }
+        
+        return $names;
+    }
 
 }

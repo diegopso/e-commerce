@@ -28,19 +28,18 @@ class Helper_Produtos{
         
         $id = $propriedades['id'] ? $propriedades['id'] : null;
         $produto = Model_Produto::get($id);
+        $produtos_properties = Model_Produto::get_properties_name();
         
-        foreach (self::$validation as $k => $v) {
+        foreach ($produtos_properties as $k) {
             if(isset($propriedades[$k])){
-                if(preg_match($v['regExp'], $propriedades[$k]) == 0){
+                if(isset(self::$validation[$k]) && preg_match(self::$validation[$k]['regExp'], $propriedades[$k]) == 0){
                     throw new ValidationException();
+                }else{
+                    $produto->{$k} = $propriedades[$k];
                 }
-            }elseif($value['obrigatorio']){
+            }elseif(isset(self::$validation[$k]) && self::$validation[$k]['obrigatorio']){
                 throw new ValidationException("Formato de $k invalido.");
             }
-        }
-        
-        foreach ($propriedades as $k => $p) {
-            $produto->{$k} = $p;
         }
         
         $produto->save();

@@ -74,7 +74,7 @@ define('default_login', '~/auth');
  * Charset padrão
  * @var	string
  */
-define('charset', 'ISO-8859-1');
+define('charset', 'UTF-8');
 
 /**
  * Linguagem padrão
