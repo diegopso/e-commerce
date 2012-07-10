@@ -50,7 +50,7 @@ class Model {
         if ($this->_key)
             return $this->_key;
 
-        $class = preg_replace('@^Model_@', '', get_called_class());
+        $class = get_called_class();
         $annotation = Annotation::get($class);
         foreach ($this as $p => $v) {
             if ($p != '_isNew') {
@@ -80,7 +80,7 @@ class Model {
      * @return	object		retorna uma intância de Model
      */
     public static function get($id = null) {
-        $class = preg_replace('@^Model_@', '', get_called_class());
+        $class = get_called_class();
         $instance = new $class();
         
         if(!$id)
@@ -100,7 +100,7 @@ class Model {
      */
     public static function all($p = 1, $m = 10, $o = 'Id', $t = 'asc') {
         $p = $m * (($p < 1 ? 1 : $p) - 1);
-        $class = preg_replace('@^Model_@', '', get_called_class());
+        $class = get_called_class();
         $db = Database::getInstance();
         return $db->{$class}->orderBy($o, $t)->paginate($p, $m);
     }
@@ -114,7 +114,7 @@ class Model {
      * @return	void
      */
     public function save() {
-        $class = preg_replace('@^Model_@', '', get_called_class());
+        $class = get_called_class();
         $key = $this->_getKey();
 
         $db = Database::getInstance();
@@ -130,11 +130,23 @@ class Model {
      * @return	void
      */
     public function delete() {
-        $class = preg_replace('@^Model_@', '', get_called_class());
+        $class = get_called_class();
 
         $db = Database::getInstance();
         $db->{$class}->delete($this);
         $db->save();
+    }
+    
+    public static function get_properties_name(){
+        $properties = get_class_vars(get_called_class());
+        $names = array();
+        
+        foreach ($properties as $k => $v){
+            if($k[0] != '_')
+                $names[] = $k;
+        }
+        
+        return $names;
     }
 
 }

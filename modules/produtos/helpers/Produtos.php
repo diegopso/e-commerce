@@ -9,7 +9,7 @@ class Helper_Produtos{
     );
     
     public static function get_produtos($q, $pg, $qt_pg, &$count) {
-        $db = new DatabaseQuery('Produto');
+        $db = new DatabaseQuery('Model_Produto');
         $db->whereSQL("nome LIKE '%$q%'");
         
         $db2 = clone $db;
@@ -22,20 +22,24 @@ class Helper_Produtos{
     }
     
     public static function cadastrar($propriedades){
-        $produto = Produto::get($propriedades['id'] ? $propriedades['id'] : null);
+        //be safe
+        if(is_object($propriedades))
+            $propriedades = (array) $propriedades;
         
-        foreach (self::$validation as $k => $v) {
+        $id = $propriedades['id'] ? $propriedades['id'] : null;
+        $produto = Model_Produto::get($id);
+        $produtos_properties = Model_Produto::get_properties_name();
+        
+        foreach ($produtos_properties as $k) {
             if(isset($propriedades[$k])){
-                if(preg_match($v['regExp'], $propriedades[$k]) == 0){
+                if(isset(self::$validation[$k]) && preg_match(self::$validation[$k]['regExp'], $propriedades[$k]) == 0){
                     throw new ValidationException();
+                }else{
+                    $produto->{$k} = $propriedades[$k];
                 }
-            }elseif($value['obrigatorio']){
+            }elseif(isset(self::$validation[$k]) && self::$validation[$k]['obrigatorio']){
                 throw new ValidationException("Formato de $k invalido.");
             }
-        }
-        
-        foreach ($propriedades as $k => $p) {
-            $produto->{$k} = $p;
         }
         
         $produto->save();
@@ -43,7 +47,11 @@ class Helper_Produtos{
     }
     
     public static function excluir($id) {
-        $produto = Produto::get($id);
+        $produto = Model_Produto::get($id);
+        
+        if($id != $produto->id)
+            throw new Exception_ProdutoNaoEncontrado();
+        
         $produto->delete();
     }
 }
