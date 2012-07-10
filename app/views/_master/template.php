@@ -126,7 +126,7 @@
             <div class="container">
                 <div class="row">
                     <div class="span5">
-                        <img src="http://lorempixel.com/g/400/200/animals/9/" />
+                        <img src="~/app/wwwroot/media/img/coruja-logo.png" />
                     </div>
                     <div class="span2 offset1">
                         <h3>Span 2</h3>
