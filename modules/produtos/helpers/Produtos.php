@@ -9,7 +9,7 @@ class Helper_Produtos{
     );
     
     public static function get_produtos($q, $pg, $qt_pg, &$count) {
-        $db = new DatabaseQuery('Model_Produto');
+        $db = new DatabaseQuery('Model_ViewProdutos');
         $db->whereSQL("nome LIKE '%$q%'");
         
         $db2 = clone $db;
