@@ -7,14 +7,27 @@ class ProdutosController extends Controller{
         $pg = $this->params('pg', 0);
         $qt_pg = $this->params('s', 20);
         $q = $this->params('q');
+        $render_type = $this->params('r', 'page');
         
         $count = 0;
         $model = Helper_Produtos::get_produtos($q, $pg, $qt_pg, $count);
         
+        $qt_pg = ceil($count / $qt_pg);
+        
         $this->_set('count', $count);
         $this->_set('pg', $pg);
-        $this->_set('qt_pg', ceil($count / $qt_pg));
+        $this->_set('qt_pg', $qt_pg);
         $this->_set('query', $q);
+        
+        if($render_type == 'json')
+            return $this->_json(array(
+                'model' => $model,
+                'count' => $count,
+                'pg' => $pg,
+                'qt_pg' => $qt_pg,
+                'query' => $q
+            ));
+        
         return $this->_view($model);
     }
     
