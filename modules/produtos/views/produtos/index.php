@@ -63,15 +63,15 @@
         </tfoot>
     </table>
 
-    <a href="~/produtos?q=<?= $query ?>&pg=0&r=json" class="btn btn-mini pagination-btn tip" id="0" title="Primeira"><i class="icon-fast-backward"></i></a>
+    <a href="~/produtos?q=<?= $query ?>&pg=0&r=html" class="btn btn-mini pagination-btn tip" id="0" title="Primeira"><i class="icon-fast-backward"></i></a>
 
     <? for ($a = $pg - 3 < 1 ? 1 : $pg - 3; $a <= $pg + 3 && $a <= $qt_pg; $a++): ?>
-        <a href="~/produtos?q=<?= $query ?>&pg=<?= $a ?>&r=json" class="btn btn-mini pagination-btn <?= $a == $pg + 1 ? 'active' : '' ?>" id="<?= $pg ?>">
+        <a href="~/produtos?q=<?= $query ?>&pg=<?= $a ?>&r=html" class="btn btn-mini pagination-btn <?= $a == $pg + 1 ? 'active' : '' ?>" id="<?= $pg ?>">
             <?= $a ?>
         </a>
     <? endfor; ?>
 
-    <a href="~/produtos?q=<?= $query ?>&pg=<?= $qt_pg - 1 ?>&r=json" class="btn btn-mini pagination-btn tip" title="Última"><i class="icon-forward"></i></a>
+    <a href="~/produtos?q=<?= $query ?>&pg=<?= $qt_pg - 1 ?>&r=html" class="btn btn-mini pagination-btn tip" title="Última"><i class="icon-forward"></i></a>
 </div>
 
 <script type="text/javascript">
@@ -88,9 +88,7 @@
             $.ajax({
                 url: $(this).attr('href'),
                 success: function(data){
-                    var tbody = $('.table > tbody');
-                    tbody.empty();
-                    
+                    $('.data').empty().append(data);
                 }
             });
         });
