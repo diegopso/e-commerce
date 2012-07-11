@@ -2,6 +2,7 @@
 
 
 class ProdutosController extends Controller{
+    
     public function index($q = '', $pg = 0, $qt_pg = 20) {
         $pg = $this->params('pg', 0);
         $qt_pg = $this->params('s', 20);
@@ -12,7 +13,7 @@ class ProdutosController extends Controller{
         
         $this->_set('count', $count);
         $this->_set('pg', $pg);
-        $this->_set('qt_pg', $qt_pg);
+        $this->_set('qt_pg', ceil($count / $qt_pg));
         $this->_set('query', $q);
         return $this->_view($model);
     }
