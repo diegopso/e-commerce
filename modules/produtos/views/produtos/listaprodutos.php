@@ -1,8 +1,8 @@
 <table class="table table-striped">
     <thead>
     <th>Nome</th>
-    <th>Preço</th>
-    <th>Quantidade</th>
+    <th class="span1">Preço</th>
+    <th class="span1">Quantidade</th>
     <th class="span2">Ações</th>
 </thead>
 <tbody>

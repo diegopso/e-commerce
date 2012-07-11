@@ -14,7 +14,7 @@
  * Define o tipo do debug, pode assumir os seguintes valores: off, local, network e all
  * @var	string
  */
-define('debug', 'off');
+define('debug', 'local');
 
 /**
  * Tipo do drive do banco de dados, pode assumir os seguintes valores: mysql
@@ -93,6 +93,8 @@ define('salt', 'BFF2A863B773C3E425BF793C9AE02210DFECE51E658E8098587D9BF7690C15E7
  * @var string
  */
 define('dbmap_force', false);
+
+define('marketing', Modules::is_set('propaganda'));
 
 define('auto_ajax', false);
 define('auto_dotxml', false);

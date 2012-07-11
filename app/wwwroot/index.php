@@ -5,6 +5,10 @@
  * All rights reserved.
  */
 
+ini_set('upload_max_filesize', '10M');
+ini_set('memory_limit', '512M');
+ini_set('post_max_size', '10M');
+
 
 //calcula o endereço de root
 $root = str_replace('\\', '/', dirname(dirname(dirname(__FILE__))));
@@ -21,8 +25,8 @@ define('modpath', $root . 'modules/');
 require_once root . 'core/libs/Import.php';
 require_once root . 'core/libs/Route.php';
 require_once root . 'core/libs/modules.php';
-require_once root . 'app/config.php';
 require_once root . 'app/routes.php';
+require_once root . 'app/config.php';
 require_once root . 'core/constantes.php';
 require_once root . 'core/functions.php';
 

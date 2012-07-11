@@ -45,10 +45,20 @@
 </div>
 
 <div style="clear: both"></div>
-<div class="data">
-    <?php
-    include('listaprodutos.php');
-    ?>
+<div class="row">
+    <div class="data span<?= marketing ? 10 : 12 ?>">
+        <?php
+        include('listaprodutos.php');
+        ?>
+    </div>
+    
+    <?php if(marketing): ?>
+    <div class="span2">
+        <a href="javascript:void(0);" class="thumbnail">
+            <img src="http://placehold.it/120x360" />
+        </a>
+    </div>
+    <?php endif; ?>
 </div>
 
 <script type="text/javascript">
