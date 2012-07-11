@@ -3,75 +3,42 @@
         <li>
             <a href="~/">My store</a> <span class="divider">/</span>
         </li>
-        <li class="active">Produtos</li>
+        <li>
+            <a href="~/produtos">Produtos</a>
+        </li>
     </ul>
 </div>
 
 <div class="pull-right">
-    <button class="btn" id="search-btn">Pesquisar</button>
+    <button class="btn" id="search-btn"><i class="icon-chevron-down"></i> Pesquisar</button>
     <button class="btn btn-primary">Adicionar</button>
 </div>
 
 <div class="clearfix"></div>
 
-<div id="search-div" style="display: none">
-    Busca <br />
+<div id="search-div" style="display: none" class="well">
+    <h3>Busca</h3><br />
     <div class="btn-group pull-left">
-        <button class="btn dropdown-toggle" data-toggle="dropdown">
-            Action 
-            <span class="caret"></span>
+        <button class="btn dropdown-toggle span3" data-toggle="dropdown">
+            <span class="pull-left">Categorias</span>
+            <span class="caret pull-right"></span>
         </button>
-        <ul class="dropdown-menu" style="">
-            <li><a href="#">Action</a></li>
+        <ul class="dropdown-menu span3">
+            <li><a href="#">Selecione uma categoria</a></li>
         </ul>
     </div>
-
-    <input type="text" placeholder="Digite sua busca" class="pull-left"/>
-
-    <button class="btn" class="pull-left">Buscar</button>
-
+    <div class="input-append margin1 pull-left">
+        <input class="pull-left" id="search-text" type="text"  placeholder="Digite sua busca" />
+        <button class="btn btn-primary" type="button" id="search-submit"><i class="icon-search icon-white"></i> Buscar</button>
+    </div>
+    <div class="clearfix"></div>
 </div>
 
 <div style="clear: both"></div>
 <div class="data">
-    <table class="table table-striped">
-        <thead>
-        <th>Nome</th>
-        <th>Preço</th>
-        <th>Quantidade</th>
-        <th class="span2">Ações</th>
-        </thead>
-        <tbody>
-            <? foreach ($model as $produto): ?>
-                <tr>
-                    <td><?= $produto->nome ?></td>
-                    <td><?= $produto->preco ?></td>
-                    <td><?= $produto->quantidade ?></td>
-                    <td>
-                        <a href="#" class="btn tip" title="Editar"><i class="icon-pencil"></i></a>
-                        <a href="#" class="btn tip" title="Visualizar"><i class="icon-eye-open"></i></a>
-                        <a href="#" class="btn tip" title="Excluir"><i class="icon-trash"></i></a>
-                    </td>
-                </tr>
-            <? endforeach; ?>
-        </tbody>
-        <tfoot>
-        <th>Nome</th>
-        <th>Preço</th>
-        <th>Quantidade</th>
-        <th class="span2">Ações</th>
-        </tfoot>
-    </table>
-
-    <a href="~/produtos?q=<?= $query ?>&pg=0&r=html" class="btn btn-mini pagination-btn tip" id="0" title="Primeira"><i class="icon-fast-backward"></i></a>
-
-    <? for ($a = $pg - 3 < 1 ? 1 : $pg - 3; $a <= $pg + 3 && $a <= $qt_pg; $a++): ?>
-        <a href="~/produtos?q=<?= $query ?>&pg=<?= $a ?>&r=html" class="btn btn-mini pagination-btn <?= $a == $pg + 1 ? 'active' : '' ?>" id="<?= $pg ?>">
-            <?= $a ?>
-        </a>
-    <? endfor; ?>
-
-    <a href="~/produtos?q=<?= $query ?>&pg=<?= $qt_pg - 1 ?>&r=html" class="btn btn-mini pagination-btn tip" title="Última"><i class="icon-forward"></i></a>
+    <?php
+        include('listaprodutos.php');
+    ?>
 </div>
 
 <script type="text/javascript">
@@ -79,19 +46,42 @@
         
         $('#search-btn').toggle(function(){
             $('#search-div').slideDown('fast');
+            $(this).find('i').removeClass('icon-chevron-down').addClass('icon-chevron-up');
         },
         function(){
             $('#search-div').slideUp('fast');
+            $(this).find('i').removeClass('icon-chevron-up').addClass('icon-chevron-down');
         });
         
-        $('.pagination-btn').click(function(){
-            $.ajax({
-                url: $(this).attr('href'),
-                success: function(data){
-                    $('.data').empty().append(data);
-                }
-            });
+        $('.pagination-btn').click(loadData);
+        
+        $('#search-submit').click(function (e){
+            e.preventDefault();
+            requestData('produtos?q=' + $('#search-text').val() +'&r=html');
+        });
+        
+        $('.delete').click(function(e){
+            e.preventDefault();
+            
         });
     });
+    
+    function loadData(e){
+        e.preventDefault();
+        requestData($(this).attr('href'));
+    }
+    
+    function requestData(url) {
+        $.ajax({
+            url: url,
+            success: function(data){
+                $('.data').empty().append(data);
+                $('.pagination-btn').click(loadData);
+            }
+        });
+    }
+    
+    
+        
 </script>
 
