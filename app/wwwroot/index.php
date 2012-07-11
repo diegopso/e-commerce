@@ -5,6 +5,10 @@
  * All rights reserved.
  */
 
+ini_set('upload_max_filesize', '10M');
+ini_set('memory_limit', '512M');
+ini_set('post_max_size', '10M');
+
 
 //calcula o endereço de root
 $root = str_replace('\\', '/', dirname(dirname(dirname(__FILE__))));

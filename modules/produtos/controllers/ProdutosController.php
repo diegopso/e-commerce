@@ -115,4 +115,8 @@ class ProdutosController extends Controller{
             ));
         }
     }
+    
+    public function EnviarImagens(){
+        return $this->_view();
+    }
 }
