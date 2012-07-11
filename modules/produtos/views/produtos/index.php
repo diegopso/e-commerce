@@ -11,7 +11,7 @@
 
 <div class="pull-right">
     <button class="btn" id="search-btn"><i class="icon-chevron-down"></i> Pesquisar</button>
-    <button class="btn btn-primary">Adicionar</button>
+    <button class="btn btn-primary"><i class="icon-plus icon-white"></i> Adicionar</button>
 </div>
 
 <div class="clearfix"></div>
