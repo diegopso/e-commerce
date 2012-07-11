@@ -19,6 +19,9 @@ class ProdutosController extends Controller{
         $this->_set('qt_pg', $qt_pg);
         $this->_set('query', $q);
         
+        if($render_type == 'html')
+            return $this->_page('listaprodutos', $model);
+        
         if($render_type == 'json')
             return $this->_json(array(
                 'model' => $model,
@@ -27,8 +30,6 @@ class ProdutosController extends Controller{
                 'qt_pg' => $qt_pg,
                 'query' => $q
             ));
-        elseif($render_type == 'html')
-            return $this->_page('listaprodutos', $model);
         
         return $this->_view($model);
     }
