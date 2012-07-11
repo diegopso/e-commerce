@@ -1,9 +1,18 @@
+*
+{
+    outline: none !important;
+}
+
 /*
  ==================== content
 */
 .content
 {
     margin-top: 50px;
+}
+
+#search-text{
+    width: 560px;
 }
 
 /*
@@ -13,10 +22,15 @@
 .footer
 {
     background-color: whitesmoke;
+    margin-top: 20px;
 }
-h3
+.footer h3
 {
     display: block;
     border-bottom: 1px solid #090909;
     margin-bottom: 10px;
 }
+
+/*margins*/
+.margin1 { margin-left: 30px}
+.margin2 {}

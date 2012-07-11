@@ -185,7 +185,7 @@ class Template {
      * @return	string				retorna o HTML
      */
     private function resolveUrl($html) {
-        return str_replace(array('="~/', "='"), array('="' . root_virtual, "='" . root_virtual), $html);
+        return str_replace(array('="~/', "='~/"), array('="' . root_virtual, "='" . root_virtual), $html);
     }
 
 }

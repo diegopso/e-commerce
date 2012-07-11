@@ -1,14 +1,15 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Lobo</title>
+        <title>Coruja</title>
 
         <link rel="stylesheet" type="text/css" href="~/app/wwwroot/media/css/bootstrap.css"></link>
         <link rel="stylesheet" type="text/css" href="~/app/wwwroot/media/css/app.css"></link>
 
         <script type="text/javascript" src="~/app/wwwroot/media/js/jquery-1.7.2.min.js"></script>
         <script type="text/javascript" src="~/app/wwwroot/media/js/bootstrap.min.js"></script>
-
+        <script type="text/javascript" src="~/media/js/helper.js"></script>
+    
     </head>
     <body>
         <div class="container">
@@ -22,7 +23,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </a>
-                        <a class="brand" href="~/home">Lobo</a>
+                        <a class="brand" href="~/home">Coruja</a>
                         <div class="nav-collapse">
                             <ul class="nav">
                                 <li class="active">
