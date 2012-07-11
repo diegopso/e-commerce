@@ -44,7 +44,7 @@ define('db_user', 'root');
  * Senha do banco de dados
  * @var	string
  */
-define('db_pass', '');
+define('db_pass', 'root');
 
 /**
  * Master Page padrão

@@ -27,6 +27,8 @@ class ProdutosController extends Controller{
                 'qt_pg' => $qt_pg,
                 'query' => $q
             ));
+        elseif($render_type == 'html')
+            return $this->_page('listaprodutos', $model);
         
         return $this->_view($model);
     }
