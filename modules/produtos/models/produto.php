@@ -3,9 +3,9 @@
 class Model_Produto extends Model
 {
     /**
-     * @AutoGenerate()
-     * @Column(Type="int(11)",Key="Primary")
-     */
+    * @AutoGenerate()
+    * @Column(Type="int(11)",Key="Primary")
+    */
     public $id;
 
     /** @Column(Type="varchar(256)") */
@@ -34,6 +34,9 @@ class Model_Produto extends Model
 
     /** @Column(Type="float") */
     public $peso;
+
+    /** @Column(Type="varchar(8)") */
+    public $status;
 
     /** @Column(Type="int(11)") */
     public $id_imagem;

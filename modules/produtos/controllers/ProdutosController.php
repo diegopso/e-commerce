@@ -81,17 +81,36 @@ class ProdutosController extends Controller{
     
     public function excluir($id) {
         try {
-            Helper_Produtos::excluir($id);
+            $produto = Helper_Produtos::excluir($id);
             $this->_flash('SUCCESS', 'O produto foi excluído.');
             return $this->_json(array(
                 'status' => 'SUCCESS',
-                'message' => 'O produto foi excluído.'
+                'message' => 'O produto foi excluído.',
+                'model' => $produto
             ));
         } catch (Exception $exc) {
             $this->_flash('ERROR', 'Ocorreu um erro ao excluir o produto.');
             return $this->_json(array(
                 'status' => 'ERROR',
                 'message' => 'Ocorreu um erro ao excluir o produto.'
+            ));
+        }
+    }
+    
+    public function desfazerexclusao($id){
+        try {
+            $produto = Helper_Produtos::desfazer_exclusao($id);
+            $this->_flash('SUCCESS', 'Ação desfeita.');
+            return $this->_json(array(
+                'status' => 'SUCCESS',
+                'message' => 'Ação desfeita.',
+                'model' => $produto
+            ));
+        } catch (Exception $exc) {
+            $this->_flash('ERROR', 'Ocorreu um erro ao desfazer.');
+            return $this->_json(array(
+                'status' => 'ERROR',
+                'message' => 'Ocorreu um erro ao desfazer.'
             ));
         }
     }

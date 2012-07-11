@@ -52,6 +52,19 @@ class Helper_Produtos{
         if($id != $produto->id)
             throw new Exception_ProdutoNaoEncontrado();
         
-        $produto->delete();
+        $produto->status = 'deleted';
+        $produto->save();
+        return $produto;
+    }
+    
+    public static function desfazer_exclusao($id){
+        $produto = Model_Produto::get($id);
+        
+        if($id != $produto->id)
+            throw new Exception_ProdutoNaoEncontrado();
+        
+        $produto->status = 'active';
+        $produto->save();
+        return $produto;
     }
 }
