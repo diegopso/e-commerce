@@ -94,6 +94,8 @@ define('salt', 'BFF2A863B773C3E425BF793C9AE02210DFECE51E658E8098587D9BF7690C15E7
  */
 define('dbmap_force', false);
 
+define('marketing', Modules::is_set('propaganda'));
+
 define('auto_ajax', false);
 define('auto_dotxml', false);
 

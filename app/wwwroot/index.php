@@ -21,8 +21,8 @@ define('modpath', $root . 'modules/');
 require_once root . 'core/libs/Import.php';
 require_once root . 'core/libs/Route.php';
 require_once root . 'core/libs/modules.php';
-require_once root . 'app/config.php';
 require_once root . 'app/routes.php';
+require_once root . 'app/config.php';
 require_once root . 'core/constantes.php';
 require_once root . 'core/functions.php';
 

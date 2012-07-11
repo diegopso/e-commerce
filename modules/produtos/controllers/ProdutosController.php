@@ -39,6 +39,7 @@ class ProdutosController extends Controller{
             $properties = $this->post();
             $properties['id_loja'] = 0; //loja do usuario logado
             $properties['id_autor'] = 0; //colocar usuario logado
+            $properties['status'] = 'active';
             
             try {
                 $pg = array(
