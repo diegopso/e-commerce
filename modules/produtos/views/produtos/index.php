@@ -11,7 +11,7 @@
 
 <div class="pull-right">
     <button class="btn" id="search-btn"><i class="icon-chevron-down"></i> Pesquisar</button>
-    <button class="btn btn-primary"><i class="icon-plus icon-white"></i> Adicionar</button>
+    <a href="~/produtos/cadastrar/" class="btn btn-primary"><i class="icon-plus icon-white"></i> Adicionar</a>
 </div>
 
 <div class="clearfix"></div>
@@ -48,14 +48,24 @@
 <div class="row">
     <div class="data span<?= marketing ? 10 : 12 ?>">
         <?php
-        include('listaprodutos.php');
+            include('listaprodutos.php');
         ?>
     </div>
     
     <?php if(marketing): ?>
+    <br />
     <div class="span2">
         <a href="javascript:void(0);" class="thumbnail">
-            <img src="http://placehold.it/120x360" />
+            <img src="http://placehold.it/125x125" />
+        </a>
+        <a href="javascript:void(0);" class="thumbnail">
+            <img src="http://placehold.it/125x125" />
+        </a>
+        <a href="javascript:void(0);" class="thumbnail">
+            <img src="http://placehold.it/125x125" />
+        </a>
+        <a href="javascript:void(0);" class="thumbnail">
+            <img src="http://placehold.it/125x125" />
         </a>
     </div>
     <?php endif; ?>

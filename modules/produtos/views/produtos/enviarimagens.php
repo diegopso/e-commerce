@@ -20,7 +20,6 @@
                 //pass
             }
         };
-        
         createUploader(cover_picture_uploader_options);
     });
     

@@ -5,7 +5,7 @@ class ProdutosController extends Controller{
     
     public function index() {
         $pg = $this->params('pg', 0);
-        $qt_pg = $this->params('s', 25);
+        $qt_pg = $this->params('s', 10);
         $q = $this->params('q');
         $render_type = $this->params('r', 'page');
         

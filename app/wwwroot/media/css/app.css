@@ -34,3 +34,11 @@
 /*margins*/
 .margin1 { margin-left: 30px}
 .margin2 {}
+
+
+/* tabelas */
+
+th
+{
+    text-align: center;
+}

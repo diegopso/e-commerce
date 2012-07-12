@@ -1,9 +1,11 @@
 <table class="table table-striped">
-    <thead>
-    <th>Nome</th>
-    <th class="span1">Preço</th>
-    <th class="span1">Quantidade</th>
-    <th class="span2">Ações</th>
+<thead>
+    <tr>
+        <th>Nome</th>
+        <th class="span1">Preço</th>
+        <th class="span1">Quantidade</th>
+        <th class="span2">Ações</th>
+    </tr>
 </thead>
 <tbody>
     <?php if($count == 0): ?>
