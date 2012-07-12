@@ -1,92 +1,55 @@
-<script type="text/javascript" src="~/media/js/tinyeditor.js"></script>
-<div class="tiny-editor">
-    <div class="btn-toolbar">
+<div class="editor-container">
+    <div class="btn-toolbar editor-toolbar">
         <div class="btn-group toolbar-controls toolbar-controls">
-            <a class="btn tip" title="Negrito" href="Bold"><i class="icon-bold"></i></a>
-            <a class="btn tip" title="Itálico" href="Italic"><i class="icon-italic"></i></a>
-            <a class="btn tip" title="Sublinhado" href="Underline"><i class="icon-text-width"></i></a>
+            <a class="btn tip" title="Negrito" href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(6, this); return false;"><i class="icon-bold"></i></a>
+            <a class="btn tip" title="Itálico" href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(9, this); return false;"><i class="icon-italic"></i></a>
+            <a class="btn tip" title="Sublinhado" href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(12, this); return false;"><i class="icon-text-width"></i></a>
         </div>
         <div class="btn-group toolbar-controls">
-            <a class="btn tip" title="Lista Ordenada" href="Insert Ordered List"><i class="icon-list"></i></a>
-            <a class="btn tip" title="Lista" href="Insert Unordered List"><i class="icon-list"></i></a>
+            <a class="btn tip" title="Lista Ordenada" href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(15, this); return false;"><i class="icon-list"></i></a>
+            <a class="btn tip" title="Lista" href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(18, this); return false;"><i class="icon-list"></i></a>
         </div>
         <div class="btn-group toolbar-controls">
-            <a class="btn tip" title="Remover Identação" href="Outdent"><i class="icon-indent-right"></i></a>
-            <a class="btn tip" title="Identar" href="Indent"><i class="icon-indent-left"></i></a>
+            <a class="btn tip" title="Remover Identação" href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(21, this); return false;"><i class="icon-indent-right"></i></a>
+            <a class="btn tip" title="Identar" href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(24, this); return false;"><i class="icon-indent-left"></i></a>
         </div>
         <div class="btn-group toolbar-controls">
-            <a class="btn tip" title="Imagem" href="Insert Image"><i class="icon icon-picture"></i></a>
-            <a class="btn tip" title="Linha Horizontal" href="Insert Horizontal Rule"><i class="icon-minus"></i></a>
-            <a class="btn tip" title="Link" href="Insert Hyperlink"><i class="icon-globe"></i></a>
+            <a class="btn tip" title="Imagem" href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(42, this); return false;"><i class="icon-picture"></i></a>
+            <a class="btn tip" title="Tabela" href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(45, this); return false;"><i class="icon-th"></i></a>
+            <a class="btn tip" title="Linha Horizontal" href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(48, this); return false;"><i class="icon-minus"></i></a>
+            <a class="btn tip" title="Link" href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(39, this); return false;"><i class="icon-globe"></i></a>
         </div>
         <div class="btn-group toolbar-controls">
-            <a class="btn tip" title="Alinhar à Esquerda" href="Left Align"><i class="icon-align-left"></i></a>
-            <a class="btn tip" title="Alinhar à Centro" href="Center Align"><i class="icon-align-center"></i></a>
-            <a class="btn tip" title="Alinhar à Direita" href="Right Align"><i class="icon-align-right"></i></a>
-            <a class="btn tip" title="Justificar" href="Block Justify"><i class="icon-align-justify"></i></a>
+            <a class="btn tip" title="Alinhar à Esquerda" href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(27, this); return false;"><i class="icon-align-left"></i></a>
+            <a class="btn tip" title="Alinhar à Centro" href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(30, this); return false;"><i class="icon-align-center"></i></a>
+            <a class="btn tip" title="Alinhar à Direita" href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(33, this); return false;"><i class="icon-align-right"></i></a>
+            <a class="btn tip" title="Justificar" href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(36, this); return false;"><i class="icon-align-justify"></i></a>
         </div>
         <div class="btn-group editor-select-style">
-            <button class="btn dropdown-toggle" title="Estilo do Texto" data-toggle="dropdown">
+            <button class="btn dropdown-toggle" onclick="try{CKEDITOR.tools.callFunction(49, {});}catch(e){} return false;" title="Estilo do Texto" data-toggle="dropdown">
                 <span>Texto Normal</span>
                 <span class="caret"></span>
             </button>
             <ul class="dropdown-menu">
-                <li><a href="<p>">Texto Normal</a></li>
-                <li><a href="<h1>"><h1>Titulo 1</h1></a></li>
-                <li><a href="<h2>"><h2>Titulo 2</h2></a></li>
-                <li><a href="<h3>"><h3>Titulo 3</h3></a></li>
-                <li><a href="<h4>"><h4>Titulo 4</h4></a></li>
-                <li><a href="<h5>"><h5>Titulo 5</h5></a></li>
-                <li><a href="<h6>"><h6>Titulo 6</h6></a></li>
+                <li><a href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(61,'p'); return false;">Texto Normal</a></li>
+                <li><a href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(61,'h1'); return false;"><h1>Titulo 1</h1></a></li>
+                <li><a href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(61,'h2'); return false;"><h2>Titulo 2</h2></a></li>
+                <li><a href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(61,'h3'); return false;"><h3>Titulo 3</h3></a></li>
+                <li><a href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(61,'h4'); return false;"><h4>Titulo 4</h4></a></li>
+                <li><a href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(61,'h5'); return false;"><h5>Titulo 5</h5></a></li>
+                <li><a href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(61,'h6'); return false;"><h6>Titulo 6</h6></a></li>
             </ul>
         </div>
     </div>
-    <textarea id="edito-input"></textarea>
+    <textarea cols="80" id="editor" name="editor2" rows="10"></textarea>
 </div>
+<script type="text/javascript" src="~/media/js/ckeditor/ckeditor.js"></script>
 <script type="text/javascript">
+    CKEDITOR.replace('editor');
+    
     $(document).ready(function(){
-        $('.toolbar-controls .btn').click(function(e){
-            e.preventDefault();
-            var ref = $(this).attr('href');
-			
-            $('.tecontrol[title="'+ref+'"]').click();
+        $('.editor2-toolbar .editor-select-style a').click(function(e){
+            $('.editor-select-style span:eq(0)').text($(this).text());
         });
-		
-        $('.editor-select-style a').click(function(e){
-            e.preventDefault();
-            var self = $(this);
-            var ref = self.attr('href');
-			
-            $('.editor-select-style span:eq(0)').text(self.text());
-			
-            $('.testyle').val(ref).change();
-        });
-        
-        //pegar conteudo como html
-        //$("iframe").contents().find("#editor").html();
-    });
-	
-    new TINY.editor.edit('editor',{
-        id:'edito-input',
-        width: '100%',
-        controlclass:'tecontrol',
-        rowclass:'teheader',
-        dividerclass:'tedivider',
-        controls:[
-            'bold','italic','underline','|',
-            'orderedlist','unorderedlist','|',
-            'outdent','indent','|',
-            'image','hr','link',
-            'leftalign','centeralign','rightalign','blockjustify','|',
-            'unformat','style','|',
-        ],
-        footer:true,
-        fonts:['Verdana','Arial','Georgia','Trebuchet MS'],
-        xhtml:true,
-        cssfile:'style.css',
-        bodyid:'editor',
-        footerclass:'tefooter',
-        toggle:{text:'source',activetext:'wysiwyg',cssclass:'toggle'},
-        resize:{cssclass:'resize'}
     });
 </script>
