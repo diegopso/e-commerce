@@ -42,3 +42,8 @@ th
 {
     text-align: center;
 }
+
+/*editor*/
+.te {border:1px solid #bbb;}
+.teheader , .tefooter{display:none;}
+.tiny-editor{width: 780px;}
