@@ -1,9 +1,11 @@
 <table class="table table-striped">
-    <thead>
-    <th>Nome</th>
-    <th class="span1">Preço</th>
-    <th class="span1">Quantidade</th>
-    <th class="span2">Ações</th>
+<thead>
+    <tr>
+        <th>Nome</th>
+        <th class="span1">Preço</th>
+        <th class="span1">Quantidade</th>
+        <th class="span2">Ações</th>
+    </tr>
 </thead>
 <tbody>
     <?php if($count == 0): ?>
@@ -39,7 +41,7 @@
     <?php endif; ?>
         
     <?php for ($a = $pg - 3 < 1 ? 1 : $pg - 3; $a <= $pg + 3 && $a <= $qt_pg; $a++): ?>
-        <a href="produtos?q=<?= $query ?>&pg=<?= $a - 1 ?>&r=html" class="btn btn-mini pagination-btn <?= $a == $pg + 1 ? 'active' : '' ?>" id="<?= $pg ?>">
+        <a href="produtos?q=<?= $query ?>&pg=<?= $a - 1 ?>&r=html" class="btn btn-mini pagination-btn tip <?= $a == $pg + 1 ? 'active' : '' ?>" id="<?= $pg ?>" title="Página <?= $pg + 1 ?>">
             <?= $a ?>
         </a>
     <? endfor; ?>
