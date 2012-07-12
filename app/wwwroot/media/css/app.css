@@ -34,3 +34,8 @@
 /*margins*/
 .margin1 { margin-left: 30px}
 .margin2 {}
+
+/*editor*/
+.te {border:1px solid #bbb;}
+.teheader , .tefooter{display:none;}
+.tiny-editor{width: 780px;}

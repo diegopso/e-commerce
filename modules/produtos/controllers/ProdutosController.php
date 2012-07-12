@@ -119,4 +119,8 @@ class ProdutosController extends Controller{
     public function EnviarImagens(){
         return $this->_view();
     }
+    
+    public function editor(){
+        return $this->_view();
+    }
 }
