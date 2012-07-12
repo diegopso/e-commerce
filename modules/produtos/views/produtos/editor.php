@@ -1,43 +1,43 @@
 <script type="text/javascript" src="~/media/js/tinyeditor.js"></script>
-<div class="tiny-editor span10">
+<div class="tiny-editor">
     <div class="btn-toolbar">
         <div class="btn-group toolbar-controls toolbar-controls">
-            <a class="btn btn-large" href="Bold"><i class="icon-bold"></i></a>
-            <a class="btn btn-large" href="Italic"><i class="icon-italic"></i></a>
-            <a class="btn btn-large" href="Underline"><i class="icon-text-width"></i></a>
+            <a class="btn" title="Negrito" href="Bold"><i class="icon-bold"></i></a>
+            <a class="btn" title="Itálico" href="Italic"><i class="icon-italic"></i></a>
+            <a class="btn" title="Sublinhado" href="Underline"><i class="icon-text-width"></i></a>
         </div>
         <div class="btn-group toolbar-controls">
-            <a class="btn btn-large" href="Insert Ordered List"><i class="icon-list"></i></a>
-            <a class="btn btn-large" href="Insert Unordered List"><i class="icon-list"></i></a>
+            <a class="btn" title="Lista Ordenada" href="Insert Ordered List"><i class="icon-list"></i></a>
+            <a class="btn" title="Lista" href="Insert Unordered List"><i class="icon-list"></i></a>
         </div>
         <div class="btn-group toolbar-controls">
-            <a class="btn btn-large" href="Outdent"><i class="icon-indent-right"></i></a>
-            <a class="btn btn-large" href="Indent"><i class="icon-indent-left"></i></a>
+            <a class="btn" title="Remover Identação" href="Outdent"><i class="icon-indent-right"></i></a>
+            <a class="btn" title="Identar" href="Indent"><i class="icon-indent-left"></i></a>
         </div>
         <div class="btn-group toolbar-controls">
-            <a class="btn btn-large" href="Insert Image"><i class="icon icon-picture"></i></a>
-            <a class="btn btn-large" href="Insert Horizontal Rule"><i class="icon-minus"></i></a>
-            <a class="btn btn-large" href="Insert Hyperlink"><i class="icon-globe"></i></a>
+            <a class="btn" title="Imagem" href="Insert Image"><i class="icon icon-picture"></i></a>
+            <a class="btn" title="Linha Horizontal" href="Insert Horizontal Rule"><i class="icon-minus"></i></a>
+            <a class="btn" title="Link" href="Insert Hyperlink"><i class="icon-globe"></i></a>
         </div>
         <div class="btn-group toolbar-controls">
-            <a class="btn btn-large" href="Left Align"><i class="icon-align-left"></i></a>
-            <a class="btn btn-large" href="Center Align"><i class="icon-align-center"></i></a>
-            <a class="btn btn-large" href="Right Align"><i class="icon-align-right"></i></a>
-            <a class="btn btn-large" href="Block Justify"><i class="icon-align-justify"></i></a>
+            <a class="btn" title="Alinhar à Esquerda" href="Left Align"><i class="icon-align-left"></i></a>
+            <a class="btn" title="Alinhar à Centro" href="Center Align"><i class="icon-align-center"></i></a>
+            <a class="btn" title="Alinhar à Direita" href="Right Align"><i class="icon-align-right"></i></a>
+            <a class="btn" title="Justificar" href="Block Justify"><i class="icon-align-justify"></i></a>
         </div>
         <div class="btn-group editor-select-style">
-            <button class="btn btn-large dropdown-toggle" data-toggle="dropdown">
+            <button class="btn dropdown-toggle" title="Estilo do Texto" data-toggle="dropdown">
                 <span>Texto Normal</span>
                 <span class="caret"></span>
             </button>
             <ul class="dropdown-menu">
                 <li><a href="<p>">Texto Normal</a></li>
-                <li><a href="<h1>">Titulo 1</a></li>
-                <li><a href="<h2>">Titulo 2</a></li>
-                <li><a href="<h3>">Titulo 3</a></li>
-                <li><a href="<h4>">Titulo 4</a></li>
-                <li><a href="<h5>">Titulo 5</a></li>
-                <li><a href="<h6>">Titulo 6</a></li>
+                <li><a href="<h1>"><h1>Titulo 1</h1></a></li>
+                <li><a href="<h2>"><h2>Titulo 2</h2></a></li>
+                <li><a href="<h3>"><h3>Titulo 3</h3></a></li>
+                <li><a href="<h4>"><h4>Titulo 4</h4></a></li>
+                <li><a href="<h5>"><h5>Titulo 5</h5></a></li>
+                <li><a href="<h6>"><h6>Titulo 6</h6></a></li>
             </ul>
         </div>
     </div>
