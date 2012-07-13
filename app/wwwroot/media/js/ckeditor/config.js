@@ -8,6 +8,17 @@ CKEDITOR.editorConfig = function( config )
 	// Define changes to default configuration here. For example:
 	// config.language = 'fr';
 	// config.uiColor = '#AADC6E';
+        /*
+        CKEDITOR.link = function(){
+            var dialog = CKEDITOR.dialog.getCurrent();
+            
+            dialog.getContentElement(pageId, elementId);
+            dialog.setValueOf(pageId, elementId, value);
+            dialog.commitContent();
+            dialog.destroy();
+        };
+        */
+        config.skin = 'BootstrapCK-Skin';
         config.toolbar = 'Custom';
         config.toolbar_Custom =
         [

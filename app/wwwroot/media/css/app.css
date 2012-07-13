@@ -47,3 +47,8 @@ th
 .editor-container{
     width: 685px;
 }
+.cke_skin_kama .cke_wrapper{background-color:#d3d3d3;display:block;_display:inline-block;padding:2px;}
+html .cke_skin_kama{visibility:inherit;}html.cke_skin_kama_container{visibility:visible;}
+.cke_editor tbody > :first-child, .cke_editor tbody > :last-child{display: none;}
+.cke_editor{width: 100%;}
+.cke_voice_label{display: none}

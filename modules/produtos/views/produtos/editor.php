@@ -17,7 +17,7 @@
             <a class="btn tip" title="Imagem" href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(42, this); return false;"><i class="icon-picture"></i></a>
             <a class="btn tip" title="Tabela" href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(45, this); return false;"><i class="icon-th"></i></a>
             <a class="btn tip" title="Linha Horizontal" href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(48, this); return false;"><i class="icon-minus"></i></a>
-            <a class="btn tip" title="Link" href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(39, this); return false;"><i class="icon-globe"></i></a>
+            <a class="btn tip" class="editor-link" title="Link" href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(39, this); return false;"><i class="icon-globe"></i></a>
         </div>
         <div class="btn-group toolbar-controls">
             <a class="btn tip" title="Alinhar à Esquerda" href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(27, this); return false;"><i class="icon-align-left"></i></a>
@@ -27,17 +27,17 @@
         </div>
         <div class="btn-group editor-select-style">
             <button class="btn dropdown-toggle" onclick="try{CKEDITOR.tools.callFunction(49, {});}catch(e){} return false;" title="Estilo do Texto" data-toggle="dropdown">
-                <span>Texto Normal</span>
+                <span class="editor-selected-style">Texto Normal</span>
                 <span class="caret"></span>
             </button>
             <ul class="dropdown-menu">
-                <li><a href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(61,'p'); return false;">Texto Normal</a></li>
-                <li><a href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(61,'h1'); return false;"><h1>Titulo 1</h1></a></li>
-                <li><a href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(61,'h2'); return false;"><h2>Titulo 2</h2></a></li>
-                <li><a href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(61,'h3'); return false;"><h3>Titulo 3</h3></a></li>
-                <li><a href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(61,'h4'); return false;"><h4>Titulo 4</h4></a></li>
-                <li><a href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(61,'h5'); return false;"><h5>Titulo 5</h5></a></li>
-                <li><a href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(61,'h6'); return false;"><h6>Titulo 6</h6></a></li>
+                <li><a href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(61,'p'); $('.editor-selected-style').text(this.text); return false;">Texto Normal</a></li>
+                <li><a href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(61,'h1'); $('.editor-selected-style').text(this.text); return false;"><h1>Titulo 1</h1></a></li>
+                <li><a href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(61,'h2'); $('.editor-selected-style').text(this.text); return false;"><h2>Titulo 2</h2></a></li>
+                <li><a href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(61,'h3'); $('.editor-selected-style').text(this.text); return false;"><h3>Titulo 3</h3></a></li>
+                <li><a href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(61,'h4'); $('.editor-selected-style').text(this.text); return false;"><h4>Titulo 4</h4></a></li>
+                <li><a href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(61,'h5'); $('.editor-selected-style').text(this.text); return false;"><h5>Titulo 5</h5></a></li>
+                <li><a href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(61,'h6'); $('.editor-selected-style').text(this.text); return false;"><h6>Titulo 6</h6></a></li>
             </ul>
         </div>
     </div>
@@ -46,10 +46,4 @@
 <script type="text/javascript" src="~/media/js/ckeditor/ckeditor.js"></script>
 <script type="text/javascript">
     CKEDITOR.replace('editor');
-    
-    $(document).ready(function(){
-        $('.editor2-toolbar .editor-select-style a').click(function(e){
-            $('.editor-select-style span:eq(0)').text($(this).text());
-        });
-    });
 </script>
