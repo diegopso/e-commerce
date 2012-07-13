@@ -3,6 +3,10 @@
 
 class ProdutosController extends Controller{
     
+    public function teste() {
+        return $this->_view();
+    }
+    
     public function index() {
         $pg = $this->params('pg', 0);
         $qt_pg = $this->params('s', 10);
