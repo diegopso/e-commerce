@@ -807,11 +807,11 @@ qq.UploadButton.prototype = {
             // in Opera only 'browse' button
             // is clickable and it is located at
             // the right side of the input
-            right: '170px',
-            top: '-10px',
+            right: '0',
+            top: '-3px',
             fontFamily: 'Arial',
             // 4 persons reported this, the max values that worked for them were 243, 236, 236, 118
-            fontSize: '20px',
+            fontSize: '25px',
             margin: 0,
             padding: 0,
             cursor: 'pointer',

@@ -34,6 +34,7 @@ TINY.editor=function(){
     c['unlink']=[23,'Remove Hyperlink','a','unlink'];
     c['unformat']=[24,'Remove Formatting','a','removeformat'];
     c['print']=[25,'Print','a','print'];
+    c['table']=[26,'Table','a','table'];
     function edit(n,obj){
         this.n=n;
         window[n]=this;
@@ -96,7 +97,7 @@ TINY.editor=function(){
                 div.className=obj.controlclass;
                 div.style.backgroundPosition='0px '+pos+'px';
                 div.title=x[1];
-                ex=func=='a'?'.action("'+x[3]+'",0,'+(x[4]||0)+')':'.insert("'+x[4]+'","'+x[5]+'","'+x[3]+'")';
+                ex= func=='a' ? '.action("'+x[3]+'",0,'+(x[4]||0)+')' : '.insert("'+x[4]+'","'+x[5]+'","'+x[3]+'")';
                 div.onclick=new Function(this.n+(id=='print'?'.print()':ex));
                 div.onmouseover=new Function(this.n+'.hover(this,'+pos+',1)');
                 div.onmouseout=new Function(this.n+'.hover(this,'+pos+',0)');
