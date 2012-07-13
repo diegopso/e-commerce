@@ -64,9 +64,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="descricao">
-                            <br />
 
+                        <div class="tab-pane fade" id="descricao">
+                        <br />
+                            <center>
+                                <?php include('editor.php') ?>
+                            </center>
                         </div>
                         <div class="tab-pane fade" id="dimensoes">
                             <br />
