@@ -83,7 +83,7 @@
                                 </div>
                                 <div class="control-group">
                                     <label class="pull-right">
-                                        Palavras-Chave: <input type="text" vlaue="" id="palavras-chave" name="palavras-chave" placeholder="Separadas por ponto e vírgula (;)" />
+                                        Palavras-Chave: <input type="text" vlaue="" id="palavras_chave" name="palavras_chave" placeholder="Separadas por ponto e vírgula (;)" />
                                     </label>
                                 </div>
                                 <div class="clearfix"></div>
@@ -167,7 +167,7 @@
         $modelo = $('#modelo').keyupValidation(/^[a-zA-Z0-9À-Ãà-ãÒ-Õò-õÈ-Êè-êÇçÌ-Îì-îÙ-Üù-ü\s\_\-\'\"\\\/\#]{0,256}$/);
         $qt = $('#quantidade').keyupValidation(/^[0-9]{1,11}$/);
         $preco = $('#preco').keyupValidation(/^[0-9]{1,9}(.[0-9]{0,2})?$/);
-        $tags = $('#palavras-chave').keyupValidation(/^([a-zA-Z0-9\s\_\-\'\"\\\/À-Ãà-ãÒ-Õò-õÈ-Êè-êÇçÌ-Îì-îÙ-Üù-ü]{1,}(;)?(\s)?)*$/);
+        $tags = $('#palavras_chave').keyupValidation(/^([a-zA-Z0-9\s\_\-\'\"\\\/À-Ãà-ãÒ-Õò-õÈ-Êè-êÇçÌ-Îì-îÙ-Üù-ü]{1,}(;)?(\s)?)*$/);
         //$categoria = $('#categoria');
         $altura = $('#altura').keyupValidation(/^[0-9]{0,9}(.)?[0-9]{0,2}$/);
         $largura = $('#largura').keyupValidation(/^[0-9]{0,9}(.)?[0-9]{0,2}$/);

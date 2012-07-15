@@ -45,13 +45,15 @@ class ProdutosController extends Controller{
             $properties['id_autor'] = 0; //colocar usuario logado
             $properties['status'] = 'active';
             
-            $palavras_chave = $properties['palavras-chave'];
+            $palavras_chave = $properties['palavras_chave'];
             $palavras_chave = str_replace('; ', ';', $palavras_chave);
             $palavras_chave = preg_replace('@[;]{2,}@', ';', $palavras_chave);
             $palavras_chave = preg_replace('@;$@', '', $palavras_chave);
-            $palavras_chave = preg_replace('@^;@', '', $palavras_chave);
+            $properties['palavras_chave'] = preg_replace('@^;@', '', $palavras_chave);
             
             try {
+                $db = Database::getInstance();
+                $db->transaction();
                 $pg = array(
                     'titulo' => $properties['name'],
                     'subtitulo' => $properties['modelo'],
@@ -71,12 +73,14 @@ class ProdutosController extends Controller{
                 
                 $produto = Helper_Produtos::cadastrar($properties);
                 
-                $palavras = explode(';', $palavras_chave);
+                $palavras = explode(';', $properties['palavras_chave']);
                 foreach ($palavras as $value) {
                     Helper_Produtos::adicionar_palavras_chave($produto->id, trim($value));
                 }
                 
                 //Helper_Categorias::set_categorias($produto->id, $properties['categorias']);
+                
+                $db->commit();
                 
                 $this->_flash('flash-message alert alert-success', 'Produto cadastrado com sucesso.');
                 if($properties['redirecionar']){
@@ -89,7 +93,8 @@ class ProdutosController extends Controller{
                     
                 return;
             } catch (Exception $exc) {
-                $this->_flash('flash-message alert alert-error', 'Ocorreu um erro ao cadastrar o produto.');
+                $db->rollback();
+                $this->_flash('flash-message alert alert-error', 'Ocorreu um erro ao cadastrar o produto.' . var_dump($exc));
                 return $this->_view($produto);
             }
         }
