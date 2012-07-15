@@ -11,7 +11,7 @@ Modules::add('dbmap', modpath . 'dbmap/');
 Modules::add('midia', modpath . 'midia/');
 //Modules::add('auth', modpath . 'auth/');
 Modules::add('produtos', modpath . 'produtos/');
-Modules::add('propaganda', modpath . 'propaganda/');
+//Modules::add('propaganda', modpath . 'propaganda/');
 
 
 /**

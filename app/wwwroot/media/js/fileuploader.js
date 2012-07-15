@@ -486,7 +486,7 @@ qq.FileUploader = function(o){
                 
         template: '<div class="qq-uploader">' + 
                 '<div class="alert alert-info qq-upload-drop-area"><span>Arraste e solte arquivos aqui para enviá-los</span></div>' +
-                '<div class="btn btn-primary qq-upload-button">Selecione um arquivo</div>' +
+                '<div class="btn btn-info qq-upload-button">Selecione um arquivo</div>' +
                 '<ul class="qq-upload-list"></ul>' + 
              '<span>Ou arraste e solte arquivos aqui para enviá-los</span></div>',
 
@@ -496,7 +496,7 @@ qq.FileUploader = function(o){
                 '<span class="qq-upload-spinner"></span>' +
                 '<span class="qq-upload-size"></span>' +
                 '<a class="qq-upload-cancel" href="#">Cancelar</a>' +
-                '<span class="qq-upload-failed-text">Enviado</span>' +
+                '<span class="qq-upload-failed-text">Ocorreu um erro</span>' +
             '</li>',        
         
         classes: {
@@ -505,6 +505,8 @@ qq.FileUploader = function(o){
             drop: 'qq-upload-drop-area',
             dropActive: 'qq-upload-drop-area-active',
             list: 'qq-upload-list',
+            
+            fullElement: 'qq-uploader',
                         
             file: 'qq-upload-file',
             spinner: 'qq-upload-spinner',
@@ -549,23 +551,27 @@ qq.extend(qq.FileUploader.prototype, {
     },
     _setupDragDrop: function(){
         var self = this,
-            dropArea = this._find(this._element, 'drop');                        
+            dropArea = this._find(this._element, 'drop'),
+            full = this._find(this._element, 'fullElement');
 
         var dz = new qq.UploadDropZone({
             element: dropArea,
             onEnter: function(e){
-                qq.addClass(dropArea, self._classes.dropActive);
+                //qq.addClass(dropArea, self._classes.dropActive);
+                qq.addClass(full, self._classes.dropActive);
                 e.stopPropagation();
             },
             onLeave: function(e){
                 e.stopPropagation();
             },
             onLeaveNotDescendants: function(e){
-                qq.removeClass(dropArea, self._classes.dropActive);  
+                //qq.removeClass(dropArea, self._classes.dropActive);  
+                qq.removeClass(full, self._classes.dropActive);
             },
             onDrop: function(e){
                 dropArea.style.display = 'none';
-                qq.removeClass(dropArea, self._classes.dropActive);
+                //qq.removeClass(dropArea, self._classes.dropActive);
+                qq.removeClass(full, self._classes.dropActive);
                 self._uploadFileList(e.dataTransfer.files);    
             }
         });
@@ -807,16 +813,16 @@ qq.UploadButton.prototype = {
             // in Opera only 'browse' button
             // is clickable and it is located at
             // the right side of the input
-            right: '0',
-            top: '-3px',
+            right: '645px',
+            top: '-69px',
             fontFamily: 'Arial',
             // 4 persons reported this, the max values that worked for them were 243, 236, 236, 118
-            fontSize: '25px',
+            fontSize: '60px',
             margin: 0,
             padding: 0,
             cursor: 'pointer',
             opacity: 0,
-            height: '50px'
+            height: '150px'
         });
         
         this._element.appendChild(input);

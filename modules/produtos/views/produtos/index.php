@@ -10,7 +10,7 @@
 </div>
 
 <div class="pull-right">
-    <button class="btn" id="search-btn"><i class="icon-chevron-down"></i> Pesquisar</button>
+    <button class="btn" data-toggle="slide" data-value="#search-div"><i class="icon-chevron-down"></i> Pesquisar</button>
     <a href="~/produtos/cadastrar/" class="btn btn-primary"><i class="icon-plus icon-white"></i> Adicionar</a>
 </div>
 
@@ -48,7 +48,7 @@
 <div class="row">
     <div class="data span<?= marketing ? 10 : 12 ?>">
         <?php
-            include('listaprodutos.php');
+            include(modpath . 'produtos/views/_snippet/listaprodutos.php');
         ?>
     </div>
     
@@ -73,16 +73,6 @@
 
 <script type="text/javascript">
     $(document).ready(function(){
-        
-        $('#search-btn').toggle(function(){
-            $('#search-div').slideDown('fast');
-            $(this).find('i').removeClass('icon-chevron-down').addClass('icon-chevron-up');
-        },
-        function(){
-            $('#search-div').slideUp('fast').clear();
-            $(this).find('i').removeClass('icon-chevron-up').addClass('icon-chevron-down');
-        });
-        
         $('.pagination-btn').click(loadData);
         
         $('#search-submit').click(function (e){

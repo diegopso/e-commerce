@@ -34,12 +34,12 @@ class Import {
 
         if (!array_key_exists($folder, $folders))
             throw new DirectoryNotFoundException($folder . 's');
-        
+
         foreach ($class as $c) {
             $file = root . $folders[$folder] . $c . '.php';
             if (!file_exists($file))
                 throw new FileNotFoundException($folders[$folder] . $c . '.php');
-            
+
             require_once $file;
 
             if (!class_exists($c))
@@ -127,15 +127,15 @@ class Import {
         $buffer = ob_get_clean();
         ob_start();
         extract($vars);
-        
+
         $file = '';
-        if(Modules::is_set(module)){
+        if (Modules::is_set(module)) {
             $file = modpath . module . '/views/' . $controller . '/' . $view . '.php';
         }
-        
-        if(!file_exists($file)){
+
+        if (!file_exists($file)) {
             $file = root . 'app/views/' . $controller . '/' . $view . '.php';
-            
+
             if (!file_exists($file)) {
                 $modules = Modules::instance();
                 $found = false;
@@ -158,6 +158,31 @@ class Import {
         $content = ob_get_clean();
         echo $buffer;
         return $content;
+    }
+
+    public static function get_contents($view, $controller = null, $module = null) {
+        $file = '';
+        
+        if ($module) {
+            $file = modpath . $module . '/views/' . $controller . '/' . $view . '.php';
+        } elseif (Modules::is_set(module)) {
+            if ($controller)
+                $file = modpath . module . '/views/' . $controller . '/' . $view . '.php';
+            else
+                $file = modpath . module . '/views/' . strtolower(str_replace('Controller', '', controller)) . '/' . $view . '.php';
+        }else {
+            if ($controller) {
+                $file = root . 'app/views/' . $controller . '/' . $view . '.php';
+            } else {
+                $file = root . 'app/views/' . strtolower(str_replace('Controller', '', controller)) . '/' . $view . '.php';
+            }
+        }
+        
+        if (file_exists($file)) {
+            return file_get_contents($file);
+        }
+        
+        throw new FileNotFoundException();
     }
 
 }

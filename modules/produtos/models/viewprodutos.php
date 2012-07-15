@@ -1,6 +1,6 @@
 <?php
 /** @Entity("viewprodutos") */
-class Model_ViewProdutos extends Model
+class Model_Viewprodutos extends Model
 {
     /** @Column(Type="int(11)") */
     public $id;
@@ -13,9 +13,6 @@ class Model_ViewProdutos extends Model
 
     /** @Column(Type="float") */
     public $preco;
-
-    /** @Column(Type="varchar(256)") */
-    public $tags;
 
     /** @Column(Type="varchar(256)") */
     public $modelo;

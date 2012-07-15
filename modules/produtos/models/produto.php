@@ -18,9 +18,6 @@ class Model_Produto extends Model
     public $preco;
 
     /** @Column(Type="varchar(256)") */
-    public $tags;
-
-    /** @Column(Type="varchar(256)") */
     public $modelo;
 
     /** @Column(Type="float") */
