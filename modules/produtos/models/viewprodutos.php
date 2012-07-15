@@ -1,6 +1,6 @@
 <?php
 /** @Entity("viewprodutos") */
-class Model_Viewprodutos extends Model
+class Model_ViewProdutos extends Model
 {
     /** @Column(Type="int(11)") */
     public $id;
@@ -31,6 +31,9 @@ class Model_Viewprodutos extends Model
 
     /** @Column(Type="varchar(8)") */
     public $status;
+
+    /** @Column(Type="varchar(256)") */
+    public $palavras_chave;
 
     /** @Column(Type="int(11)") */
     public $id_imagem;

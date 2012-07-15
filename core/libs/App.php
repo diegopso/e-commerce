@@ -38,6 +38,7 @@ class App {
         }
 
         //I18n
+        
         define('lang', $this->args['lang']);
 
         $i18n = I18n::getInstance();
@@ -50,6 +51,7 @@ class App {
         function _e($string, $format = null) {
             echo I18n::getInstance()->get($string, $format);
         }
+        
 
         define('controller', Inflector::camelize($this->args['controller']) . 'Controller');
         define('action', str_replace('-', '_', $this->args['action']));
