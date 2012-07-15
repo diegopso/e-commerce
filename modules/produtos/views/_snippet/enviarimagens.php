@@ -28,7 +28,7 @@
                    var tr = $('<tr></tr>');
                    tr.append('<td>'+data.model.original_name+'</td>');
                    
-                   var del = $('<button class="btn tip" title="Excluir"><i class="icon-trash"></i></button>').click(function(){
+                   var del = $('<button class="btn tip" onclick="return false;" title="Excluir"><i class="icon-trash"></i></button>').click(function(){
                        //pass
                    });
                    
@@ -72,12 +72,12 @@
         <tr>
             <td>Nome da Imagem</td>
             <td>
-                <button class="btn tip" title="Excluir">
+                <button class="btn tip" onclick="return false;" title="Excluir">
                     <i class="icon-trash"></i>
                 </button>
-                <button class="btn tip" title="Visualizar">
+                <a href="javascript:void(0);" target="_blank" class="btn tip" title="Visualizar">
                     <i class="icon-eye-open"></i>
-                </button>
+                </a>
             </td>
         </tr>
     </tbody>

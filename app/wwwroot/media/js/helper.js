@@ -40,6 +40,7 @@ $.fn.submitValidation = function(requireds, modal){
        var self = $(this);
        self.bind('submit.validation', function(e){
             e.preventDefault();
+            
             var erros = self.find('.error');
             var camposErrados = '';
             var camposObrigatorios = '';

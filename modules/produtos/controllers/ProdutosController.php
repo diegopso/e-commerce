@@ -79,7 +79,14 @@ class ProdutosController extends Controller{
                 //Helper_Categorias::set_categorias($produto->id, $properties['categorias']);
                 
                 $this->_flash('flash-message alert alert-success', 'Produto cadastrado com sucesso.');
-                $this->_redirect('~/produtos');
+                if($properties['redirecionar']){
+                    $this->_redirect('~/produtos');
+                }
+                else{
+                    $_POST = null;
+                    return $this->_view();
+                }
+                    
                 return;
             } catch (Exception $exc) {
                 $this->_flash('flash-message alert alert-error', 'Ocorreu um erro ao cadastrar o produto.' . var_dump($exc));

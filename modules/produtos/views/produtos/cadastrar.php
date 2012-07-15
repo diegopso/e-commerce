@@ -77,7 +77,7 @@
                                     <ul class="dropdown-menu">
                                         <li><a href="javascript:void(0)" data-value="1">Selecione uma Categoria</a></li>
                                     </ul>
-                                    <button class="btn btn-info tip" title="Adicionar">
+                                    <button class="btn btn-info tip" onclick="return false;" title="Adicionar">
                                         <i class="icon-plus"></i>
                                     </button>
                                 </div>
@@ -138,7 +138,9 @@
             <hr />
             <div class="clearfix"></div>
             <div class="pull-right">
-                <input type="submit" class="btn btn-primary" value="Salvar" />
+                <input type="submit" class="btn btn-primary" data-toggle="dont-redirect" value="Salvar" />
+                <input type="submit" class="btn btn-info" value="Salvar e Sair" onclick="$('#redirect').val('1');" />
+                <input id="redirect" name="redirecionar" type="hidden" value="" />
                 <button class="btn">Cancelar</button>
             </div>
 

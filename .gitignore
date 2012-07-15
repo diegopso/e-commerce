@@ -4,7 +4,4 @@
 *.log
 *.xml
 *.properties
-*.png
-*.jpg
-*.jpeg
-*.pdf
+^(.*)uploads(.*)$
