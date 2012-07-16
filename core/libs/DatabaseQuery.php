@@ -128,8 +128,10 @@ class DatabaseQuery
 			return self::$connection;
 		try
 		{
-			self::$connection = new PDO('mysql:dbname='. db_name .';host='. db_host, db_user, db_pass);
-			self::$connection->setAttribute(PDO::ATTR_PERSISTENT, true);
+			self::$connection = new PDO('mysql:dbname='. db_name .';host='. db_host, db_user, db_pass,  array(
+                            PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES ' . str_replace('-', '', charset),
+                            PDO::ATTR_PERSISTENT => true
+                        ));
 			return self::$connection;
 		}
 		catch(PDOException $e)

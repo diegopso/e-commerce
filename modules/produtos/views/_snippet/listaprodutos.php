@@ -33,21 +33,26 @@
 <th class="span2">Ações</th>
 </tfoot>
 </table>
-
-<div class="pull-right">
+<?php if($qt_pg > 1): ?>
+<div class="pull-right pagination">
+    <ul>
     
     <?php if ($pg > 0): ?>
-        <a href="produtos?q=<?= $query ?>&pg=0&r=html" class="btn btn-mini pagination-btn tip" title="Primeira"><i class="icon-fast-backward"></i></a>
+        <li><a href="produtos?q=<?= $query ?>&pg=0&r=html" class="pagination-btn tip" title="Primeira">«</a></li>
     <?php endif; ?>
         
     <?php for ($a = $pg - 1 < 1 ? 1 : $pg - 1; $a <= $pg + 3 && $a <= $qt_pg; $a++): ?>
-        <a href="produtos?q=<?= $query ?>&pg=<?= $a - 1 ?>&r=html" class="btn btn-mini pagination-btn tip <?= $a == $pg + 1 ? 'active' : '' ?>" title="Página <?= $a ?>">
-            <?= $a ?>
-        </a>
+        <li class="<?= $a == $pg + 1 ? 'active' : '' ?>">
+            <a href="produtos?q=<?= $query ?>&pg=<?= $a - 1 ?>&r=html" class="pagination-btn tip" title="Página <?= $a ?>">
+                <?= $a ?>
+            </a>
+        </li>
     <? endfor; ?>
         
     <?php if ($pg < $qt_pg - 1): ?>
-        <a href="produtos?q=<?= $query ?>&pg=<?= $qt_pg - 1 ?>&r=html" class="btn btn-mini pagination-btn tip" title="Última"><i class="icon-forward"></i></a>
+        <li><a href="produtos?q=<?= $query ?>&pg=<?= $qt_pg - 1 ?>&r=html" class="pagination-btn tip" title="Última">»</a></li>
     <?php endif; ?>
-    <div class="clearfix"></div>
+    </ul>
 </div>
+<div class="clearfix"></div>
+<?php endif; ?>

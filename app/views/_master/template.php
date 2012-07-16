@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title>Coruja</title>
-
+        <meta http-equiv="Content-Type" content="text/html; charset=<?= charset ?>" ></meta>
         <link rel="stylesheet" type="text/css" href="~/app/wwwroot/media/css/bootstrap.css"></link>
         <link rel="stylesheet" type="text/css" href="~/app/wwwroot/media/css/app.css"></link>
         
