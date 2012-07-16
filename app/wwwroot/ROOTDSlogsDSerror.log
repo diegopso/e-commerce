@@ -1,0 +1,144 @@
+[15-Jul-2012 21:33:47] PHP Notice:  Undefined index: ProdutosController in C:\xampp\htdocs\e-commerce\core\libs\Annotation.php on line 47
+[15-Jul-2012 21:33:47] PHP Notice:  Undefined property: stdClass::$Auth in C:\xampp\htdocs\e-commerce\core\libs\App.php on line 202
+[15-Jul-2012 21:33:47] PHP Notice:  Undefined variable: roles in C:\xampp\htdocs\e-commerce\core\libs\App.php on line 204
+[15-Jul-2012 21:33:47] PHP Notice:  Undefined variable: roles in C:\xampp\htdocs\e-commerce\core\libs\App.php on line 207
+[15-Jul-2012 21:33:47] PHP Notice:  Undefined property: stdClass::$Master in C:\xampp\htdocs\e-commerce\core\libs\Template.php on line 94
+[15-Jul-2012 21:33:47] PHP Notice:  Undefined variable: tpl in C:\xampp\htdocs\e-commerce\core\libs\Template.php on line 99
+[15-Jul-2012 21:33:47] PHP Notice:  Undefined index: Model_ViewProdutos in C:\xampp\htdocs\e-commerce\core\libs\Annotation.php on line 47
+[15-Jul-2012 21:33:47] PHP Notice:  Undefined offset: 0 in C:\xampp\htdocs\e-commerce\core\libs\Debug.php on line 51
+[15-Jul-2012 21:33:47] PHP Notice:  Undefined offset: 0 in C:\xampp\htdocs\e-commerce\core\libs\Debug.php on line 51
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:33:47] PHP Notice:  Undefined index: Trilado.8641881a5082343c7240c3788e40b625 in C:\xampp\htdocs\e-commerce\core\libs\Session.php on line 93
+[15-Jul-2012 21:33:47] PHP Notice:  Undefined index: dot in C:\xampp\htdocs\e-commerce\core\libs\Template.php on line 51
+[15-Jul-2012 21:34:58] PHP Notice:  Undefined index: ProdutosController in C:\xampp\htdocs\e-commerce\core\libs\Annotation.php on line 47
+[15-Jul-2012 21:34:58] PHP Notice:  Undefined property: stdClass::$Auth in C:\xampp\htdocs\e-commerce\core\libs\App.php on line 202
+[15-Jul-2012 21:34:58] PHP Notice:  Undefined variable: roles in C:\xampp\htdocs\e-commerce\core\libs\App.php on line 204
+[15-Jul-2012 21:34:58] PHP Notice:  Undefined variable: roles in C:\xampp\htdocs\e-commerce\core\libs\App.php on line 207
+[15-Jul-2012 21:34:58] PHP Notice:  Undefined property: stdClass::$Master in C:\xampp\htdocs\e-commerce\core\libs\Template.php on line 94
+[15-Jul-2012 21:34:58] PHP Notice:  Undefined variable: tpl in C:\xampp\htdocs\e-commerce\core\libs\Template.php on line 99
+[15-Jul-2012 21:34:58] PHP Notice:  Undefined offset: 0 in C:\xampp\htdocs\e-commerce\core\libs\Template.php on line 48
+[15-Jul-2012 21:34:58] PHP Notice:  Undefined index: dot in C:\xampp\htdocs\e-commerce\core\libs\Template.php on line 51
+[15-Jul-2012 21:36:54] PHP Notice:  Undefined index: HomeController in C:\xampp\htdocs\e-commerce\core\libs\Annotation.php on line 47
+[15-Jul-2012 21:36:54] PHP Notice:  Undefined property: stdClass::$Auth in C:\xampp\htdocs\e-commerce\core\libs\App.php on line 202
+[15-Jul-2012 21:36:54] PHP Notice:  Undefined variable: roles in C:\xampp\htdocs\e-commerce\core\libs\App.php on line 204
+[15-Jul-2012 21:36:54] PHP Notice:  Undefined variable: roles in C:\xampp\htdocs\e-commerce\core\libs\App.php on line 207
+[15-Jul-2012 21:36:54] PHP Notice:  Undefined property: stdClass::$Master in C:\xampp\htdocs\e-commerce\core\libs\Template.php on line 94
+[15-Jul-2012 21:36:54] PHP Notice:  Undefined variable: tpl in C:\xampp\htdocs\e-commerce\core\libs\Template.php on line 99
+[15-Jul-2012 21:36:54] PHP Notice:  Undefined index: dot in C:\xampp\htdocs\e-commerce\core\libs\Template.php on line 51
+[15-Jul-2012 21:36:58] PHP Notice:  Undefined index: ProdutosController in C:\xampp\htdocs\e-commerce\core\libs\Annotation.php on line 47
+[15-Jul-2012 21:36:58] PHP Notice:  Undefined property: stdClass::$Auth in C:\xampp\htdocs\e-commerce\core\libs\App.php on line 202
+[15-Jul-2012 21:36:58] PHP Notice:  Undefined variable: roles in C:\xampp\htdocs\e-commerce\core\libs\App.php on line 204
+[15-Jul-2012 21:36:58] PHP Notice:  Undefined variable: roles in C:\xampp\htdocs\e-commerce\core\libs\App.php on line 207
+[15-Jul-2012 21:36:58] PHP Notice:  Undefined property: stdClass::$Master in C:\xampp\htdocs\e-commerce\core\libs\Template.php on line 94
+[15-Jul-2012 21:36:58] PHP Notice:  Undefined variable: tpl in C:\xampp\htdocs\e-commerce\core\libs\Template.php on line 99
+[15-Jul-2012 21:36:58] PHP Notice:  Undefined index: Model_ViewProdutos in C:\xampp\htdocs\e-commerce\core\libs\Annotation.php on line 47
+[15-Jul-2012 21:36:58] PHP Notice:  Undefined offset: 0 in C:\xampp\htdocs\e-commerce\core\libs\Debug.php on line 51
+[15-Jul-2012 21:36:58] PHP Notice:  Undefined offset: 0 in C:\xampp\htdocs\e-commerce\core\libs\Debug.php on line 51
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Warning:  settype() [<a href='function.settype'>function.settype</a>]: Invalid type in C:\xampp\htdocs\e-commerce\core\libs\DatabaseQuery.php on line 330
+[15-Jul-2012 21:36:58] PHP Notice:  Undefined index: dot in C:\xampp\htdocs\e-commerce\core\libs\Template.php on line 51
