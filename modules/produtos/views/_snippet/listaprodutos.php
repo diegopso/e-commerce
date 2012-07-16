@@ -2,8 +2,8 @@
 <thead>
     <tr>
         <th>Nome</th>
-        <th class="span1">Preço</th>
-        <th class="span1">Quantidade</th>
+        <th class="span2">Preço (<?=default_currency?>)</th>
+        <th class="span1">Estoque</th>
         <th class="span2">Ações</th>
     </tr>
 </thead>
@@ -16,7 +16,7 @@
     <? foreach ($model as $produto): ?>
         <tr>
             <td><?= $produto->nome ?> <img class="loading" src="<?= site_url ?>media/img/loading.gif" style="display: none;" /></td>
-            <td><?= $produto->preco ?></td>
+            <td><?= number_format($produto->preco, 2, decimal_separator, thousands_separator); ?></td>
             <td><?= $produto->quantidade ?></td>
             <td>
                 <a href="~/produtos/cadastrar/<?= $produto->id ?>"  class="btn tip" title="Editar"><i class="icon-pencil"></i></a>
@@ -28,8 +28,8 @@
 </tbody>
 <tfoot>
 <th>Nome</th>
-<th>Preço</th>
-<th>Quantidade</th>
+<th>Preço (<?=default_currency?>)</th>
+<th>Estoque</th>
 <th class="span2">Ações</th>
 </tfoot>
 </table>

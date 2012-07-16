@@ -83,6 +83,24 @@ define('charset', 'UTF-8');
 define('default_lang', 'pt-br');
 
 /**
+ * Moeda padrão
+ * @var	string
+ */
+define('default_currency', 'R$');
+
+/**
+ * Moeda padrão
+ * @var	string
+ */
+define('decimal_separator', ',');
+
+/**
+ * Moeda padrão
+ * @var	string
+ */
+define('thousands_separator', '.');
+
+/**
  * Chave de segurança (deve ser alterada)
  * @var	string
  */
