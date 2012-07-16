@@ -121,9 +121,11 @@ class Model {
 
         $db = Database::getInstance();
         if ($key){
-            $bool = $this->$key;
+            $bool = $this->{$key};
             if($bool)
                 $db->{$class}->update($this);
+            else
+                $db->{$class}->insert($this);
         }else
             $db->{$class}->insert($this);
         $db->save();
