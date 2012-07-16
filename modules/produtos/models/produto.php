@@ -18,9 +18,6 @@ class Model_Produto extends Model
     public $preco;
 
     /** @Column(Type="varchar(256)") */
-    public $tags;
-
-    /** @Column(Type="varchar(256)") */
     public $modelo;
 
     /** @Column(Type="float") */
@@ -37,6 +34,9 @@ class Model_Produto extends Model
 
     /** @Column(Type="varchar(8)") */
     public $status;
+
+    /** @Column(Type="varchar(256)") */
+    public $palavras_chave;
 
     /** @Column(Type="int(11)") */
     public $id_imagem;

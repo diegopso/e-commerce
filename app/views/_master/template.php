@@ -171,14 +171,5 @@
                 </div>
             </div>
         </div>
-
-
-        <script type="text/javascript">
-            $(document).ready(function(){
-                
-                $(".tip").tooltip();
-                
-            });
-        </script>
     </body>
 </html>

@@ -1,4 +1,5 @@
 @import "bootstrap/mixins.less";
+@import "bootstrap/variables.less";
 
 .qq-uploader > span{
     display: block;
@@ -8,23 +9,37 @@
     padding-bottom: 30px;
 } 
 .qq-uploader { 
-    border: 5px dashed gray;
+    border: 5px dashed @grayLight;
     padding: 5px;
     position: relative;
     width: 97%;
     .border-radius(4px);
+    color: @grayLight;
 }
 
 .qq-upload-drop-area {
-    position:absolute; top:0; left:0; width:96%; height:100%; z-index:2;
-    text-align:center; margin: -8px;
+    opacity: 0;
+    position:absolute;
+    top:0;
+    left:0; 
+    text-align:center; 
+    margin: -5px;
+    width:101%;
+    height:105%;
+    z-index:2;
+    padding: 0;
 }
 .qq-upload-drop-area span {
     display:block; position:absolute; top: 50%; width:100%; margin-top:-8px; font-size:16px;
 }
-.qq-upload-drop-area-active {}
+.qq-upload-drop-area-active.qq-uploader {
+    border-color: @gray;
+    color: @gray;
+}
 
-.qq-upload-list {margin:15px 35px; padding:0; list-style:disc;}
+.qq-upload-list {
+    margin:15px 35px; padding:0; list-style:disc;
+}
 .qq-upload-list li { margin:0; padding:0; line-height:15px; font-size:12px;}
 .qq-upload-file, .qq-upload-spinner, .qq-upload-size, .qq-upload-cancel, .qq-upload-failed-text {
     margin-right: 7px;

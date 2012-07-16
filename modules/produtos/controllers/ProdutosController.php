@@ -45,7 +45,15 @@ class ProdutosController extends Controller{
             $properties['id_autor'] = 0; //colocar usuario logado
             $properties['status'] = 'active';
             
+            $palavras_chave = $properties['palavras_chave'];
+            $palavras_chave = str_replace('; ', ';', $palavras_chave);
+            $palavras_chave = preg_replace('@[;]{2,}@', ';', $palavras_chave);
+            $palavras_chave = preg_replace('@;$@', '', $palavras_chave);
+            $properties['palavras_chave'] = preg_replace('@^;@', '', $palavras_chave);
+            
             try {
+                $db = Database::getInstance();
+                $db->transaction();
                 $pg = array(
                     'titulo' => $properties['name'],
                     'subtitulo' => $properties['modelo'],
@@ -65,13 +73,28 @@ class ProdutosController extends Controller{
                 
                 $produto = Helper_Produtos::cadastrar($properties);
                 
+                $palavras = explode(';', $properties['palavras_chave']);
+                foreach ($palavras as $value) {
+                    Helper_Produtos::adicionar_palavras_chave($produto->id, trim($value));
+                }
+                
                 //Helper_Categorias::set_categorias($produto->id, $properties['categorias']);
                 
-                $this->_flash('SUCCESS', 'Produto cadastrado com sucesso.');
-                $this->_redirect('~/produtos');
+                $db->commit();
+                
+                $this->_flash('flash-message alert alert-success', 'Produto cadastrado com sucesso.');
+                if($properties['redirecionar']){
+                    $this->_redirect('~/produtos');
+                }
+                else{
+                    $_POST = null;
+                    return $this->_view();
+                }
+                    
                 return;
             } catch (Exception $exc) {
-                $this->_flash('ERROR', 'Ocorreu um erro ao cadastrar o produto.');
+                $db->rollback();
+                $this->_flash('flash-message alert alert-error', 'Ocorreu um erro ao cadastrar o produto.' . var_dump($exc));
                 return $this->_view($produto);
             }
         }
@@ -87,16 +110,16 @@ class ProdutosController extends Controller{
     public function excluir($id) {
         try {
             $produto = Helper_Produtos::excluir($id);
-            $this->_flash('SUCCESS', 'O produto foi excluído.');
+            $this->_flash('flash-message alert alert-success', 'O produto foi excluído.');
             return $this->_json(array(
-                'status' => 'SUCCESS',
+                'status' => 'flash-message alert alert-success',
                 'message' => 'O produto foi excluído.',
                 'model' => $produto
             ));
         } catch (Exception $exc) {
-            $this->_flash('ERROR', 'Ocorreu um erro ao excluir o produto.');
+            $this->_flash('flash-message alert alert-error', 'Ocorreu um erro ao excluir o produto.');
             return $this->_json(array(
-                'status' => 'ERROR',
+                'status' => 'flash-message alert alert-error',
                 'message' => 'Ocorreu um erro ao excluir o produto.'
             ));
         }
@@ -105,16 +128,16 @@ class ProdutosController extends Controller{
     public function desfazerexclusao($id){
         try {
             $produto = Helper_Produtos::desfazer_exclusao($id);
-            $this->_flash('SUCCESS', 'Ação desfeita.');
+            $this->_flash('flash-message alert alert-success', 'Ação desfeita.');
             return $this->_json(array(
-                'status' => 'SUCCESS',
+                'status' => 'flash-message alert alert-success',
                 'message' => 'Ação desfeita.',
                 'model' => $produto
             ));
         } catch (Exception $exc) {
-            $this->_flash('ERROR', 'Ocorreu um erro ao desfazer.');
+            $this->_flash('flash-message alert alert-error', 'Ocorreu um erro ao desfazer.');
             return $this->_json(array(
-                'status' => 'ERROR',
+                'status' => 'flash-message alert alert-error',
                 'message' => 'Ocorreu um erro ao desfazer.'
             ));
         }

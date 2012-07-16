@@ -320,14 +320,15 @@ class DatabaseQuery
 				
 				foreach($result as $field => $value)
 				{
-					$property = $annotation->getProperty($field);
-					$type = strtolower($property->Column->Type);
-					$type = $type == 'double' ? 'float' : $type;
-					$type = $type == 'int' ? 'integer' : $type;
-					if($type == 'boolean')
-						$value = ord($value) == 1;
-					elseif($type != 'datetime')
-						settype($value, $type);
+					//$property = $annotation->getProperty($field);
+					//$type = strtolower($property->Column->Type);
+                                        //$char = $type[0];
+					//$type = $type == 'double' ? 'float' : $type;
+					//$type = $type == 'int' ? 'integer' : $type;
+					//if($char == 'b')
+						//$value = ord($value) == 1;
+					//elseif($type != 'datetime')
+						//settype($value, $type);
 					$object->{$field} = $value;
 				}
 				

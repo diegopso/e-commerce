@@ -49,6 +49,8 @@ class Model {
     protected function _getKey() {
         if ($this->_key)
             return $this->_key;
+        else
+            $this->_key = false;
 
         $class = get_called_class();
         $annotation = Annotation::get($class);
@@ -118,9 +120,13 @@ class Model {
         $key = $this->_getKey();
 
         $db = Database::getInstance();
-        if ($key && $this->{$key})
-            $db->{$class}->update($this);
-        else
+        if ($key){
+            $bool = $this->{$key};
+            if($bool)
+                $db->{$class}->update($this);
+            else
+                $db->{$class}->insert($this);
+        }else
             $db->{$class}->insert($this);
         $db->save();
     }
@@ -141,10 +147,14 @@ class Model {
         $properties = get_class_vars(get_called_class());
         $names = array();
         
+        $i = 0;
         foreach ($properties as $k => $v){
-            if($k[0] != '_')
-                $names[] = $k;
+            //if($k[0] != '_')
+                $names[$i++] = $k;
         }
+        
+        unset($names[$i - 1]);
+        unset($names[$i - 2]);
         
         return $names;
     }

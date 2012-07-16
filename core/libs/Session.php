@@ -34,13 +34,17 @@ class Session
 		session_regenerate_id();
 	}
 	
+        private static $_key = null;
+        
 	/**
 	 * Cria uma chave MD5 com base no navegador do usuário e o salt, definido na configuração
 	 * @return	string		retorna uma string MD5 
 	 */
 	private static function key()
 	{
-		return 'Trilado.'. md5($_SERVER['HTTP_USER_AGENT'] . salt);
+            if(!self::$_key)
+                $_key = 'Trilado.'. md5($_SERVER['HTTP_USER_AGENT'] . salt);
+            return $_key;
 	}
 	
 	/**

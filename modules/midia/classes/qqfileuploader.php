@@ -5,10 +5,12 @@ class Classe_qqFileUploader {
     private $sizeLimit = 8388608;
     private $file;
 
-    function __construct(array $allowedExtensions = array(), $sizeLimit = 8388608){        
+    function __construct(array $allowedExtensions = null, $sizeLimit = 8388608){        
         $allowedExtensions = array_map("strtolower", $allowedExtensions);
             
-        $this->allowedExtensions = $allowedExtensions;        
+        if($allowedExtensions)
+            $this->allowedExtensions = $allowedExtensions;        
+        
         $this->sizeLimit = $sizeLimit;
         
         $this->checkServerSettings();       
@@ -88,7 +90,8 @@ class Classe_qqFileUploader {
                 'success'=> true, 
                 'fileName'=> $uploadDirectory . $filename . '.' . $ext,
                 'ext' => $ext,
-                'basename' => $filename
+                'basename' => $filename,
+                'original_name' => $pathinfo['filename']
             );
         } else {
             die("{'error':'ERROR.', 'error_type':'unknow'}");
