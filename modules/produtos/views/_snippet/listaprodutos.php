@@ -15,13 +15,13 @@
     <?php endif; ?>
     <? foreach ($model as $produto): ?>
         <tr>
-            <td><?= $produto->nome ?></td>
+            <td><?= $produto->nome ?> <img class="loading" src="<?= site_url ?>media/img/loading.gif" style="display: none;" /></td>
             <td><?= $produto->preco ?></td>
             <td><?= $produto->quantidade ?></td>
             <td>
-                <a href="~/produtos/cadastrar/<?= $produto->id ?>" class="btn tip" title="Editar"><i class="icon-pencil"></i></a>
+                <a href="~/produtos/cadastrar/<?= $produto->id ?>"  class="btn tip" title="Editar"><i class="icon-pencil"></i></a>
                 <a href="javascript:void(0);" class="btn tip" title="Visualizar"><i class="icon-eye-open"></i></a>
-                <a href="produtos/excluir/<?= $produto->id ?>" class="btn tip delete" title="Excluir"><i class="icon-trash"></i></a>
+                <a href="produtos/excluir/<?= $produto->id ?>" onclick="removerProduto(this); return false;" class="btn tip delete" title="Excluir"><i class="icon-trash"></i></a>
             </td>
         </tr>
     <? endforeach; ?>
@@ -40,8 +40,8 @@
         <a href="produtos?q=<?= $query ?>&pg=0&r=html" class="btn btn-mini pagination-btn tip" title="Primeira"><i class="icon-fast-backward"></i></a>
     <?php endif; ?>
         
-    <?php for ($a = $pg - 3 < 1 ? 1 : $pg - 3; $a <= $pg + 3 && $a <= $qt_pg; $a++): ?>
-        <a href="produtos?q=<?= $query ?>&pg=<?= $a - 1 ?>&r=html" class="btn btn-mini pagination-btn tip <?= $a == $pg + 1 ? 'active' : '' ?>" id="<?= $pg ?>" title="Página <?= $pg + 1 ?>">
+    <?php for ($a = $pg - 1 < 1 ? 1 : $pg - 1; $a <= $pg + 3 && $a <= $qt_pg; $a++): ?>
+        <a href="produtos?q=<?= $query ?>&pg=<?= $a - 1 ?>&r=html" class="btn btn-mini pagination-btn tip <?= $a == $pg + 1 ? 'active' : '' ?>" title="Página <?= $a ?>">
             <?= $a ?>
         </a>
     <? endfor; ?>

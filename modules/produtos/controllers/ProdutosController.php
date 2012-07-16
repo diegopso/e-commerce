@@ -24,7 +24,7 @@ class ProdutosController extends Controller{
         $this->_set('query', $q);
         
         if($render_type == 'html')
-            return $this->_page('listaprodutos', $model);
+            return $this->_page('_snippet', 'listaprodutos', $model);
         
         if($render_type == 'json')
             return $this->_json(array(

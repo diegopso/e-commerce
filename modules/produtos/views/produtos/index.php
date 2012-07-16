@@ -34,7 +34,7 @@
     <div class="clearfix"></div>
 </form>
 
-<div class="alert alert-block" style="display: none">
+<div id="desfazer" class="alert alert-block" style="display: none">
     <center>
         <strong>
             <a class="close" data-dismiss="alert" href="#">×</a>
@@ -72,6 +72,7 @@
 </div>
 
 <script type="text/javascript">
+    var divAlert = null;
     $(document).ready(function(){
         $('.pagination-btn').click(loadData);
         
@@ -80,30 +81,7 @@
             requestData('produtos?q=' + $('#search-text').val() +'&r=html');
         });
         
-        $('.delete').click(function(e){
-            e.preventDefault();
-            $.ajax({
-                url: $(this).attr('href'),
-                success: function(data){
-                    var divAlert = $('.alert');
-                    divAlert.find('a').click(function(e){ 
-                        e.preventDefault();
-                        $.ajax({
-                            url: 'produtos/desfazerexclusao/' + data.d.model.id,
-                            success: function(){
-                                divAlert.slideUp('fast');
-                            }
-                        });
-                    });
-                    divAlert.slideDown('fast');
-                    setTimeout(function(){
-                        divAlert.slideUp('fast');
-                        requestData('produtos?q=' + $('#search-text').val() +'&r=html');
-                    }, 2000);
-                }
-            });
-        });
-        
+        divAlert = $('#desfazer');
     });
     
     function loadData(e){
@@ -121,7 +99,30 @@
         });
     }
     
-    
+    removerProduto = function(element){
+        var self = $(element);
+        var tr = self.parent().parent();
+        tr.find('.loading').show();
+        $.ajax({
+            url: self.attr('href'),
+            success: function(data){
+                requestData('produtos?q=' + $('#search-text').val() +'&r=html');
+                divAlert.find('a').click(function(e){
+                    e.preventDefault();
+                    $.ajax({
+                        url: 'produtos/desfazerexclusao/' + data.d.model.id,
+                        success: function(){
+                            divAlert.slideUp('fast');
+                        }
+                    });
+                });
+                divAlert.slideDown('fast');
+                setTimeout(function(){
+                    divAlert.slideUp('fast');
+                }, 2000);
+            }
+        });
+    }
         
 </script>
 

@@ -16,23 +16,23 @@ class Helper_Produtos{
         ),
         'preco' => array(
             'obrigatorio' => true,
-            'regExp' => '@^[0-9]{1,9}(.[0-9]{0,2})?$@'
+            'regExp' => '@^[0-9]{1,9}(\.[0-9]{0,2})?$@'
         ),
         'altura' => array(
             'obrigatorio' => false,
-            'regExp' => '@^[0-9]{0,9}(.)?[0-9]{0,2}$@'
+            'regExp' => '@^[0-9]{0,9}(\.)?[0-9]{0,2}$@'
         ),
         'largura' => array(
             'obrigatorio' => false,
-            'regExp' => '@^[0-9]{0,9}(.)?[0-9]{0,2}$@'
+            'regExp' => '@^[0-9]{0,9}(\.)?[0-9]{0,2}$@'
         ),
         'comprimento' => array(
             'obrigatorio' => false,
-            'regExp' => '@^[0-9]{0,9}(.)?[0-9]{0,2}$@'
+            'regExp' => '@^[0-9]{0,9}(\.)?[0-9]{0,2}$@'
         ),
         'peso' => array(
             'obrigatorio' => false,
-            'regExp' => '@^[0-9]{0,9}(.)?[0-9]{0,2}$@'
+            'regExp' => '@^[0-9]{0,9}(\.)?[0-9]{0,2}$@'
         ),
     );
     
