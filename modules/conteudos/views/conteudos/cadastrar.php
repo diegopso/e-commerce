@@ -4,7 +4,7 @@
             <a href="~/">My store</a> <span class="divider">/</span>
         </li>
         <li>
-            <a href="~/conteudos">Produtos</a> <span class="divider">/</span>
+            <a href="~/conteudos">Conteúdos</a> <span class="divider">/</span>
         </li>
         <li>
             <a href="~/conteudos/cadastrar">Cadastrar</a>
@@ -24,6 +24,7 @@
             </ul>
             <div id="contentTabContent" class="tab-content">
                 <div class="tab-pane fade active in" id="descricao">
+                    <br />
                     <div class="control-group">
                         <label class="control-label" for="nome">Título <span class="help-required">*</span></label>
                         <div class="controls">
@@ -43,6 +44,7 @@
                     </div>
                 </div>
                 <div class="tab-pane fade" id="imagens">
+                    <br />
                     <? include(root . 'app/views/_snippet/enviarimagens.php'); ?>
                 </div>
             </div>
@@ -69,10 +71,11 @@
 <script type="text/javascript">
     var $titulo = undefined;
     var $sub = undefined;
+    var $tags = undefined;
     var requireds = undefined;
     $(document).ready(function(){
-        $titulo = $('#titulo').keyupValidation(/^.*{1,256}$/);
-        $sub = $('#subtitulo').keyupValidation(/^.*{0,256}$/);
+        $titulo = $('#titulo').keyupValidation(/^[\u0001-\u9999]{1,256}$/);
+        $sub = $('#subtitulo').keyupValidation(/^[\u0001-\u9999]{0,256}$/);
         $tags = $('#palavras_chave').keyupValidation(/^([a-zA-Z0-9\s\_\-\'\"\\\/À-Ãà-ãÒ-Õò-õÈ-Êè-êÇçÌ-Îì-îÙ-Üù-ü]{1,}(;)?(\s)?)*$/);
         //$categoria = $('#categoria');
         requireds = [$titulo];

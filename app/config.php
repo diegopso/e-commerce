@@ -118,3 +118,6 @@ define('auto_ajax', false);
 define('auto_dotxml', false);
 
 define('auto_dotjson', false);
+
+define('upload_directory', wwwroot . 'uploads/');
+define('temp_directory', upload_directory . 'temp/');

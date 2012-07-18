@@ -2,12 +2,12 @@
 
 class Classe_Imagem{
     public static function resize($filename, $size, $destination, $max_dimension = CLASSE_IMAGEM_RATIO, $compression = 75){
-        $image_info = getimagesize($filename);
+        $path = temp_directory . $filename;
+        $image_info = getimagesize($path);
         $image_type = $image_info[2];
         
         if($image_type == IMAGETYPE_JPEG){
-            $image = imagecreatefromjpeg($filename);
-            
+            $image = imagecreatefromjpeg($path);
             $o_height = imagesy($image);
             $o_width = imagesx($image);
             
@@ -21,7 +21,7 @@ class Classe_Imagem{
             
             imagejpeg($image, $destination, $compression);
         }elseif($image_type == IMAGETYPE_PNG){
-            $image = imagecreatefrompng($filename);
+            $image = imagecreatefrompng($path);
             
             if($max_dimension === CLASSE_IMAGEM_RATIO){
                 $image = self::resize_by_ratio($image, $size, $o_height, $o_width);
@@ -33,7 +33,7 @@ class Classe_Imagem{
             
             imagepng($image, $destination, $compression);
         }elseif($image_type == IMAGETYPE_GIF){
-            $image = imagecreatefromgif($filename);
+            $image = imagecreatefromgif($path);
             
             if($max_dimension === CLASSE_IMAGEM_RATIO){
                 $image = self::resize_by_ratio($image, $size, $o_height, $o_width);
@@ -67,15 +67,9 @@ class Classe_Imagem{
     
     private static function resize_by_ratio($image, $size, $o_height, $o_width){
         if($o_height > $o_width){
-            return self::resize_by_height($image, $size, array(
-                'h' => $o_height,
-                'w' => $o_width
-            ));
+            return self::resize_by_height($image, $size, $o_height, $o_width);
         }else{
-            return self::resize_by_width($image, $size, array(
-                'h' => $o_height,
-                'w' => $o_width
-            ));
+            return self::resize_by_width($image, $size, $o_height, $o_width);
         }
     }
 }

@@ -92,13 +92,13 @@ class Helper_Conteudos{
     
     public static function vincular_arquivo($filepath, $filename, $id_pagina, $image_sizes = array(256, 128)){
         $finfo = finfo_open(FILEINFO_MIME_TYPE);
-        $mime = finfo_file($finfo, $filepath);
-        finfo_close($finfo);
+        $mime = finfo_file($finfo, temp_directory . $filepath);
+        finfo_close($mime);
         
         $pathinfo = pathinfo($filepath);
         
-        $ext = '.' . $pathinfo[PATHINFO_EXTENSION];
-        $caminho = $pathinfo[PATHINFO_FILENAME];
+        $ext = '.' . $pathinfo['extension'];
+        $caminho = $pathinfo['filename'];
         
         if(strpos($mime, 'image') !== false){
             Helper_Midia::resize_image($filepath, $image_sizes, $pathinfo);
