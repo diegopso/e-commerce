@@ -7,7 +7,7 @@ class ConteudosController extends Controller{
         $render_type = $this->params('r', 'page');
         
         $count = 0;
-        $model = Helper_Conteudos::get_paginas($q, $pg, $qt_pg, $count);
+        $model = Helper_Conteudos::get_paginas($q, $pg, $qt_pg, $count, 'conteudo', 'Listar');
         
         $qt_pg = ceil($count / $qt_pg);
         
@@ -17,7 +17,7 @@ class ConteudosController extends Controller{
         $this->_set('query', $q);
         
         if($render_type == 'html')
-            return $this->_page('_snippet', 'listaprodutos', $model);
+            return $this->_page('_snippet', 'listaconteudos', $model);
         
         if($render_type == 'json')
             return $this->_json(array(
@@ -38,38 +38,46 @@ class ConteudosController extends Controller{
             $properties['id_autor'] = 0; //colocar usuario logado
             $properties['status'] = 'active';
             
-            $palavras_chave = $properties['palavras_chave'];
-            $palavras_chave = str_replace('; ', ';', $palavras_chave);
-            $palavras_chave = preg_replace('@[;]{2,}@', ';', $palavras_chave);
-            $palavras_chave = preg_replace('@;$@', '', $palavras_chave);
-            $properties['palavras_chave'] = preg_replace('@^;@', '', $palavras_chave);
-            
             try {
                 $db = Database::getInstance();
                 $db->transaction();
                 
                 $conteudo = Helper_Conteudos::cadastrar($properties);
-                Helper_Midia::save_files($conteudo->id);
                 
-                $palavras = explode(';', $properties['palavras_chave']);
-                foreach ($palavras as $value) {
-                    Helper_Conteudos::adicionar_palavra_chave($conteudo->id, trim($value));
+                $count = count($properties['filename']);
+                $id_pagina = $conteudo->id;
+                for ($i = 0; $i < $count; ++$i) {
+                    Helper_Conteudos::vincular_arquivo($properties['filename'][$i], $properties['nome_original'][$i], $id_pagina);
+                }
+                
+                if(isset($properties['palavras_chave'])){
+                    $palavras_chave = $properties['palavras_chave'];
+                    $palavras_chave = preg_replace('([\s]{2,})', ' ', $palavras_chave);
+                    $palavras_chave = str_replace('; ', ';', $palavras_chave);
+                    $palavras_chave = preg_replace('@[;]{2,}@', ';', $palavras_chave);
+                    $palavras_chave = preg_replace('@;$@', '', $palavras_chave);
+                    $palavras_chave = preg_replace('@^;@', '', $palavras_chave);
+                    
+                    $palavras = explode(';', $palavras_chave);
+                    foreach ($palavras as $value) {
+                        Helper_Conteudos::adicionar_palavra_chave($conteudo->id, trim($value));
+                    }
                 }
                 
                 //Helper_Categorias::set_categorias($conteudo->id, $properties['categorias']);
                 
                 $db->commit();
-                $this->_flash('flash-message alert alert-success', 'Produto cadastrado com sucesso.');
+                $this->_flash('flash-message alert alert-success', 'Conteúdo cadastrado com sucesso.');
                 $this->_redirect('~/conteudos');    
                 return;
             } catch (Exception $exc) {
                 $db->rollback();
-                $this->_flash('flash-message alert alert-error', 'Ocorreu um erro ao cadastrar o produto.' . var_dump($exc));
+                $this->_flash('flash-message alert alert-error', 'Ocorreu um erro ao cadastrar o conteúdo.' . var_dump($exc));
                 return $this->_view($conteudo);
             }
         }
         
-        $conteudo = Model_Conteudo::get($id);
+        $conteudo = Model_Pagina::get($id);
         
         if($id != $conteudo->id)
             throw new Exception_ContudoNaoEncontrado();

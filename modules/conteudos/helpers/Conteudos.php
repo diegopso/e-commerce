@@ -4,11 +4,11 @@ class Helper_Conteudos{
     private static $validation = array(
         'titulo' => array(
             'obrigatorio' => true,
-            'regExp' => '@^[a-zA-Z0-9À-Ãà-ãÒ-Õò-õÈ-Êè-êÇçÌ-Îì-îÙ-Üù-ü\s\_\-\'\"\\\/\#]{1,256}$@'
+            'regExp' => '@^.*{1,256}$@'
         ),
         'subtitulo' => array(
             'obrigatorio' => false,
-            'regExp' => '@^[a-zA-Z0-9À-Ãà-ãÒ-Õò-õÈ-Êè-êÇçÌ-Îì-îÙ-Üù-ü\s\_\-\'\"\\\/\#]{0,256}$@'
+            'regExp' => '@^.*{0,256}$@'
         ),
         'conteudo' => array(
             'obrigatorio' => true,
@@ -19,12 +19,12 @@ class Helper_Conteudos{
     public static function get_paginas($q, $pg, $qt_pg, &$count, $type = false, $sufix = ''){
         $sql = '';
         if($q){
-            $sql .= 'nome LIKE "%' . $q . '%"';
+            $sql .= 'titulo LIKE "%' . $q . '%"';
             if($type){
-                $sql .= ' AND type = "' . $type . '"';
+                $sql .= ' AND tipo = "' . $type . '"';
             }
         }elseif($type){
-            $sql .= 'type = "' . $type . '"';
+            $sql .= 'tipo = "' . $type . '"';
         }
         
         $db = new DatabaseQuery('Model_ViewPaginas' . $sufix);
@@ -33,7 +33,7 @@ class Helper_Conteudos{
         $db2 = clone $db;
         $count = $db2->count();
         
-        $db->orderBy('nome', 'ASC');
+        $db->orderBy('data', 'DESC');
         $db->limit($qt_pg, $pg * $qt_pg);
         
         return $db->all();

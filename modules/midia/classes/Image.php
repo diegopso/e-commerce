@@ -1,58 +1,53 @@
 <?php
 
-class Classe_Image{
-    public static function resize($filename, $size, $destination, $max_dimension = CLASSE_IMAGE_RATIO, $compression = 75){
+class Classe_Imagem{
+    public static function resize($filename, $size, $destination, $max_dimension = CLASSE_IMAGEM_RATIO, $compression = 75){
         $image_info = getimagesize($filename);
         $image_type = $image_info[2];
         
         if($image_type == IMAGETYPE_JPEG){
             $image = imagecreatefromjpeg($filename);
             
-            if($max_dimension === CLASSE_IMAGE_RATIO){
-                $image = self::resize_by_ratio($image, $size);
-            }elseif($max_dimension === CLASSE_IMAGE_HEIGHT){
-                $image = self::resize_by_height($image, $height);
+            $o_height = imagesy($image);
+            $o_width = imagesx($image);
+            
+            if($max_dimension === CLASSE_IMAGEM_RATIO){
+                $image = self::resize_by_ratio($image, $size, $o_height, $o_width);
+            }elseif($max_dimension === CLASSE_IMAGEM_HEIGHT){
+                $image = self::resize_by_height($image, $size, $o_height, $o_width);
             }else{
-                $image = self::resize_by_width($image, $width);
+                $image = self::resize_by_width($image, $size, $o_height, $o_width);
             }
             
             imagejpeg($image, $destination, $compression);
         }elseif($image_type == IMAGETYPE_PNG){
             $image = imagecreatefrompng($filename);
             
-            if($max_dimension === CLASSE_IMAGE_RATIO){
-                $image = self::resize_by_ratio($image, $size);
-            }elseif($max_dimension === CLASSE_IMAGE_HEIGHT){
-                $image = self::resize_by_height($image, $height);
+            if($max_dimension === CLASSE_IMAGEM_RATIO){
+                $image = self::resize_by_ratio($image, $size, $o_height, $o_width);
+            }elseif($max_dimension === CLASSE_IMAGEM_HEIGHT){
+                $image = self::resize_by_height($image, $size, $o_height, $o_width);
             }else{
-                $image = self::resize_by_width($image, $width);
+                $image = self::resize_by_width($image, $size, $o_height, $o_width);
             }
             
             imagepng($image, $destination, $compression);
         }elseif($image_type == IMAGETYPE_GIF){
             $image = imagecreatefromgif($filename);
             
-            if($max_dimension === CLASSE_IMAGE_RATIO){
-                $image = self::resize_by_ratio($image, $size);
-            }elseif($max_dimension === CLASSE_IMAGE_HEIGHT){
-                $image = self::resize_by_height($image, $height);
+            if($max_dimension === CLASSE_IMAGEM_RATIO){
+                $image = self::resize_by_ratio($image, $size, $o_height, $o_width);
+            }elseif($max_dimension === CLASSE_IMAGEM_HEIGHT){
+                $image = self::resize_by_height($image, $size, $o_height, $o_width);
             }else{
-                $image = self::resize_by_width($image, $width);
+                $image = self::resize_by_width($image, $size, $o_height, $o_width);
             }
             
             imagegif($image, $destination);
         }
     }
     
-    private static function resize_by_height($image, $height, $o = NULL){
-        if($o){
-            $o_height = $o['h'];
-            $o_width = $o['w'];
-        }else{
-            $o_height = imagesy($image);
-            $o_width = imagesx($image);
-        }
-        
+    private static function resize_by_height($image, $height, $o_height, $o_width){
         $ratio = $height / $o_height;
         $width = $o_width * $ratio;
         
@@ -61,15 +56,7 @@ class Classe_Image{
         return $new_image;
     }
     
-    private static function resize_by_width($image, $width, $o = NULL){
-        if($o){
-            $o_height = $o['h'];
-            $o_width = $o['w'];
-        }else{
-            $o_height = imagesy($image);
-            $o_width = imagesx($image);
-        }
-        
+    private static function resize_by_width($image, $width, $o_height, $o_width){
         $ratio = $width / $o_width;
         $height = $o_height * $ratio;
         
@@ -78,10 +65,7 @@ class Classe_Image{
         return $new_image;
     }
     
-    private static function resize_by_ratio($image, $size){
-        $o_height = imagesy($image);
-        $o_width = imagesx($image);
-        
+    private static function resize_by_ratio($image, $size, $o_height, $o_width){
         if($o_height > $o_width){
             return self::resize_by_height($image, $size, array(
                 'h' => $o_height,

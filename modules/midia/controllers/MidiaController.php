@@ -1,9 +1,9 @@
 <?php
 class MidiaController extends Controller{
-    public function AjaxUpload(){        
+    public function AjaxUpload(){
         try {
             $uploader = new Classe_qqFileUploader();
-            $result = $uploader->handleUpload(wwwroot . 'uploads/');
+            $result = $uploader->handleUpload(wwwroot . 'uploads/temp/');
             $this->_flash('SUCCESS', 'Imagem enviada.');
             return $this->_json(array(
                 'status' => 'SUCCESS',
