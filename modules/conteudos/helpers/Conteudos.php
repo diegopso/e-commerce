@@ -95,18 +95,19 @@ class Helper_Conteudos{
         $mime = finfo_file($finfo, $filepath);
         finfo_close($finfo);
         
-        $ext = '.' . pathinfo($filepath, PATHINFO_EXTENSION);
+        $pathinfo = pathinfo($filepath);
+        
+        $ext = '.' . $pathinfo[PATHINFO_EXTENSION];
+        $caminho = $pathinfo[PATHINFO_FILENAME];
         
         if(strpos($mime, 'image') !== false){
-            Helper_Midia::crop_image($filepath, $image_sizes);
+            Helper_Midia::resize_image($filepath, $image_sizes, $pathinfo);
         }else{
             Helper_Midia::remove_from_temp($filepath);
         }
         
-        $caminho = str_replace('/temp', '', $filepath);
-        
         $arquivo = new Model_Arquivo();
-        $arquivo->caminho = preg_replace('@\.[a-zA-Z]{3,4}$@', '', $caminho);
+        $arquivo->caminho = $caminho;
         $arquivo->extensao = $ext;
         $arquivo->mimetype = $mime;
         $arquivo->nome_original = $filename;
