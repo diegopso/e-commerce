@@ -100,13 +100,6 @@ class Helper_Conteudos{
         $ext = '.' . $pathinfo['extension'];
         $caminho = $pathinfo['filename'];
         
-        if(strpos($mime, 'image') !== false){
-            copy(temp_directory . $filepath, upload_directory . $filepath);
-            Helper_Midia::resize_image($filepath, $image_sizes, $pathinfo);
-        }else{
-            Helper_Midia::remove_from_temp($filepath);
-        }
-        
         $arquivo = new Model_Arquivo();
         $arquivo->caminho = $caminho;
         $arquivo->extensao = $ext;
@@ -116,5 +109,16 @@ class Helper_Conteudos{
         $arquivo->id_loja = $id_loja;
         
         $arquivo->save();
+        
+        if(strpos($mime, 'image') !== false){
+            copy(temp_directory . $filepath, upload_directory . $filepath);
+            Helper_Midia::resize_image($filepath, $image_sizes, $pathinfo);
+        }else{
+            Helper_Midia::remove_from_temp($filepath);
+        }
+    }
+    
+    public static function arquivos($id){
+        return Model_ViewPaginas::get($id);
     }
 }

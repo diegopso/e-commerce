@@ -53,8 +53,6 @@
             <div class="clearfix"></div>
             <div class="pull-right">
                 <input type="submit" class="btn btn-primary" data-toggle="dont-redirect" value="Salvar" />
-                <input type="submit" class="btn btn-info" value="Salvar e Sair" onclick="$('#redirect').val('1');" />
-                <input id="redirect" name="redirecionar" type="hidden" value="" />
                 <input name="id" type="hidden" value="<?= $model->id ?>" />
                 <button class="btn">Cancelar</button>
             </div>

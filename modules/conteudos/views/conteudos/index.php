@@ -22,9 +22,10 @@
         <button class="btn dropdown-toggle span3" data-toggle="dropdown">
             <span class="pull-left">Categorias</span>
             <span class="caret pull-right"></span>
+            <input id="categoria" name="categoria" type="hidden" value="" />
         </button>
         <ul class="dropdown-menu span3">
-            <li><a href="#">Selecione uma categoria</a></li>
+            <li><a href="javascript:void(0)" data-value="1">Selecione uma categoria</a></li>
         </ul>
     </div>
     <div class="input-append margin1 pull-left">

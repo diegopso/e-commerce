@@ -29,11 +29,11 @@
                    var tr = $('<tr><input type="hidden" name="nome_original[]" value="'+ data.model.original_name +'" /><input type="hidden" name="filename[]" value="'+ data.model.basename +'.'+ data.model.ext +'" /></tr>');
                    tr.append('<td>'+data.model.original_name+'</td>');
                    
-                   var del = $('<button class="btn tip" onclick="return false;" title="Excluir"><i class="icon-trash"></i></button>').click(function(){
-                       //pass
-                   });
+                    var del = $('<button class="btn tip" onclick="return false;" title="Excluir"><i class="icon-trash"></i></button>').click(function(){
+                        $(this).parent().parent().remove();
+                    });
                    
-                   var see = $('<a href="'+site_url+'uploads/' + data.model.basename + '.' + data.model.ext + '" target="_blank" class="btn tip" title="Visualizar"><i class="icon-eye-open"></i></a>');
+                   var see = $('<a href="'+site_url+'uploads/temp/' + data.model.basename + '.' + data.model.ext + '" target="_blank" class="btn tip" title="Visualizar"><i class="icon-eye-open"></i></a>');
                    
                    tr.append($('<td></td>').append(del, see));
                    $('#list-images tbody').append(tr);
@@ -51,6 +51,20 @@
         createUploader(picture_uploader_options);
     });
     
+    
+    removerImg = function(element){
+        var self = $(element);
+        var tr = self.parent().parent();
+        tr.find('.loading').show();
+        $.ajax({
+            url: self.attr('href'),
+            success: function(data){
+                $('#list-images').remove();
+                $('#imagens').append(data);
+            }
+        });
+    }
+    
     function createUploader(o){            
         var uploader = new qq.FileUploader({
             element: document.getElementById(o.elementId),
@@ -62,39 +76,5 @@
         });           
     }   
 </script> 
-<table id="list-images" class="table table-striped">
-    <thead>
-        <tr>
-            <th>Nome</th>
-            <th class="span2">Ações</th>
-        </tr>
-    </thead>
-    <tbody>
-        <?php if(!count($model->arquivos)): ?>
-            <tr class="empty-row">
-                <td colspan="4"><center><b>Nenhum conteúdo a ser exibido</b></center></td>
-            </tr>
-        <?php else:
-        foreach($model->arquivos as $a): ?>
-            <tr>
-                <td><?= $a->nome_original ?></td>
-                <td>
-                    <button class="btn tip" onclick="return false;" title="Excluir">
-                        <i class="icon-trash"></i>
-                    </button>
-                    <a href="<?= site_url ?>uploads/<?= $a->caminho . $a->extensao ?>" target="_blank" class="btn tip" title="Visualizar">
-                        <i class="icon-eye-open"></i>
-                    </a>
-                </td>
-            </tr>
-        <? endforeach;
-        endif; ?>
-    </tbody>
-    <tfoot>
-        <tr>
-            <th>Nome</th>
-            <th>Ações</th>
-        </tr>
-    </tfoot>
-</table>
+<?php include('listarimagens.php'); ?>
     

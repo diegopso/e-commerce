@@ -51,6 +51,9 @@ class Model_ViewPaginas extends Model
     public $nome_autor;
     
     public static function get($id){
+        if(!$id)
+            return new Model_ViewPaginas();
+        
         $db = new DatabaseQuery('Model_ViewPaginas');
         $db->whereSQL('id = '.$id);
         $rs = $db->all();

@@ -37,17 +37,20 @@ class ConteudosController extends Controller{
             $properties['id_loja'] = 0; //loja do usuario logado
             $properties['id_autor'] = 0; //colocar usuario logado
             $properties['status'] = 'active';
+            $properties['tipo'] = 'conteudo';
+            $properties['data'] = time();
+            $imagens = $this->post('filename', array());
+            $nomes = $this->post('nome_original', array());
             
             try {
                 $db = Database::getInstance();
                 $db->transaction();
                 
                 $conteudo = Helper_Conteudos::cadastrar($properties);
-                
-                $count = count($properties['filename']);
+                $count = count($imagens);
                 $id_pagina = $conteudo->id;
                 for ($i = 0; $i < $count; ++$i) {
-                    Helper_Conteudos::vincular_arquivo($properties['filename'][$i], $properties['nome_original'][$i], $id_pagina);
+                    Helper_Conteudos::vincular_arquivo($imagens[$i], $nomes[$i], $id_pagina);
                 }
                 
                 if(isset($properties['palavras_chave'])){
@@ -60,7 +63,7 @@ class ConteudosController extends Controller{
                     
                     $palavras = explode(';', $palavras_chave);
                     foreach ($palavras as $value) {
-                        Helper_Conteudos::adicionar_palavra_chave($conteudo->id, trim($value));
+                        Helper_Conteudos::adicionar_palavra_chave($id_pagina, trim($value));
                     }
                 }
                 
@@ -70,10 +73,16 @@ class ConteudosController extends Controller{
                 $this->_flash('flash-message alert alert-success', 'Conteúdo cadastrado com sucesso.');
                 $this->_redirect('~/conteudos');    
                 return;
-            } catch (Exception $exc) {
+            }catch (Exception_LimiteDeArquivosExcedido $exc){
                 $db->rollback();
-                $this->_flash('flash-message alert alert-error', 'Ocorreu um erro ao cadastrar o conteúdo.' . var_dump($exc));
-                return $this->_view($conteudo);
+                $this->_flash('flash-message alert alert-error', $exc->getMessage());
+                $this->_redirect('~/conteudos/cadastrar/' . $this->post('id'));
+                return;
+            }catch (Exception $exc) {
+                $db->rollback();
+                $this->_flash('flash-message alert alert-error', 'Ocorreu um erro ao cadastrar o conteúdo.');
+                $this->_redirect('~/conteudos/cadastrar/' . $this->post('id'));
+                return;
             }
         }
         
@@ -119,5 +128,10 @@ class ConteudosController extends Controller{
                 'message' => 'Ocorreu um erro ao desfazer.'
             ));
         }
+    }
+    
+    public function arquivos($id){
+        $model = Helper_Conteudos::arquivos($id);
+        return $this->_page('_snippet', 'listarimagens', $model);
     }
 }

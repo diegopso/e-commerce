@@ -26,5 +26,14 @@ class Model_Arquivo extends Model
     /** @Column(Type="int(11)") */
     public $id_pagina;
 
+    public function save(){
+        $db = new DatabaseQuery('Model_Arquivo');
+        $db->whereSQL('id_pagina = '.$this->id_pagina);
+        $count = $db->count();
+        if($count >= 5)
+            throw new Exception_LimiteDeArquivosExcedido();
+        
+        return parent::save();
+    }
 
 }

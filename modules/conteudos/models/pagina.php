@@ -34,6 +34,4 @@ class Model_Pagina extends Model
 
     /** @Column(Type="int(11)") */
     public $id_loja;
-
-
 }
