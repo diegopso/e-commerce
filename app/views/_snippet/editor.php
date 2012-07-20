@@ -20,7 +20,6 @@
     <div class="clearfix"></div>
 </div>
 <div class="editor-container">
-    <span>Descrição</span><br />
     <div class="btn-toolbar editor-toolbar">
         <div class="btn-group toolbar-controls toolbar-controls">
             <a class="btn tip" title="Negrito" href="javascript:void(0)" onclick="CKEDITOR.tools.callFunction(6, this); return false;"><i class="icon-bold"></i></a>

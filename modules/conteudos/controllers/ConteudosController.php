@@ -77,7 +77,7 @@ class ConteudosController extends Controller{
             }
         }
         
-        $conteudo = Model_Pagina::get($id);
+        $conteudo = Model_ViewPaginas::get($id);
         
         if($id != $conteudo->id)
             throw new Exception_ContudoNaoEncontrado();

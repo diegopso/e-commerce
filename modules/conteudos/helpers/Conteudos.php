@@ -101,6 +101,7 @@ class Helper_Conteudos{
         $caminho = $pathinfo['filename'];
         
         if(strpos($mime, 'image') !== false){
+            copy(temp_directory . $filepath, upload_directory . $filepath);
             Helper_Midia::resize_image($filepath, $image_sizes, $pathinfo);
         }else{
             Helper_Midia::remove_from_temp($filepath);

@@ -70,7 +70,7 @@
         </tr>
     </thead>
     <tbody>
-        <?php if($count_images == 0): ?>
+        <?php if(!count($model->arquivos)): ?>
             <tr class="empty-row">
                 <td colspan="4"><center><b>Nenhum conteúdo a ser exibido</b></center></td>
             </tr>
@@ -82,7 +82,7 @@
                     <button class="btn tip" onclick="return false;" title="Excluir">
                         <i class="icon-trash"></i>
                     </button>
-                    <a href="javascript:void(0);" target="_blank" class="btn tip" title="Visualizar">
+                    <a href="<?= site_url ?>uploads/<?= $a->caminho . $a->extensao ?>" target="_blank" class="btn tip" title="Visualizar">
                         <i class="icon-eye-open"></i>
                     </a>
                 </td>

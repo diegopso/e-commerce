@@ -11,41 +11,42 @@
         </li>
     </ul>
 </div>
-
 <div class="clearfix"></div>
-
 <div class="row">
-
     <div class="span<?= marketing ? 10 : 12 ?>">
         <form id="form-conteudo" class="form-horizontal" action="<?= site_url . 'Conteudos/Cadastrar' ?>" method="POST">
             <ul class="nav nav-tabs">
-                <li class="active"><a href="#descricao" data-toggle="tab">Descrição</a></li>
+                <li class="active"><a href="#conteudo" data-toggle="tab">Conteúdo</a></li>
                 <li class=""><a href="#imagens" data-toggle="tab">Imagens</a></li>
             </ul>
-            <div id="contentTabContent" class="tab-content">
-                <div class="tab-pane fade active in" id="descricao">
-                    <br />
-                    <div class="control-group">
-                        <label class="control-label" for="nome">Título <span class="help-required">*</span></label>
-                        <div class="controls">
-                            <input type="text" class="span8" id="titulo" name="titulo" value="<?= $model->titulo ?>"/>
-                            <span class="help-block">Informe o título do conteúdo</span>
+            <div class="row">
+                <div id="contentTabContent" class="tab-content">
+                    <div id="conteudo" class="tab-pane fade active in">
+                        <br />
+                        <div class="span10">
+                            <div class="control-group">
+                                <label class="control-label" for="nome">Título <span class="help-required">*</span></label>
+                                <div class="controls">
+                                    <input type="text" class="span8" id="titulo" name="titulo" value="<?= $model->titulo ?>"/>
+                                    <span class="help-block">Informe o título do conteúdo</span>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="nome">Subtítulo</label>
+                                <div class="controls">
+                                    <input type="text" class="span8" id="subtitulo" name="subtitulo" value="<?= $model->subtitulo ?>"/>
+                                    <span class="help-block">Informe o subtítulo do conteúdo</span>
+                                </div>
+                            </div>
+                            <div id="descricao" class="tab-pane">
+                                <? include(root . 'app/views/_snippet/editor.php'); ?>
+                            </div>
                         </div>
                     </div>
-                    <div class="control-group">
-                        <label class="control-label" for="nome">Subtítulo</label>
-                        <div class="controls">
-                            <input type="text" class="span8" id="subtitulo" name="subtitulo" value="<?= $model->subtitulo ?>"/>
-                            <span class="help-block">Informe o subtítulo do conteúdo</span>
-                        </div>
+                    <div class="tab-pane fade" id="imagens">
+                        <br />
+                        <? include(root . 'app/views/_snippet/enviarimagens.php'); ?>
                     </div>
-                    <div>
-                        <? include(root . 'app/views/_snippet/editor.php'); ?>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="imagens">
-                    <br />
-                    <? include(root . 'app/views/_snippet/enviarimagens.php'); ?>
                 </div>
             </div>
             <hr />

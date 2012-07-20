@@ -49,6 +49,31 @@ class Model_ViewPaginas extends Model
 
     /** @Column(Type="varchar(6)") */
     public $nome_autor;
+    
+    public static function get($id){
+        $db = new DatabaseQuery('Model_ViewPaginas');
+        $db->whereSQL('id = '.$id);
+        $rs = $db->all();
+        $count = count($rs);
+        
+        if($count === 0)
+            throw new Exception_ConteudoNaoEncontrado();
+        
+        $result = $rs[0];
+        $result->arquivos = array();
+        if($result->id_arquivo){
+            for ($i = 0; $i < $count; ++$i) {
+                $result->arquivos[$i] = new stdClass();
+                $result->arquivos[$i]->id_arquivo = $rs[$i]->id_arquivo;
+                $result->arquivos[$i]->caminho = $rs[$i]->caminho;
+                $result->arquivos[$i]->extensao = $rs[$i]->extensao;
+                $result->arquivos[$i]->nome_original = $rs[$i]->nome_original;
+                $result->arquivos[$i]->mimetype = $rs[$i]->mimetype;
+            }
+        }
+        
+        return $result;
+    }
 
 
 }
