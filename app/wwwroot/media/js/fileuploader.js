@@ -83,7 +83,8 @@ qq.insertBefore = function(a, b){
     b.parentNode.insertBefore(a, b);
 };
 qq.remove = function(element){
-    element.parentNode.removeChild(element);
+    if(element)
+        element.parentNode.removeChild(element);
 };
 
 qq.contains = function(parent, descendant){       
@@ -128,10 +129,10 @@ qq.css = function(element, styles){
 };
 qq.hasClass = function(element, name){
     var re = new RegExp('(^| )' + name + '( |$)');
-    return re.test(element.className);
+    return element && re.test(element.className);
 };
 qq.addClass = function(element, name){
-    if (!qq.hasClass(element, name)){
+    if (!qq.hasClass(element, name) && element){
         element.className += ' ' + name;
     }
 };
@@ -140,8 +141,10 @@ qq.removeClass = function(element, name){
     element.className = element.className.replace(re, ' ').replace(/^\s+|\s+$/g, "");
 };
 qq.setText = function(element, text){
-    element.innerText = text;
-    element.textContent = text;
+    if(element){
+        element.innerText = text;
+        element.textContent = text;
+    }
 };
 
 //
@@ -162,6 +165,9 @@ qq.children = function(element){
 };
 
 qq.getByClass = function(element, className){
+    if(!element)
+        return false;
+    
     if (element.querySelectorAll){
         return element.querySelectorAll('.' + className);
     }
@@ -541,10 +547,10 @@ qq.extend(qq.FileUploader.prototype, {
     /**
      * Gets one of the elements listed in this._options.classes
      **/
-    _find: function(parent, type){                                
+    _find: function(parent, type){     
         var element = qq.getByClass(parent, this._options.classes[type])[0];        
         if (!element){
-            throw new Error('element not found ' + type);
+            //throw new Error('element not found ' + type);
         }
         
         return element;
@@ -602,7 +608,8 @@ qq.extend(qq.FileUploader.prototype, {
 
         var item = this._getItemByFileId(id);
         var size = this._find(item, 'size');
-        size.style.display = 'inline';
+        if(size)
+            size.style.display = 'inline';
         
         var text; 
         if (loaded != total){
