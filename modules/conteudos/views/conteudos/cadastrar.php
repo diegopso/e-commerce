@@ -52,9 +52,9 @@
             <hr />
             <div class="clearfix"></div>
             <div class="pull-right">
-                <input type="submit" class="btn btn-primary" data-toggle="dont-redirect" value="Salvar" />
+                <input type="submit" class="btn btn-primary" value="Salvar" />
                 <input name="id" type="hidden" value="<?= $model->id ?>" />
-                <button class="btn">Cancelar</button>
+                <a href="<?= site_url ?>conteudos" class="btn">Cancelar</a>
             </div>
 
         </form>
@@ -66,6 +66,18 @@
             </a>
         </div>
     <?php endif; ?>
+</div>
+<div class="modal hide" id="correcoes">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h3>Existem alguns campos incorretos</h3>
+    </div>
+    <div class="modal-body">
+        
+    </div>
+    <div class="modal-footer">
+        <a href="#" class="btn btn-primary" data-dismiss="modal">Ok</a>
+    </div>
 </div>
 <script type="text/javascript">
     var $titulo = undefined;
@@ -79,8 +91,7 @@
         //$categoria = $('#categoria');
         requireds = [$titulo];
         
-        $('#form-produto').submitValidation(requireds, 'seletor_modal');
-        $('#form-produto').submit(function(){
+        $('#form-conteudo').submitValidation(requireds, '#correcoes', function(e){
             CKEDITOR.instances.editor.destroy();
         });
     });
