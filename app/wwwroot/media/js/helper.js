@@ -35,12 +35,11 @@ $.fn.keyupValidation = function(regExp, classe){
     
 };
 
-$.fn.submitValidation = function(requireds, modal){
+$.fn.submitValidation = function(requireds, modal, onSend){
     return $(this).each(function(){
        var self = $(this);
        self.bind('submit.validation', function(e){
             e.preventDefault();
-            
             var erros = self.find('.error');
             var camposErrados = '';
             var camposObrigatorios = '';
@@ -63,7 +62,7 @@ $.fn.submitValidation = function(requireds, modal){
                         type = 'text';
                     case 'text':
                         if(o.val() == ''){
-                            camposObrigatorios += '<li>'+ o.find('label').text() +'</li>';
+                            camposObrigatorios += '<li>'+ o.parent().parent().find('label').text() +'</li>';
                         }
                         break;
                 }
@@ -73,9 +72,9 @@ $.fn.submitValidation = function(requireds, modal){
             });
 
             if(ulErrados || camposObrigatorios != ''){
-                alert('colocar modal aki\n'+camposErrados+'\n'+camposObrigatorios);
+                $(modal).modal({show:true}).find('.modal-body').empty().append(ulErrados).append(ulObrigatorios);
             }else{
-                self.unbind('submit.validation').submit();
+                self.unbind('submit.validation').submit(onSend).submit();
             }
         }); 
     });

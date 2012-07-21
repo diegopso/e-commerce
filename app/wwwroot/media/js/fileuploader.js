@@ -820,8 +820,8 @@ qq.UploadButton.prototype = {
             // in Opera only 'browse' button
             // is clickable and it is located at
             // the right side of the input
-            right: '645px',
-            top: '-69px',
+            right: '0',
+            top: '-10px',
             fontFamily: 'Arial',
             // 4 persons reported this, the max values that worked for them were 243, 236, 236, 118
             fontSize: '60px',
@@ -829,7 +829,7 @@ qq.UploadButton.prototype = {
             padding: 0,
             cursor: 'pointer',
             opacity: 0,
-            height: '150px'
+            height: '50px'
         });
         
         this._element.appendChild(input);
