@@ -19,7 +19,7 @@
             <td><?= preg_replace('@\s.*$@', '', $conteudo->nome_autor) ?>, <?= date('d/m', $conteudo->data) ?></td>
             <td><span class="label"><?= $conteudo->tipo ?></span></td>
             <td>
-                <a href="~/conteudos/cadastrar/<?= $conteudo->id ?>"  class="btn tip" title="Editar"><i class="icon-pencil"></i></a>
+                <a href="<?= site_url ?>conteudos/cadastrar/<?= $conteudo->id ?>"  class="btn tip" title="Editar"><i class="icon-pencil"></i></a>
                 <a href="javascript:void(0);" class="btn tip" title="Visualizar"><i class="icon-eye-open"></i></a>
                 <a href="conteudos/excluir/<?= $conteudo->id ?>" onclick="removerConteudo(this); return false;" class="btn tip delete" title="Excluir"><i class="icon-trash"></i></a>
             </td>

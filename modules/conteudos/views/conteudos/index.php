@@ -108,11 +108,12 @@
             url: self.attr('href'),
             success: function(data){
                 requestData('conteudos?q=' + $('#search-text').val() +'&r=html');
-                divAlert.find('a').click(function(e){
+                divAlert.find('a').unbind('click').click(function(e){
                     e.preventDefault();
                     $.ajax({
                         url: 'conteudos/desfazerexclusao/' + data.d.model.id,
                         success: function(){
+                            requestData('conteudos?q=' + $('#search-text').val() +'&r=html');
                             divAlert.slideUp('fast');
                         }
                     });
@@ -120,7 +121,7 @@
                 divAlert.slideDown('fast');
                 setTimeout(function(){
                     divAlert.slideUp('fast');
-                }, 2000);
+                }, 5000);
             }
         });
     }
