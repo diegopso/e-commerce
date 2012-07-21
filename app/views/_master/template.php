@@ -68,9 +68,11 @@
                                         </li>
                                     </ul>
                                 </li>
+                                <?php if(Modules::is_set('conteudos')): ?>
                                 <li class="">
-                                    <a href="~/home/paginas">Páginas</a>
+                                    <a href="<?= site_url ?>conteudos">Conteúdos</a>
                                 </li>
+                                <?php endif; ?>
                                 <li class="">
                                     <a href="~/home/relatorios">Relatórios</a>
                                 </li>
