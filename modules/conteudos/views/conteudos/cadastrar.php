@@ -19,9 +19,9 @@
                 <li class="active"><a href="#conteudo" data-toggle="tab">Conteúdo</a></li>
                 <li class=""><a href="#imagens" data-toggle="tab">Imagens</a></li>
             </ul>
-            <div class="row">
-                <div id="contentTabContent" class="tab-content">
-                    <div id="conteudo" class="tab-pane fade active in">
+            <div id="contentTabContent" class="tab-content">
+                <div id="conteudo" class="tab-pane fade active in row">
+                    <div class="row">
                         <br />
                         <div class="span10">
                             <div class="control-group">
@@ -43,10 +43,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="imagens">
-                        <br />
-                        <? include(root . 'app/views/_snippet/enviarimagens.php'); ?>
-                    </div>
+                </div>
+                <div class="tab-pane fade" id="imagens">
+                    <br />
+                    <? include(root . 'app/views/_snippet/enviarimagens.php'); ?>
                 </div>
             </div>
             <hr />
