@@ -30,7 +30,7 @@ class Model_Arquivo extends Model
         $db = new DatabaseQuery('Model_Arquivo');
         $db->whereSQL('id_pagina = '.$this->id_pagina);
         $count = $db->count();
-        if($count >= 5)
+        if($count >= Helper_Conteudos::$arquivos_por_pagina)
             throw new Exception_LimiteDeArquivosExcedido();
         
         return parent::save();

@@ -16,6 +16,8 @@ class Helper_Conteudos{
         )
     );
     
+    public static $arquivos_por_pagina = 5;
+
     public static function get_paginas($q, $pg, $qt_pg, &$count, $type = false, $sufix = ''){
         $sql = '';
         if($q){
