@@ -8,7 +8,7 @@
         <ul class="dropdown-menu">
             <li><a href="javascript:void(0)" data-value="1">Selecione uma Categoria</a></li>
         </ul>
-        <button class="btn btn-info tip" onclick="return false;" title="Adicionar">
+        <button class="btn tip" onclick="return false;" title="Adicionar">
             <i class="icon-plus"></i>
         </button>
     </div>
