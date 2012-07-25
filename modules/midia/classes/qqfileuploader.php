@@ -88,7 +88,7 @@ class Classe_qqFileUploader {
         if ($this->file->save($uploadDirectory . $filename . '.' . $ext)){
             return array(
                 'success'=> true, 
-                'fileName'=> $uploadDirectory . $filename . '.' . $ext,
+                //'fileName'=> $uploadDirectory . $filename . '.' . $ext,
                 'ext' => $ext,
                 'basename' => $filename,
                 'original_name' => $pathinfo['filename']

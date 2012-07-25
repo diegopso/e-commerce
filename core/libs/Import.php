@@ -164,7 +164,10 @@ class Import {
         $file = '';
         
         if ($module) {
-            $file = modpath . $module . '/views/' . $controller . '/' . $view . '.php';
+            if($module === 'app')
+                $file = root . 'app/views/' . $controller . '/' . $view . '.php';
+            else
+                $file = modpath . $module . '/views/' . $controller . '/' . $view . '.php';
         } elseif (Modules::is_set(module)) {
             if ($controller)
                 $file = modpath . module . '/views/' . $controller . '/' . $view . '.php';
