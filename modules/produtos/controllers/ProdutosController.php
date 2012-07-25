@@ -61,7 +61,8 @@ class ProdutosController extends Controller{
                     'data' => time(),
                     'tipo' => 'produto',
                     'id_autor' => $properties['id_autor'], 
-                    'id_loja' => $properties['id_loja']
+                    'id_loja' => $properties['id_loja'],
+                    'palavras_chave' => $properties['palavras_chave']
                 );
                 
                 //implementar estes métodos

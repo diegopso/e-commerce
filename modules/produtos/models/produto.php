@@ -35,9 +35,6 @@ class Model_Produto extends Model
     /** @Column(Type="varchar(8)") */
     public $status;
 
-    /** @Column(Type="varchar(256)") */
-    public $palavras_chave;
-
     /** @Column(Type="int(11)") */
     public $id_imagem;
 

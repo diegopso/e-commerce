@@ -19,7 +19,7 @@
             <td><?= number_format($produto->preco, 2, decimal_separator, thousands_separator); ?></td>
             <td><?= $produto->quantidade ?></td>
             <td>
-                <a href="~/produtos/cadastrar/<?= $produto->id ?>"  class="btn tip" title="Editar"><i class="icon-pencil"></i></a>
+                <a href="<?= site_url ?>produtos/cadastrar/<?= $produto->id ?>"  class="btn tip" title="Editar"><i class="icon-pencil"></i></a>
                 <a href="javascript:void(0);" class="btn tip" title="Visualizar"><i class="icon-eye-open"></i></a>
                 <a href="produtos/excluir/<?= $produto->id ?>" onclick="removerProduto(this); return false;" class="btn tip delete" title="Excluir"><i class="icon-trash"></i></a>
             </td>
