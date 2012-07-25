@@ -42,6 +42,13 @@ class ConteudosController extends Controller{
             $imagens = $this->post('filename', array());
             $nomes = $this->post('nome_original', array());
             
+            $palavras_chave = $properties['palavras_chave'];
+            $palavras_chave = preg_replace('([\s]{2,})', ' ', $palavras_chave);
+            $palavras_chave = str_replace('; ', ';', $palavras_chave);
+            $palavras_chave = preg_replace('@[;]{2,}@', ';', $palavras_chave);
+            $palavras_chave = preg_replace('@;$@', '', $palavras_chave);
+            $properties['palavras_chave'] = preg_replace('@^;@', '', $palavras_chave);
+            
             try {
                 $db = Database::getInstance();
                 $db->transaction();
@@ -54,13 +61,6 @@ class ConteudosController extends Controller{
                 }
                 
                 if(isset($properties['palavras_chave'])){
-                    $palavras_chave = $properties['palavras_chave'];
-                    $palavras_chave = preg_replace('([\s]{2,})', ' ', $palavras_chave);
-                    $palavras_chave = str_replace('; ', ';', $palavras_chave);
-                    $palavras_chave = preg_replace('@[;]{2,}@', ';', $palavras_chave);
-                    $palavras_chave = preg_replace('@;$@', '', $palavras_chave);
-                    $palavras_chave = preg_replace('@^;@', '', $palavras_chave);
-                    
                     $palavras = explode(';', $palavras_chave);
                     foreach ($palavras as $value) {
                         Helper_Conteudos::adicionar_palavra_chave($id_pagina, trim($value));
