@@ -95,7 +95,7 @@ class ProdutosController extends Controller{
                 return;
             } catch (Exception $exc) {
                 $db->rollback();
-                $this->_flash('flash-message alert alert-error', 'Ocorreu um erro ao cadastrar o produto.' . var_dump($exc));
+                $this->_flash('flash-message alert alert-error', 'Ocorreu um erro ao cadastrar o produto.');
                 return $this->_view($produto);
             }
         }

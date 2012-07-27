@@ -56,7 +56,7 @@ class Helper_Produtos{
         
         $id = $propriedades['id'] ? $propriedades['id'] : null;
         $produto = Model_Produto::get($id);
-        $produtos_properties = Model_Produto::get_properties_name();
+        $produtos_properties = array_keys(get_object_vars($produto));
         
         foreach ($produtos_properties as $k) {
             if(isset($propriedades[$k])){

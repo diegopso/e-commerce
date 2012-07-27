@@ -41,7 +41,7 @@ class Helper_Conteudos {
 
     public static function cadastrar($propriedades) {
         $pagina = Model_Pagina::get($propriedades['id']);
-        $pagina_properties = Model_Pagina::get_properties_name();
+        $pagina_properties = array_keys(get_object_vars($produto));
 
         foreach ($pagina_properties as $k) {
             if (isset($propriedades[$k])) {
