@@ -79,7 +79,7 @@
         
         $('#search-submit').click(function (e){
             e.preventDefault();
-            requestData('conteudos?q=' + $('#search-text').val() +'&r=html');
+            requestData('<?= site_url ?>conteudos?q=' + $('#search-text').val() +'&r=html');
         });
         
         divAlert = $('#desfazer');
@@ -107,13 +107,13 @@
         $.ajax({
             url: self.attr('href'),
             success: function(data){
-                requestData('conteudos?q=' + $('#search-text').val() +'&r=html');
+                requestData('<?= site_url ?>conteudos?q=' + $('#search-text').val() +'&r=html');
                 divAlert.find('a').unbind('click').click(function(e){
                     e.preventDefault();
                     $.ajax({
-                        url: 'conteudos/desfazerexclusao/' + data.d.model.id,
+                        url: '<?= site_url ?>conteudos/desfazerexclusao/' + data.d.model.id,
                         success: function(){
-                            requestData('conteudos?q=' + $('#search-text').val() +'&r=html');
+                            requestData('<?= site_url ?>conteudos?q=' + $('#search-text').val() +'&r=html');
                             divAlert.slideUp('fast');
                         }
                     });
