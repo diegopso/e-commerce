@@ -26,8 +26,6 @@ class DatabaseQuery
 	 * @var	array
 	 */
 	protected $operations = array();
-        
-        protected $count_operations = 0;
 	
 	/**
 	 * Guarda uma instância da classe Annotation referente ao model que está sendo trabalhado
@@ -583,7 +581,7 @@ class DatabaseQuery
 		$sql = 'INSERT INTO '. $entity .' ('. implode($fields, ', ') .') VALUES ('. implode(',', array_fill(0, count($values), '?')) .');';
 		
 		Debug::addSql($sql, $values);
-		$this->operations[++$this->count_operations] = array('sql' => $sql, 'values' => $values, 'model' => $model);
+		$this->operations[] = array('sql' => $sql, 'values' => $values, 'model' => $model);
 	}
 	
 	/**
@@ -642,7 +640,7 @@ class DatabaseQuery
 		$sql = 'UPDATE '. $entity .' SET '. implode(', ', $fields) .' WHERE '. implode(' AND ', $conditions['fields']) .';';
 		
 		Debug::addSql($sql, array_merge($values, $conditions['values']));
-		$this->operations[++$this->count_operations] = array('sql' => $sql, 'values' => array_merge($values, $conditions['values']));
+		$this->operations[] = array('sql' => $sql, 'values' => array_merge($values, $conditions['values']));
 	}
 	
 	/**
@@ -678,7 +676,7 @@ class DatabaseQuery
 		$sql = 'DELETE FROM '. $entity .' WHERE '. implode(' AND ', $conditions['fields']) .';';
 		
 		Debug::addSql($sql, $conditions['values']);
-		$this->operations[++$this->count_operations] = array('sql' => $sql, 'values' => $conditions['values']);
+		$this->operations[] = array('sql' => $sql, 'values' => $conditions['values']);
 	}
 	
 	/**
