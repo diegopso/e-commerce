@@ -14,7 +14,7 @@
  * Define o tipo do debug, pode assumir os seguintes valores: off, local, network e all
  * @var	string
  */
-define('debug', 'local');
+define('debug', 'off');
 
 /**
  * Tipo do drive do banco de dados, pode assumir os seguintes valores: mysql
