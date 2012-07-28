@@ -126,7 +126,7 @@ class Template {
         $html = Import::view($ob->Vars, '_master', master);
         $html = $this->resolveUrl($html);
         
-        $head = Import::get_contents('head', '_master');
+        $head = Import::view($ob->Vars, '_master', 'head');
         $head = $this->resolveUrl($head);
 
         $content = Import::view($ob->Vars, $ob->Data['controller'], $ob->Data['view']);
