@@ -47,7 +47,7 @@
                 <?= $a ?>
             </a>
         </li>
-    <? endfor; ?>
+    <?php endfor; ?>
         
     <?php if ($pg < $qt_pg - 1): ?>
         <li><a href="produtos?q=<?= $query ?>&pg=<?= $qt_pg - 1 ?>&r=html" class="pagination-btn tip" title="Última">»</a></li>
