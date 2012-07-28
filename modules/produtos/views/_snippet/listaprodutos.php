@@ -13,7 +13,7 @@
             <td colspan="4"><center><b>Nenhum produto a ser exibido</b></center></td>
         </tr>
     <?php endif; ?>
-    <? foreach ($model as $produto): ?>
+    <?php foreach ($model as $produto): ?>
         <tr>
             <td><?= $produto->nome ?> <img class="loading" src="<?= site_url ?>media/img/loading.gif" style="display: none;" /></td>
             <td><?= number_format($produto->preco, 2, decimal_separator, thousands_separator); ?></td>
@@ -24,7 +24,7 @@
                 <a href="produtos/excluir/<?= $produto->id ?>" onclick="removerProduto(this); return false;" class="btn tip delete" title="Excluir"><i class="icon-trash"></i></a>
             </td>
         </tr>
-    <? endforeach; ?>
+    <?php endforeach; ?>
 </tbody>
 <tfoot>
 <th>Nome</th>
@@ -47,7 +47,7 @@
                 <?= $a ?>
             </a>
         </li>
-    <? endfor; ?>
+    <?php endfor; ?>
         
     <?php if ($pg < $qt_pg - 1): ?>
         <li><a href="produtos?q=<?= $query ?>&pg=<?= $qt_pg - 1 ?>&r=html" class="pagination-btn tip" title="Última">»</a></li>
