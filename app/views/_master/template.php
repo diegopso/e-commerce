@@ -6,11 +6,12 @@
         <link rel="stylesheet" type="text/css" href="~/app/wwwroot/media/css/bootstrap.css"></link>
         <link rel="stylesheet" type="text/css" href="~/app/wwwroot/media/css/app.css"></link>
         
-
+        
         <script type="text/javascript" src="~/app/wwwroot/media/js/jquery-1.7.2.min.js"></script>
         <script type="text/javascript" src="~/app/wwwroot/media/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="~/media/js/helper.js"></script>
-    
+        
+        <?= head ?>
     </head>
     <body>
         <div class="container">

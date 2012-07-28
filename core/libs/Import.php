@@ -185,7 +185,7 @@ class Import {
             return file_get_contents($file);
         }
         
-        throw new FileNotFoundException();
+        return null;
     }
 
 }

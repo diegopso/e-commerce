@@ -125,11 +125,15 @@ class Template {
     private function renderView($ob) {
         $html = Import::view($ob->Vars, '_master', master);
         $html = $this->resolveUrl($html);
+        
+        $head = Import::get_contents('head', '_master');
+        $head = $this->resolveUrl($head);
 
         $content = Import::view($ob->Vars, $ob->Data['controller'], $ob->Data['view']);
         $content = $this->resolveUrl($content);
 
         $html = str_replace(content, $content, $html);
+        $html = str_replace(head, $head, $html);
         $this->response = $html;
     }
 
