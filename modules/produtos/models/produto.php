@@ -135,7 +135,6 @@ class Model_Produto {
         if ($key){
             $bool = $this->{$key};
             if($bool){
-                //ocorrendo erro aqui embaixo
                 $db->Model_Produto->update($this);
             }
             else{

@@ -541,7 +541,7 @@ class DatabaseQuery
 	 * @throws	DatabaseException	disparada caso o model não seja uma nova instância, ou não tenha a anotação Entity
 	 * @return	void
 	 */
-	public function insert(Model $model)
+	public function insert($model)
 	{
 		$fields = array();
 		$values = array();
@@ -590,7 +590,7 @@ class DatabaseQuery
 	 * @throws	DatabaseException	disparada caso o model seja uma nova instância, ou não tenha a anotação Entity
 	 * @return	void
 	 */
-	public function update(Model $model)
+	public function update($model)
 	{
                 $i = 0;
 		$conditions = array();
@@ -649,7 +649,7 @@ class DatabaseQuery
 	 * @throws	DatabaseException	disparada caso o model seja uma nova instância, ou não tenha a anotação Entity
 	 * @return	void
 	 */
-	public function delete(Model $model)
+	public function delete($model)
 	{
 		$conditions = array();
 		
