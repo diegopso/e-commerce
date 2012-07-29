@@ -1,17 +1,17 @@
 <div class="pull-left">
     <ul class="breadcrumb">
         <li>
-            <a href="~/">My store</a> <span class="divider">/</span>
+            <a href="<?= site_url ?>">My store</a> <span class="divider">/</span>
         </li>
         <li>
-            <a href="~/produtos">Produtos</a>
+            <a href="<?= site_url ?>produtos">Produtos</a>
         </li>
     </ul>
 </div>
 
 <div class="pull-right">
     <button class="btn" data-toggle="slide" data-value="#search-div"><i class="icon-chevron-down"></i> Pesquisar</button>
-    <a href="~/produtos/cadastrar/" class="btn btn-primary"><i class="icon-plus icon-white"></i> Adicionar</a>
+    <a href="<?= site_url ?>produtos/cadastrar/" class="btn btn-primary"><i class="icon-plus icon-white"></i> Adicionar</a>
 </div>
 
 <div class="clearfix"></div>
@@ -78,7 +78,7 @@
         
         $('#search-submit').click(function (e){
             e.preventDefault();
-            requestData('produtos?q=' + $('#search-text').val() +'&r=html');
+            requestData('<?= site_url ?>produtos?q=' + $('#search-text').val() +'&r=html');
         });
         
         divAlert = $('#desfazer');
@@ -106,13 +106,14 @@
         $.ajax({
             url: self.attr('href'),
             success: function(data){
-                requestData('produtos?q=' + $('#search-text').val() +'&r=html');
-                divAlert.find('a').click(function(e){
+                requestData('<?= site_url ?>produtos?q=' + $('#search-text').val() +'&r=html');
+                divAlert.find('a').unbind('click').click(function(e){
                     e.preventDefault();
                     $.ajax({
-                        url: 'produtos/desfazerexclusao/' + data.d.model.id,
+                        url: '<?= site_url ?>produtos/desfazerexclusao/' + data.d.model.id,
                         success: function(){
                             divAlert.slideUp('fast');
+                            requestData('<?= site_url ?>produtos?q=' + $('#search-text').val() +'&r=html');
                         }
                     });
                 });
