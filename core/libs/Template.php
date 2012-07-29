@@ -126,8 +126,12 @@ class Template {
         $html = Import::view($ob->Vars, '_master', master);
         $html = $this->resolveUrl($html);
         
-        $head = Import::view($ob->Vars, '_master', 'head');
-        $head = $this->resolveUrl($head);
+        try {
+            $head = Import::view($ob->Vars, '_master', 'head');
+            $head = $this->resolveUrl($head);
+        } catch (FileNotFoundException $exc) {
+            //pass
+        }
 
         $content = Import::view($ob->Vars, $ob->Data['controller'], $ob->Data['view']);
         $content = $this->resolveUrl($content);
