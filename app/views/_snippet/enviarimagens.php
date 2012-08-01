@@ -1,8 +1,8 @@
 <br />
 <button class="btn" data-toggle="slide" data-value="#uploader">
-    <i class="icon-chevron-down"></i>
-    <span>Nova Imagem</span>
     <i class="icon-plus"></i>
+    <span>Nova Imagem</span>
+    <i class="icon-chevron-down"></i>
 </button>
 <div id="uploader" style="display:none;">
     <fieldset class="profile-fieldset">
