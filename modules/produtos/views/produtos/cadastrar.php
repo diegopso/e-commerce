@@ -13,20 +13,18 @@
 </div>
 
 <div class="clearfix"></div>
-
 <div class="row">
-
     <div class="span<?= marketing ? 10 : 12 ?>">
         <form id="form-produto" class="form-horizontal" action="<?= site_url . 'Produtos/Cadastrar' ?>" method="POST">
             <ul class="nav nav-tabs">
                 <li class="active"><a href="#informacoes" data-toggle="tab">Informações</a></li>
-                <li class=""><a href="#descricao" data-toggle="tab">Descrição</a></li>
+                <li class=""><a href="#produtos-descricao" data-toggle="tab">Descrição</a></li>
                 <li class=""><a href="#dimensoes" data-toggle="tab">Dimensões</a></li>
                 <li class=""><a href="#imagens" data-toggle="tab">Imagens</a></li>
             </ul>
-            <div class="row">
-                <div id="productTabContent" class="tab-content">
-                    <div class="tab-pane fade active in" id="informacoes">
+            <div id="productTabContent" class="tab-content">
+                <div class="tab-pane fade active in" id="informacoes">
+                    <div class="row">
                         <br />
                         <div class="span10">
                             <div class="control-group">
@@ -64,34 +62,15 @@
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="tab-pane fade" id="descricao">
-                        <div>
-                            <div class="btn-toolbar">
-                                <div class="btn-group pull-left">
-                                    <button class="btn dropdown-toggle" data-toggle="dropdown">
-                                        <span class="editor-selected-style">Categorias</span>
-                                        <span class="caret"></span>
-                                        <input id="categoria" name="categoria" type="hidden" value="" />
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="javascript:void(0)" data-value="1">Selecione uma Categoria</a></li>
-                                    </ul>
-                                    <button class="btn btn-info tip" onclick="return false;" title="Adicionar">
-                                        <i class="icon-plus"></i>
-                                    </button>
-                                </div>
-                                <div class="control-group">
-                                    <label class="pull-right">
-                                        Palavras-Chave: <input type="text" vlaue="" id="palavras_chave" name="palavras_chave" placeholder="Separadas por ponto e vírgula (;)" />
-                                    </label>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                            <?= Import::get_contents('editor', '_snippet'); ?>
-                        </div>
+                <div id="produtos-descricao" class="tab-pane fade">
+                    <div class="row">
+                        <? include(root . 'app/views/_snippet/editor.php'); ?>
                     </div>
-                    <div class="tab-pane fade" id="dimensoes">
+                </div>
+                <div class="tab-pane fade" id="dimensoes">
+                    <div class="row">
                         <br />
                         <div class="span10">
                             <div class="pull-left">
@@ -130,9 +109,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="imagens">
-                        <? include(modpath . 'produtos/views/_snippet/enviarimagens.php'); ?>
-                    </div>
+                </div>
+                <div class="tab-pane fade" id="imagens">
+                    <? include(root . 'app/views/_snippet/enviarimagens.php'); ?>
                 </div>
             </div>
             <hr />

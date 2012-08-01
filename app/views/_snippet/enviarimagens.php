@@ -1,3 +1,4 @@
+<br />
 <button class="btn" data-toggle="slide" data-value="#uploader">
     <i class="icon-chevron-down"></i>
     <span>Nova Imagem</span>
@@ -12,8 +13,8 @@
         </div>
     </fieldset>
 </div>
-<link rel="stylesheet" type="text/css" href="~/app/wwwroot/media/css/fileuploader.css"></link>
-<script type="text/javascript" src="~/app/wwwroot/media/js/fileuploader.js"></script>
+<link rel="stylesheet" type="text/css" href="~/media/css/fileuploader.css"></link>
+<script type="text/javascript" src="~/media/js/fileuploader.js"></script>
 <script type="text/javascript">  
     var site_url = <?php echo '"' . site_url . '"' ?>;
     $(document).ready(function(){
@@ -77,4 +78,4 @@
     }   
 </script> 
 <?php include('listarimagens.php'); ?>
-    
+<span>Obs.: Máximo de <?= Helper_Conteudos::$arquivos_por_pagina ?> arquivos.</span>

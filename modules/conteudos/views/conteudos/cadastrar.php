@@ -45,9 +45,7 @@
                     </div>
                 </div>
                 <div class="tab-pane fade" id="imagens">
-                    <br />
                     <? include(root . 'app/views/_snippet/enviarimagens.php'); ?>
-                    <span>Obs.: Máximo de <?= Helper_Conteudos::$arquivos_por_pagina ?> arquivos.</span>
                 </div>
             </div>
             <hr />
