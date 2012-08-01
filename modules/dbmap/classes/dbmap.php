@@ -47,12 +47,16 @@ class DBmap {
         $class_name = $table_name;
         $class_name[0] = strtoupper($class_name[0]);
 
-        $contents = str_replace(':class_name', $class_name, $contents);
+        $contents = str_replace('class_name', $class_name, $contents);
         $contents = str_replace(':table_name', $table_name, $contents);
 
         $properties_str = self::_create_properties($properties);
+        $methods_str = str_replace('class_name', $class_name, file_get_contents(modpath . 'dbmap/classes/templates/methods.template'));
 
-        $contents = str_replace(':properties', $properties_str, $contents);
+        $contents = str_replace('/*PROPERTIES*/', $properties_str, $contents);
+        $contents = str_replace('/*METHODS*/', $methods_str, $contents);
+        $contents = str_replace(':primary', self::$key, $contents);
+        
         file_put_contents(root . "app/models/$file_name.php", $contents);
     }
     
@@ -63,6 +67,7 @@ class DBmap {
                 if ($p['Key'] == 'PRI') {
                     $p_template = file_get_contents(modpath . 'dbmap/classes/templates/id.template');
                     $p_template = str_replace(':auto_increment', preg_match('@auto_increment@', $p['Extra']) == -1 ? '' : '@AutoGenerate()', $p_template);
+                    self::$key = $p['Field'];
                 } else {
                     $p_template = file_get_contents(modpath . 'dbmap/classes/templates/properties.template');
                 }
@@ -74,5 +79,7 @@ class DBmap {
         
         return $properties_str;
     }
+    
+    private static $key;
 
 }
