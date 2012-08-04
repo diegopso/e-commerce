@@ -547,7 +547,7 @@ class DatabaseQuery
 	{
 		$fields = array();
 		$values = array();
-                $i = 0;
+                $i = -1;
 		
 		if(get_class($model) != $this->clazz)
 			throw new DatabaseException("O objeto deve ser do tipo '". $this->clazz ."'");

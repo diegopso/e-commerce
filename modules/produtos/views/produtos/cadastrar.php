@@ -81,7 +81,6 @@
                                         <span class="help-block">Valor em metros</span>
                                     </div>
                                 </div>
-
                                 <div class="control-group">
                                     <label class="control-label" for="largura">Largura<br /><span class="label label-warning">P/ FRETE</span></label>
                                     <div class="controls">
@@ -98,7 +97,6 @@
                                         <span class="help-block">Valor em metros</span>
                                     </div>
                                 </div>
-
                                 <div class="control-group">
                                     <label class="control-label" for="peso">Peso<br /><span class="label label-warning">P/ FRETE</span></label>
                                     <div class="controls">

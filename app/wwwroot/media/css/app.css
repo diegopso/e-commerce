@@ -61,11 +61,18 @@ html .cke_skin_kama{visibility:inherit;}html.cke_skin_kama_container{visibility:
 }
 
 #descricao.tab-pane{
-    margin-left: 75px;
     width: 710px;
 }
 
-#productTabContent{
+#produtos-descricao.tab-pane{
+    width: 685px;
+}
+
+#produtos-descricao.tab-pane, #descricao.tab-pane{
+    margin-left: 75px;
+}
+
+#productTabContent, #contentTabContent{
     min-height: 360px;
     overflow-x: hidden;
 }
