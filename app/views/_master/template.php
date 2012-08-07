@@ -3,12 +3,12 @@
     <head>
         <title>Coruja</title>
         <meta http-equiv="Content-Type" content="text/html; charset=<?= charset ?>" ></meta>
-        <link rel="stylesheet" type="text/css" href="~/app/wwwroot/media/css/bootstrap.css"></link>
-        <link rel="stylesheet" type="text/css" href="~/app/wwwroot/media/css/app.css"></link>
+        <link rel="stylesheet" type="text/css" href="~/media/css/bootstrap.css"></link>
+        <link rel="stylesheet" type="text/css" href="~//media/css/app.css"></link>
         
         
-        <script type="text/javascript" src="~/app/wwwroot/media/js/jquery-1.7.2.min.js"></script>
-        <script type="text/javascript" src="~/app/wwwroot/media/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="~/media/js/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="~/media/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="~/media/js/helper.js"></script>
         
         <?= head ?>

@@ -1,12 +1,7 @@
 <?php
 
 
-class ProdutosController extends Controller{
-    
-    public function teste() {
-        return $this->_view();
-    }
-    
+class CategoriasController extends Controller{
     public function index() {
         $pg = $this->params('pg', 0);
         $qt_pg = $this->params('s', 10);
@@ -14,7 +9,7 @@ class ProdutosController extends Controller{
         $render_type = $this->params('r', 'page');
         
         $count = 0;
-        $model = Helper_Produtos::get_produtos($q, $pg, $qt_pg, $count);
+        $model = Helper_Categorias::get_categorias($q, $pg, $qt_pg, $count);
         
         $qt_pg = ceil($count / $qt_pg);
         
@@ -23,10 +18,10 @@ class ProdutosController extends Controller{
         $this->_set('qt_pg', $qt_pg);
         $this->_set('query', $q);
         
-        if($render_type == 'html')
-            return $this->_page('_snippet', 'listaprodutos', $model);
+        if($render_type === 'html')
+            return $this->_page('_snippet', 'listacategorias', $model);
         
-        if($render_type == 'json')
+        if($render_type === 'json')
             return $this->_json(array(
                 'model' => $model,
                 'count' => $count,
@@ -42,70 +37,34 @@ class ProdutosController extends Controller{
         if(is_post){
             $properties = $this->post();
             $properties['id_loja'] = 0; //loja do usuario logado
-            $properties['id_autor'] = 0; //colocar usuario logado
             $properties['status'] = 'active';
-            
-            $palavras_chave = $properties['palavras_chave'];
-            $palavras_chave = str_replace('; ', ';', $palavras_chave);
-            $palavras_chave = preg_replace('@[;]{2,}@', ';', $palavras_chave);
-            $palavras_chave = preg_replace('@;$@', '', $palavras_chave);
-            $properties['palavras_chave'] = preg_replace('@^;@', '', $palavras_chave);
             
             try {
                 $db = Database::getInstance();
                 $db->transaction();
-                $pg = array(
-                    'titulo' => $properties['name'],
-                    'subtitulo' => $properties['modelo'],
-                    'conteudo' => $properties['conteudo'],
-                    'data' => time(),
-                    'tipo' => 'produto',
-                    'id_autor' => $properties['id_autor'], 
-                    'id_loja' => $properties['id_loja'],
-                    'palavras_chave' => $properties['palavras_chave']
-                );
                 
-                //implementar estes métodos
-                //$pagina = Helper_Pagina::cadastrar($pg);
-                //$files = Helper_Midia::save_files($_FILES, $pagina->id);
-
-                //$properties['id_pagina'] = $pagina->id;
-                //$properties['id_imagem'] = $files['principal']->id;
-                
-                $produto = Helper_Produtos::cadastrar($properties);
-                
-                $palavras = explode(';', $properties['palavras_chave']);
-                foreach ($palavras as $value) {
-                    Helper_Produtos::adicionar_palavras_chave($produto->id, trim($value));
-                }
-                
-                //Helper_Categorias::set_categorias($produto->id, $properties['categorias']);
+                $categoria = Helper_Categorias::cadastrar($properties);
                 
                 $db->commit();
                 
-                $this->_flash('flash-message alert alert-success', 'Produto cadastrado com sucesso.');
-                if($properties['redirecionar']){
-                    $this->_redirect('~/produtos');
-                }
-                else{
-                    $_POST = null;
-                    return $this->_view();
-                }
-                    
-                return;
+                $this->_flash('flash-message alert alert-success', 'Categoria cadastrada com sucesso.');
+                
+                return $this->_json(array(
+                    'model' => $categoria,
+                ));
             } catch (Exception $exc) {
                 $db->rollback();
-                $this->_flash('flash-message alert alert-error', 'Ocorreu um erro ao cadastrar o produto.');
-                return $this->_view($produto);
+                $this->_flash('flash-message alert alert-error', 'Ocorreu um erro ao cadastrar a categoria.');
+                return $this->_view($categoria);
             }
         }
         
-        $produto = Model_Produto::get($id);
+        $categoria = Model_Categoria::get($id);
         
-        if($id != $produto->id)
-            throw new Exception_ProdutoNaoEncontrado();
+        if($id != $categoria->id)
+            throw new Exception_CategoriaNaoEncontrada();
         
-        return $this->_view($produto);
+        return $this->_view($categoria);
     }
     
     public function excluir($id) {

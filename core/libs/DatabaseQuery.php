@@ -547,7 +547,7 @@ class DatabaseQuery
 	{
 		$fields = array();
 		$values = array();
-                $i = -1;
+                $i = 0;
 		
 		if(get_class($model) != $this->clazz)
 			throw new DatabaseException("O objeto deve ser do tipo '". $this->clazz ."'");
@@ -579,7 +579,7 @@ class DatabaseQuery
 			}
 		}
 		$entity = $class->Entity ? $class->Entity : get_class($model);
-			
+                
 		$sql = 'INSERT INTO '. $entity .' ('. implode($fields, ', ') .') VALUES ('. implode(',', array_fill(0, count($values), '?')) .');';
 		
 		Debug::addSql($sql, $values);

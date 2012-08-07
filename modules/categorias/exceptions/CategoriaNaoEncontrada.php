@@ -12,13 +12,13 @@
  * @version	1
  *
  */
-class Exception_ProdutoNaoEncontrado extends PageNotFoundException {
+class Exception_CategoriaNaoEncontrada extends PageNotFoundException {
     /**
      * Contrutor da classe
      * @param	string	$action		nome da action
      */
     public function __construct() {
-        parent::__construct('O produto solicitado não foi encontrado.');
+        parent::__construct('A categoria solicitada não foi encontrada.');
     }
 
     /**

@@ -73,6 +73,7 @@ class Database {
                 try {
                     $stmt = DatabaseQuery::connection()->prepare($operation['sql']);
                     $status = $stmt->execute($operation['values']);
+                    
                     if (!$status) {
                         $error = $stmt->errorInfo();
                         throw new TriladoException($error[2]);

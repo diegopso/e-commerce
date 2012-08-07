@@ -124,8 +124,9 @@ class Model {
             $bool = $this->{$key};
             if($bool)
                 $db->{$class}->update($this);
-            else
+            else{
                 $db->{$class}->insert($this);
+            }
         }else
             $db->{$class}->insert($this);
         $db->save();

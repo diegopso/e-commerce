@@ -4,30 +4,21 @@
             <a href="<?= site_url ?>">My store</a> <span class="divider">/</span>
         </li>
         <li>
-            <a href="<?= site_url ?>produtos">Produtos</a>
+            <a href="<?= site_url ?>categorias">Categorias</a>
         </li>
     </ul>
 </div>
 
 <div class="pull-right">
     <button class="btn" data-toggle="slide" data-value="#search-div"><i class="icon-chevron-down"></i> Pesquisar</button>
-    <a href="<?= site_url ?>produtos/cadastrar/" class="btn btn-primary"><i class="icon-plus icon-white"></i> Adicionar</a>
+    <a href="#cadastrar" data-toggle="modal" class="btn btn-primary"><i class="icon-plus icon-white"></i> Adicionar</a>
 </div>
 
 <div class="clearfix"></div>
 
 <form id="search-div" style="display: none" class="well">
     <h3>Buscar</h3><br />
-    <div class="btn-group pull-left">
-        <button class="btn dropdown-toggle span3" data-toggle="dropdown">
-            <span class="pull-left">Categorias</span>
-            <span class="caret pull-right"></span>
-        </button>
-        <ul class="dropdown-menu span3">
-            <li><a href="#">Selecione uma categoria</a></li>
-        </ul>
-    </div>
-    <div class="input-append margin1 pull-left">
+    <div class="input-append pull-left">
         <input class="pull-left" id="search-text" type="text"  placeholder="Digite sua busca" />
         <button class="btn btn-primary" type="button" id="search-submit"><i class="icon-search icon-white"></i> Buscar</button>
     </div>
@@ -37,8 +28,7 @@
 <div id="desfazer" class="alert alert-block" style="display: none">
     <center>
         <strong>
-            <a class="close" data-dismiss="alert" href="#">×</a>
-            O produto foi excluído. 
+            A categoria foi excluída.
             <a class="btn btn-warning" href="javascript:void(0);">Desfazer</a>
         </strong>
     </center>
@@ -48,37 +38,80 @@
 <div class="row">
     <div class="data span<?= marketing ? 10 : 12 ?>">
         <?php
-            include(modpath . 'produtos/views/_snippet/listaprodutos.php');
+        include(modpath . 'categorias/views/_snippet/listacategorias.php');
         ?>
     </div>
-    
-    <?php if(marketing): ?>
-    <br />
-    <div class="span2">
-        <a href="javascript:void(0);" class="thumbnail">
-            <img src="http://placehold.it/125x125" />
-        </a>
-        <a href="javascript:void(0);" class="thumbnail">
-            <img src="http://placehold.it/125x125" />
-        </a>
-        <a href="javascript:void(0);" class="thumbnail">
-            <img src="http://placehold.it/125x125" />
-        </a>
-        <a href="javascript:void(0);" class="thumbnail">
-            <img src="http://placehold.it/125x125" />
-        </a>
-    </div>
+
+    <?php if (marketing): ?>
+        <br />
+        <div class="span2">
+            <a href="javascript:void(0);" class="thumbnail">
+                <img src="http://placehold.it/125x125" />
+            </a>
+            <a href="javascript:void(0);" class="thumbnail">
+                <img src="http://placehold.it/125x125" />
+            </a>
+            <a href="javascript:void(0);" class="thumbnail">
+                <img src="http://placehold.it/125x125" />
+            </a>
+            <a href="javascript:void(0);" class="thumbnail">
+                <img src="http://placehold.it/125x125" />
+            </a>
+        </div>
     <?php endif; ?>
 </div>
+<form id="form-cadastrar-categoria" class="form-inline" action="<?= site_url ?>categorias/cadastrar" method="POST">
+    <div class="modal hide" id="cadastrar">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">×</button>
+            <h3>Cadastrar Categoria</h3>
+        </div>
+        <div class="modal-body">
 
+            <label>
+                Nome<br />
+                <input name="nome" type="text" value="" placeholder="Digite um Nome para a Categoria" />
+            </label>
+            <label class="pull-right">
+                Categoria Pai<br />
+                <select id="select-categoria-pai" name="id_categoria_pai" data-placeholder="Não Adicionar Categoria Pai">
+                    <option value="0">Não Adicionar Categoria Pai</option>
+                    <?php foreach ($model as $categoria): ?>
+                        <option value="<?= $categoria->id ?>"><?= $categoria->nome ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </label>
+            <div class="clearfix"></div>
+
+        </div>
+        <div class="modal-footer">
+            <a href="#" class="btn" data-dismiss="modal">Cancelar</a>
+            <input type="submit" value="Salvar" class="btn btn-primary" />
+        </div>
+    </div>
+</form>
+<script type="text/javascript" src="~/media/js/chosen/chosen.jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="~/media/js/chosen/chosen.css"></link>
+<script type="text/javascript" src="~/media/js/jquery.form.js"></script>
 <script type="text/javascript">
     var divAlert = null;
     $(document).ready(function(){
         $('.pagination-btn').click(loadData);
         
+        $("#select-categoria-pai").chosen({
+            no_results_text: "Nenhuma Categoria Encontrada.",
+            allow_single_deselect: true
+        });
+        
+        $('#form-cadastrar-categoria').ajaxForm({
+            success: function(data){
+                console.log(data);
+            }
+        }); 
+        
         $('#search-submit').click(function (e){
             e.preventDefault();
-            requestData('<?= site_url ?>produtos?q=' + $('#search-text').val() +'&r=html');
+            requestData('<?= site_url ?>categorias?q=' + $('#search-text').val() +'&r=html');
         });
         
         divAlert = $('#desfazer');
@@ -86,6 +119,7 @@
     
     function loadData(e){
         e.preventDefault();
+        $('.tooltip').remove();
         requestData($(this).attr('href'));
     }
     
@@ -95,6 +129,7 @@
             success: function(data){
                 $('.data').empty().append(data);
                 $('.pagination-btn').click(loadData);
+                $(".data .tip").tooltip();
             }
         });
     }
@@ -106,14 +141,14 @@
         $.ajax({
             url: self.attr('href'),
             success: function(data){
-                requestData('<?= site_url ?>produtos?q=' + $('#search-text').val() +'&r=html');
+                requestData('<?= site_url ?>categorias?q=' + $('#search-text').val() +'&r=html');
                 divAlert.find('a').unbind('click').click(function(e){
                     e.preventDefault();
                     $.ajax({
-                        url: '<?= site_url ?>produtos/desfazerexclusao/' + data.d.model.id,
+                        url: '<?= site_url ?>categorias/desfazerexclusao/' + data.d.model.id,
                         success: function(){
                             divAlert.slideUp('fast');
-                            requestData('<?= site_url ?>produtos?q=' + $('#search-text').val() +'&r=html');
+                            requestData('<?= site_url ?>categorias?q=' + $('#search-text').val() +'&r=html');
                         }
                     });
                 });
