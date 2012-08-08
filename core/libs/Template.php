@@ -127,7 +127,7 @@ class Template {
         $html = $this->resolveUrl($html);
         
         try {
-            $head = Import::view($ob->Vars, '_master', 'head');
+            $head = Import::view($ob->Vars, '_master', 'head', false);
             $head = $this->resolveUrl($head);
         } catch (FileNotFoundException $exc) {
             //pass

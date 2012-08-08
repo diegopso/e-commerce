@@ -123,7 +123,7 @@ class Import {
      * @throws	FileNotFoundException	disparado se o arquivo não for encontrado
      * @return	string					retorna o conteúdo da view
      */
-    public static function view($vars, $controller, $view) {
+    public static function view($vars, $controller, $view, $module_serch = true) {
         $buffer = ob_get_clean();
         ob_start();
         extract($vars);
@@ -135,21 +135,25 @@ class Import {
 
         if (!file_exists($file)) {
             $file = root . 'app/views/' . $controller . '/' . $view . '.php';
+            $found = file_exists($file);
+            
+            if (!$found) {
+                if($module_serch){
+                    $modules = Modules::instance();
 
-            if (!file_exists($file)) {
-                $modules = Modules::instance();
-                $found = false;
-
-                foreach ($modules as $path) {
-                    $file = $path . 'views/' . $controller . '/' . $view . '.php';
-                    if (file_exists($file)) {
-                        $found = true;
-                        break;
+                    foreach ($modules as $path) {
+                        $file = $path . 'views/' . $controller . '/' . $view . '.php';
+                        if (file_exists($file)) {
+                            $found = true;
+                            break;
+                        }
                     }
-                }
-
-                if (!$found)
+                    
+                    if(!$found)
+                        throw new FileNotFoundException('views/' . $controller . '/' . $view . '.php');
+                }else{
                     throw new FileNotFoundException('views/' . $controller . '/' . $view . '.php');
+                }
             }
         }
 
