@@ -1,10 +1,7 @@
 # Static Files #
 *.xml
 *.properties
-*.jpg
-*.jpeg
-*.png
-*.gif
+uploads/
 
 # Logs and databases #
 ######################
