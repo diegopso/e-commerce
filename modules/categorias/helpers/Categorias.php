@@ -44,4 +44,15 @@ class Helper_Categorias{
         $categoria->save();
         return $categoria;
     }
+    
+    public static function excluir($id) {
+        $categoria = Model_Categoria::get($id);
+        
+        if($id != $categoria->id)
+            throw new Exception_CategoriaNaoEncontrada();
+        
+        $categoria->status = 'deleted';
+        $categoria->save();
+        return $categoria;
+    }
 }

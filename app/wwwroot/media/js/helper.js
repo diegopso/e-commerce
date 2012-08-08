@@ -1,5 +1,6 @@
 $.fn.clear = function(){
-    $(this).find(':input').each(function() {
+	var self = $(this);
+    self.find(':input').each(function() {
         switch(this.type) {
             case 'password':
                 $(this).val('');
@@ -17,6 +18,7 @@ $.fn.clear = function(){
                 this.checked = false;
         }
     });
+	return self;
 };
 
 $.fn.keyupValidation = function(regExp, classe){

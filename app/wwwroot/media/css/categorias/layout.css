@@ -1,0 +1,7 @@
+#search-text { 
+    width: 810px !important;
+}
+#cadastrar .modal-body, #cadastrar.modal{
+    overflow: visible;
+}
+

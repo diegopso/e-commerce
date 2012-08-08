@@ -70,7 +70,7 @@
 
             <label>
                 Nome<br />
-                <input name="nome" type="text" value="" placeholder="Digite um Nome para a Categoria" />
+                <input id="input-nome" name="nome" type="text" value="" placeholder="Digite um Nome para a Categoria" />
             </label>
             <label class="pull-right">
                 Categoria Pai<br />
@@ -82,7 +82,7 @@
                 </select>
             </label>
             <div class="clearfix"></div>
-
+            <input id="input-id" name="id" type="hidden" value="0" />
         </div>
         <div class="modal-footer">
             <a href="#" class="btn" data-dismiss="modal">Cancelar</a>
@@ -114,6 +114,12 @@
             requestData('<?= site_url ?>categorias?q=' + $('#search-text').val() +'&r=html');
         });
         
+        $('#form-cadastrar-categoria a[data-dismiss], #form-cadastrar-categoria button[data-dismiss]').click(function(e){
+            var form = $('#form-cadastrar-categoria').clear();
+            form.find('input[type="hidden"]').val(0);
+            form.find('select').val(0).trigger("liszt:updated"); 
+        });
+        
         divAlert = $('#desfazer');
     });
     
@@ -134,7 +140,7 @@
         });
     }
     
-    removerProduto = function(element){
+    removerCategoria = function(element){
         var self = $(element);
         var tr = self.parent().parent();
         tr.find('.loading').show();
@@ -156,9 +162,17 @@
                 setTimeout(function(){
                     divAlert.slideUp('fast');
                 }, 2000);
+            },
+            complete: function(){
+                $('.tooltip').remove();
             }
         });
     }
-        
+    
+    function editarCategoria(c){
+        $('#input-nome').val(c.nome);
+        $('#input-id').val(c.id);
+        $("#select-categoria-pai").val(2).trigger("liszt:updated");
+    }   
 </script>
 

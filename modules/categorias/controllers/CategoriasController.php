@@ -69,18 +69,18 @@ class CategoriasController extends Controller{
     
     public function excluir($id) {
         try {
-            $produto = Helper_Produtos::excluir($id);
-            $this->_flash('flash-message alert alert-success', 'O produto foi excluído.');
+            $categoria = Helper_Categorias::excluir($id);
+            $this->_flash('flash-message alert alert-success', 'A categoria foi excluída.');
             return $this->_json(array(
                 'status' => 'flash-message alert alert-success',
-                'message' => 'O produto foi excluído.',
-                'model' => $produto
+                'message' => 'A categoria foi excluída.',
+                'model' => $categoria
             ));
         } catch (Exception $exc) {
-            $this->_flash('flash-message alert alert-error', 'Ocorreu um erro ao excluir o produto.');
+            $this->_flash('flash-message alert alert-error', 'Ocorreu um erro ao excluir a categoria.');
             return $this->_json(array(
                 'status' => 'flash-message alert alert-error',
-                'message' => 'Ocorreu um erro ao excluir o produto.'
+                'message' => 'Ocorreu um erro ao excluir a categoria.'
             ));
         }
     }

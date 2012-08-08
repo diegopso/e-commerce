@@ -17,8 +17,8 @@
                 <td><?= $categoria->nome ?> <img class="loading" src="<?= site_url ?>media/img/loading.gif" style="display: none;" /></td>
                 <td><?= $categoria->nome_categoria_pai ?></td>
                 <td>
-                    <a href="<?= site_url ?>produtos/cadastrar/<?= $produto->id ?>"  class="btn tip" title="Editar"><i class="icon-pencil"></i></a>
-                    <a href="<?= site_url ?>produtos/excluir/<?= $produto->id ?>" onclick="removerProduto(this); return false;" class="btn tip delete" title="Excluir"><i class="icon-trash"></i></a>
+                    <a href="#cadastrar" data-toggle="modal" onclick="editarCategoria({id:'<?=$categoria->id?>',id_categoria_pai:'<?=$categoria->id_categoria_pai?>',nome:'<?=$categoria->nome?>'});" class="btn tip" title="Editar"><i class="icon-pencil"></i></a>
+                    <a href="<?= site_url ?>categorias/excluir/<?= $categoria->id ?>" onclick="removerCategoria(this); return false;" class="btn tip delete" title="Excluir"><i class="icon-trash"></i></a>
                 </td>
             </tr>
         <?php endforeach; ?>
