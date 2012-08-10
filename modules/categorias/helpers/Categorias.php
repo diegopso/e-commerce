@@ -12,7 +12,7 @@ class Helper_Categorias{
         $db = new DatabaseQuery('Model_ViewCategorias');
         
         if($q !== ''){
-            $db->whereSQL("nome LIKE '%$q%'"); //pegar produtos apenas da loja cadastrada
+            $db->whereSQL("nome LIKE '%$q%'"); //pegar categorias apenas da loja cadastrada
         }
         
         $db2 = clone $db;
@@ -60,7 +60,7 @@ class Helper_Categorias{
         $categoria = Model_Categoria::get($id);
         
         if($id != $categoria->id)
-            throw new Exception_ProdutoNaoEncontrado();
+            throw new Exception_CategoriaNaoEncontrada();
         
         $categoria->status = 'active';
         $categoria->save();
