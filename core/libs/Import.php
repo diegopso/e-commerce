@@ -124,7 +124,6 @@ class Import {
      * @return	string					retorna o conteúdo da view
      */
     public static function view($vars, $controller, $view, $module_serch = true) {
-        $buffer = ob_get_clean();
         ob_start();
         extract($vars);
 
@@ -159,9 +158,7 @@ class Import {
 
         require_once $file;
 
-        $content = ob_get_clean();
-        echo $buffer;
-        return $content;
+        return ob_get_clean();
     }
 
     public static function get_contents($view, $controller = null, $module = null) {

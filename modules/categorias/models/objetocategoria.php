@@ -1,6 +1,6 @@
 <?php
 /** @Entity("objetocategoria") */
-class Model_Objetocategoria extends Model
+class Model_ObjetoCategoria extends Model
 {
     /**
     * @AutoGenerate()

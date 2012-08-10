@@ -74,12 +74,7 @@
             </label>
             <label class="pull-right">
                 Categoria Pai<br />
-                <select id="select-categoria-pai" name="id_categoria_pai" data-placeholder="Não Adicionar Categoria Pai">
-                    <option value="0">Não Adicionar Categoria Pai</option>
-                    <?php foreach ($model as $categoria): ?>
-                        <option value="<?= $categoria->id ?>"><?= $categoria->nome ?></option>
-                    <?php endforeach; ?>
-                </select>
+				<?= Import::view(array('categorias' => $model, 'mensagem_padrao' => 'Não Adicionar Categoria Pai'), '_snippet', 'selectcategorias') ?>
             </label>
             <div class="clearfix"></div>
             <input id="input-id" name="id" type="hidden" value="0" />

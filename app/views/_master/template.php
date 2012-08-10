@@ -2,15 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title>Coruja</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=<?= charset ?>" ></meta>
-        <link rel="stylesheet" type="text/css" href="~/media/css/bootstrap.css"></link>
-        <link rel="stylesheet" type="text/css" href="~//media/css/app.css"></link>
-        
+        <meta http-equiv="Content-Type" content="text/html; charset=<?= charset ?>" />
+        <link rel="stylesheet" type="text/css" href="~/media/css/bootstrap.css" />
+        <link rel="stylesheet" type="text/css" href="~//media/css/app.css" />
         
         <script type="text/javascript" src="~/media/js/jquery-1.7.2.min.js"></script>
         <script type="text/javascript" src="~/media/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="~/media/js/helper.js"></script>
-        
         <?= head ?>
     </head>
     <body>

@@ -66,4 +66,12 @@ class Helper_Categorias{
         $categoria->save();
         return $categoria;
     }
+	
+	public static function vincular($id_objeto, $id_categoria, $tipo_objeto = 'produto'){
+		$obcat = new Model_ObjetoCategoria();
+		$obcat->id_objeto = $id_objeto;
+		$obcat->id_categoria = $id_categoria;
+		$obcat->tipo_objeto = $tipo_objeto;
+		$obcat->save();
+	}
 }
