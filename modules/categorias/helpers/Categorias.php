@@ -55,4 +55,15 @@ class Helper_Categorias{
         $categoria->save();
         return $categoria;
     }
+	
+	public static function desfazer_exclusao($id){
+        $categoria = Model_Categoria::get($id);
+        
+        if($id != $categoria->id)
+            throw new Exception_ProdutoNaoEncontrado();
+        
+        $categoria->status = 'active';
+        $categoria->save();
+        return $categoria;
+    }
 }

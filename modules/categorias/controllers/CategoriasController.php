@@ -34,7 +34,7 @@ class CategoriasController extends Controller{
     }
     
     public function cadastrar($id = null) {
-        if(is_post){
+		if(is_post){
             $properties = $this->post();
             $properties['id_loja'] = 0; //loja do usuario logado
             $properties['status'] = 'active';
@@ -87,7 +87,7 @@ class CategoriasController extends Controller{
     
     public function desfazerexclusao($id){
         try {
-            $produto = Helper_Produtos::desfazer_exclusao($id);
+            $produto = Helper_Categorias::desfazer_exclusao($id);
             $this->_flash('flash-message alert alert-success', 'Ação desfeita.');
             return $this->_json(array(
                 'status' => 'flash-message alert alert-success',

@@ -63,7 +63,7 @@
 <form id="form-cadastrar-categoria" class="form-inline" action="<?= site_url ?>categorias/cadastrar" method="POST">
     <div class="modal hide" id="cadastrar">
         <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">×</button>
+            <button id="fechar-modal-cadastrar-categoria" type="button" class="close" data-dismiss="modal">×</button>
             <h3>Cadastrar Categoria</h3>
         </div>
         <div class="modal-body">
@@ -105,7 +105,8 @@
         
         $('#form-cadastrar-categoria').ajaxForm({
             success: function(data){
-                console.log(data);
+                $('#fechar-modal-cadastrar-categoria').click();
+				requestData('<?= site_url ?>categorias?q=' + $('#search-text').val() +'&r=html');
             }
         }); 
         
@@ -172,7 +173,7 @@
     function editarCategoria(c){
         $('#input-nome').val(c.nome);
         $('#input-id').val(c.id);
-        $("#select-categoria-pai").val(2).trigger("liszt:updated");
+        $("#select-categoria-pai").val(c.id_categoria_pai).trigger("liszt:updated");
     }   
 </script>
 
